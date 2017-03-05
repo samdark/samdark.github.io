@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Alexander Makarov</title>
+    <link>https://samdark.github.io/blog/index.xml</link>
+    <description>Recent content in Blog on Alexander Makarov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 05 Mar 2017 21:52:28 +0300</lastBuildDate>
+    <atom:link href="https://samdark.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>No Kipple Please</title>
+      <link>https://samdark.github.io/blog/no-kipple-please/</link>
+      <pubDate>Sun, 05 Mar 2017 21:52:28 +0300</pubDate>
+      
+      <guid>https://samdark.github.io/blog/no-kipple-please/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;“Kipple is useless objects, like junk mail or match folders after you use the last match or gum wrappers or yesterday&amp;rsquo;s
+homeopape. When nobody&amp;rsquo;s around, kipple reproduces itself. For instance, if you go to bed leaving any kipple around
+your apartment, when you wake up the next morning there&amp;rsquo;s twice as much of it. It always gets more and more.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;There&amp;rsquo;s the First Law of Kipple,&amp;rdquo; he said. &amp;ldquo;&amp;lsquo;Kipple drives out nonkipple.&amp;rsquo;&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;Do Androids Dream of Electric Sheep? by Philip K. Dick&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;IT projects are much like the aparments mentioned in Philip K. Dick novel. They tend
+to have kipple and, as with apartments, it grows every day.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve reviewed lots of projects and one of mistakes I often see is about kipple. It looks
+minor compared to bugs or architecture mistakes but at the same time it affects both
+project and development team significantly.&lt;/p&gt;
+
+&lt;p&gt;So kipple exists. Usually it&amp;rsquo;s cryptic unneeded stuff which one hesitates to delete for
+quite vague illogical reasons. Commented out code, files like &lt;code&gt;main.css_old&lt;/code&gt;, unused
+methods, five different versions of jQuery, &lt;code&gt;// TODO:&lt;/code&gt; etc.&lt;/p&gt;
+
+&lt;p&gt;That&amp;rsquo;s why kipple is both useless and bad:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Broken_windows_theory&#34;&gt;Broken Windows Theory&lt;/a&gt; applies
+well to IT projects. If it&amp;rsquo;s allowed not to clean up it&amp;rsquo;s OK to write code which is
+of doubtful quality.&lt;/li&gt;
+&lt;li&gt;Often developers comment out big chunks of CSS, JavaScript and HTML which are still
+served to end user slowing page loading speed.&lt;/li&gt;
+&lt;li&gt;We&amp;rsquo;re actually reading commented out parts of code. It takes time.&lt;/li&gt;
+&lt;li&gt;Large number of unused files may and would confuse newcomers.&lt;/li&gt;
+&lt;li&gt;It is unpleasant to work with such kippled project. Feels like code is of a bad quality
+even if architecture and code itself is OK.&lt;/li&gt;
+&lt;li&gt;Compile time may be increased.&lt;/li&gt;
+&lt;li&gt;Any version control systems remembers everything you&amp;rsquo;ll delete. If there&amp;rsquo;s a need
+you can always get it from there. If you fail to remember where was it, tag the commit.
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I know that you may say that it&amp;rsquo;s not important and there&amp;rsquo;s no time for it but I highly
+recommend trying it for a few months. You&amp;rsquo;ll see difference in both the project and
+overall quality of the code your team produce.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Finding Bug with Binary Search</title>
+      <link>https://samdark.github.io/blog/finding-bug-with-binary-search/</link>
+      <pubDate>Sat, 04 Mar 2017 21:52:28 +0300</pubDate>
+      
+      <guid>https://samdark.github.io/blog/finding-bug-with-binary-search/</guid>
+      <description>&lt;p&gt;Once there&amp;rsquo;s a way to reproduce the issue we need to find code which causes it. Sometimes we&amp;rsquo;re getting totally stuck
+for day feeling more and more depressed and, in the end, unable to think clear. Luckily, there&amp;rsquo;s a good way to
+find bug even if you have no idea what caused it and even where to set a breakpoint for proper debugging. This way is
+binary search.&lt;/p&gt;
+
+&lt;p&gt;If your code is under version control, you&amp;rsquo;re checking out fairly old commit and see if it works. If it works then you&amp;rsquo;re
+checking out commit which is in the middle between commit which works and commit which does not and check again. When
+there are no commits left in between you get the commit that broke it. If you&amp;rsquo;re using git you&amp;rsquo;re lucky since it has
+built-in way to do it via &lt;code&gt;git bisect&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Alike it could be done with HTML markup. If you have weird bug, delete half of the page HTML and see if issue is still there.
+If it is then divide that HTML and check parts again. If it&amp;rsquo;s not then take other half for inspection.&lt;/p&gt;
+
+&lt;p&gt;Pro is that you&amp;rsquo;ll certainly find what caused the bug for sure. Con is that it&amp;rsquo;s not so fast.&lt;/p&gt;
+
+&lt;p&gt;Same method could be applied to anything. For example, it&amp;rsquo;s widely used in electronics.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The History of Yii Framework</title>
+      <link>https://samdark.github.io/blog/the-history-of-yii-framework/</link>
+      <pubDate>Sat, 04 Mar 2017 21:52:28 +0300</pubDate>
+      
+      <guid>https://samdark.github.io/blog/the-history-of-yii-framework/</guid>
+      <description>
+
+&lt;p&gt;Yii is one of the long-living PHP frameworks out there constantly evolving with time
+as PHP is enhanced more and more. It&amp;rsquo;s interesting to know how it was made.&lt;/p&gt;
+
+&lt;h2 id=&#34;prado&#34;&gt;Prado&lt;/h2&gt;
+
+&lt;p&gt;In June 2004 Qiang Xue released first version of PRADO framework. He was inspired
+by Apache Tapestry, Borland Delphi and Microsoft ASP.NET.&lt;/p&gt;
+
+&lt;p&gt;Roughly at the same time Zend conducted a competition called &amp;ldquo;gophp5&amp;rdquo; to promote
+just released PHP 5.0. Qiang re-implemented framework on PHP 5 and won the
+competition.&lt;/p&gt;
+
+&lt;p&gt;At the time project was hosted at SourceForge. In the middle of 2005 Wei Zhuo helped
+with i18n and l10n. Prado 2.0 was released.&lt;/p&gt;
+
+&lt;p&gt;In May 2005 it was decided to re-write framework again to include new cool features
+inspired by Microsoft ASP.NET 2.0. In April 2006 version 3.0 was released. Starting
+from it Prado team mostly on code quality and stability.&lt;/p&gt;
+
+&lt;p&gt;PRADO is still alive and used.&lt;/p&gt;
+
+&lt;h2 id=&#34;yii&#34;&gt;Yii&lt;/h2&gt;
+
+&lt;p&gt;In October 2006 Qiang announced alpha version of Yii at PRADO forums.&lt;/p&gt;
+
+&lt;p&gt;December 3rd 2008 version 1.0.0 was out. Many ideas and some code were taken
+from PRADO: ActiveRecord, i18n, l10n etc. More inspiration was from
+RoR (convention over configuration, some AR features), symfony1 (filters,
+plugins) and Joomla (modules, message translation).&lt;/p&gt;
+
+&lt;p&gt;Yii 1.0.0 was significantly faster than other frameworks with alike functionality
+so community grew fast.&lt;/p&gt;
+
+&lt;p&gt;In January 2010 Yii 1.1 was out. It had form builder, relational queries in AR,
+ready to use unit-testing framework and more.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve joined Yii team in 2010. By the end of the year we were discussing Yii 1.2
+while developing version 1.1. In may 2011 it was decided to use newer PHP versions
+and fix architectural mistakes i.e. to do 2.0. First commit was made into then
+secret repository.&lt;/p&gt;
+
+&lt;p&gt;In May 2013 Yii 2.0 code was presented to public. In October 2014 first stable release
+was out.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

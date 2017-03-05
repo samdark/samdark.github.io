@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Engineer having fun">
+
+<base href="https://samdark.github.io/">
+<title>
+
+
+     Finding Bug with Binary Search 
+
+</title>
+<link rel="canonical" href="https://samdark.github.io/blog/finding-bug-with-binary-search/">
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="https://samdark.github.io/css/reset.css?t=1488742023">
+    <link rel="stylesheet" href="https://samdark.github.io/css/pygments.css?t=1488742023">
+    <link rel="stylesheet" href="https://samdark.github.io/css/main.css?t=1488742023">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://samdark.github.io/img/favicon.ico"
+
+>
+
+
+
+
+
+
+</head>
+
+
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+              <a href="https://samdark.github.io/"><img class="avatar" src="https://samdark.github.io/img/avatar.jpg" /></a>
+            
+            <a href="https://samdark.github.io/"><div class="name">Alexander Makarov / @samdark</div></a>
+            
+              <h3 class="self-intro">Engineer having fun</h3>
+            
+            <nav>
+                <ul>
+                    <li class="nav-blog"><a href="https://samdark.github.io/blog/">Blog</a></li>
+                    <li class="nav-about"><a href="https://samdark.github.io/about/">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+
+        
+            <a href="//github.com/samdark" target="_blank" rel="noopener"><img class="icon" src="https://samdark.github.io/img/github.svg" alt="github" /></a>
+        
+
+        
+            <a href="//twitter.com/sam_dark" target="_blank" rel="noopener"><img class="icon" src="https://samdark.github.io/img/twitter.svg" alt="twitter" /></a>
+        
+
+        
+            <a href="//linkedin.com/in/makarov" target="_blank" rel="noopener"><img class="icon" src="https://samdark.github.io/img/linkedin.svg" alt="linkedin" /></a>
+        
+
+        
+
+        
+
+        
+            <a href="mailto:sam@rmcreative.ru"><img class="icon" src="https://samdark.github.io/img/email.svg" alt="email" /></a>
+        
+
+        
+            <a href="https://samdark.github.io/index.xml"><img class="icon" src="https://samdark.github.io/img/rss.svg" alt="rss" /></a>
+        
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    Finding Bug with Binary Search
+
+</div>
+
+                    <div class="initials"><a href="https://samdark.github.io/"></a></div>
+                </div>
+                <div class="meta">
+                    
+                    <div class="date" title='Sat Mar 4 2017 21:52:28 MSK'>Mar 4, 2017</div>
+                    
+                    
+                    <div class="reading-time"><div class="middot"></div>2 minutes read</div>
+                    
+                </div>
+            </div>
+            <div class="markdown">
+                <p>Once there&rsquo;s a way to reproduce the issue we need to find code which causes it. Sometimes we&rsquo;re getting totally stuck
+for day feeling more and more depressed and, in the end, unable to think clear. Luckily, there&rsquo;s a good way to
+find bug even if you have no idea what caused it and even where to set a breakpoint for proper debugging. This way is
+binary search.</p>
+
+<p>If your code is under version control, you&rsquo;re checking out fairly old commit and see if it works. If it works then you&rsquo;re
+checking out commit which is in the middle between commit which works and commit which does not and check again. When
+there are no commits left in between you get the commit that broke it. If you&rsquo;re using git you&rsquo;re lucky since it has
+built-in way to do it via <code>git bisect</code>.</p>
+
+<p>Alike it could be done with HTML markup. If you have weird bug, delete half of the page HTML and see if issue is still there.
+If it is then divide that HTML and check parts again. If it&rsquo;s not then take other half for inspection.</p>
+
+<p>Pro is that you&rsquo;ll certainly find what caused the bug for sure. Con is that it&rsquo;s not so fast.</p>
+
+<p>Same method could be applied to anything. For example, it&rsquo;s widely used in electronics.</p>
+
+                <br>
+                <p><a href="https://samdark.github.io/blog/">Back to posts</a></p>
+            </div>
+            <br>
+            <div class="disqus">
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'samdark';
+    var disqus_identifier = 'https:\/\/samdark.github.io\/blog\/finding-bug-with-binary-search\/';
+    var disqus_title = 'Finding Bug with Binary Search';
+    var disqus_url = 'https:\/\/samdark.github.io\/blog\/finding-bug-with-binary-search\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+  
+
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+</body>
+</html>
+
