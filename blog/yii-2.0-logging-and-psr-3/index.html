@@ -14,10 +14,10 @@
 <title>
 
 
-     The History of Yii Framework 
+     Yii 2.0 Logging and PSR-3 
 
 </title>
-<link rel="canonical" href="https://samdark.github.io/blog/the-history-of-yii-framework/">
+<link rel="canonical" href="https://samdark.github.io/blog/yii-2.0-logging-and-psr-3/">
 
 
 
@@ -118,7 +118,7 @@
                 <div class="title-container">
                     <div class="page-heading">
 
-    The History of Yii Framework
+    Yii 2.0 Logging and PSR-3
 
 </div>
 
@@ -126,59 +126,69 @@
                 </div>
                 <div class="meta">
                     
-                    <div class="date" title='Sat Mar 4 2017 21:52:28 MSK'>Mar 4, 2017</div>
+                    <div class="date" title='Thu Mar 9 2017 12:39:18 MSK'>Mar 9, 2017</div>
                     
                     
-                    <div class="reading-time"><div class="middot"></div>2 minutes read</div>
+                    <div class="reading-time"><div class="middot"></div>3 minutes read</div>
                     
                 </div>
             </div>
             <div class="markdown">
                 
 
-<p>Yii is one of the long-living PHP frameworks out there constantly evolving with time
-as PHP is enhanced more and more. It&rsquo;s interesting to know how it was made.</p>
+<p>It is 2017 and major parts of PHP community are all about <a href="http://www.php-fig.org/psr/">PSRs: PHP standard recommendations</a>
+which aim is to make parts of frameworks reusable. There is PSR-3 about logging and quite a number of logging libraries
+following it among which <a href="https://github.com/Seldaek/monolog">Monolog</a> is the most widely used one.</p>
 
-<h2 id="prado">Prado</h2>
+<p>There are three questions often asked about Yii 2.0 in this regard:</p>
 
-<p>In June 2004 Qiang Xue released first version of PRADO framework. He was inspired
-by Apache Tapestry, Borland Delphi and Microsoft ASP.NET.</p>
+<ol>
+<li>Why Yii 2.0 isn&rsquo;t PSR-3 compatible?</li>
+<li>How do I use PSR-3 compatible logger in Yii 2.0?</li>
+<li>Is there a plan to extract a standalone PSR-3 compatible logging library from Yii 2.0?</li>
+</ol>
 
-<p>Roughly at the same time Zend conducted a competition called &ldquo;gophp5&rdquo; to promote
-just released PHP 5.0. Qiang re-implemented framework on PHP 5 and won the
-competition.</p>
+<p>Let&rsquo;s answer these.</p>
 
-<p>At the time project was hosted at SourceForge. In the middle of 2005 Wei Zhuo helped
-with i18n and l10n. Prado 2.0 was released.</p>
+<h2 id="why-yii-2-0-isn-t-psr-3-compatible">Why Yii 2.0 isn&rsquo;t PSR-3 compatible?</h2>
 
-<p>In May 2005 it was decided to re-write framework again to include new cool features
-inspired by Microsoft ASP.NET 2.0. In April 2006 version 3.0 was released. Starting
-from it Prado team mostly on code quality and stability.</p>
+<p><a href="http://www.yiiframework.com/doc-2.0/guide-runtime-logging.html">Yii 2.0 logger</a> is one of the well done parts of
+the framework. It&rsquo;s stable, easy to extend, performant and really powerful when it comes to features. It was
+implemented at early stages of yet secret pre-alpha development of the framework and was not changed much since then.
+The design is very close to what was done in Yii 1.0 so we can think of 2008 as the year when logger design formed.</p>
 
-<p>PRADO is still alive and used.</p>
+<p>The year is important because it&rsquo;s way before PHP-FIG group which is responsible for designing PSRs formed. At the time
+Yii 2.0 was in alpha stage we had a proven logger design with worked well with Yii 1.0 and Yii 1.1 and PSR-3 wasn&rsquo;t
+a thing yet: there were nothing special about loggers implementing it and there was no benefits for Yii framework
+adopting it. So then we decided not to.</p>
 
-<h2 id="yii">Yii</h2>
+<p>Now it&rsquo;s time to re-decide it for 2.1 since there are certain pros in being PSR-3 compatible.</p>
 
-<p>In October 2006 Qiang announced alpha version of Yii at PRADO forums.</p>
+<h2 id="how-do-i-use-psr-3-compatible-logger-in-yii-2-0">How do I use PSR-3 compatible logger in Yii 2.0?</h2>
 
-<p>December 3rd 2008 version 1.0.0 was out. Many ideas and some code were taken
-from PRADO: ActiveRecord, i18n, l10n etc. More inspiration was from
-RoR (convention over configuration, some AR features), symfony1 (filters,
-plugins) and Joomla (modules, message translation).</p>
+<p>Yii&rsquo;s logging facility is quite flexible. There&rsquo;s a central dispatcher component which is collecting log messages and
+then flushes them to individual <a href="http://www.yiiframework.com/doc-2.0/guide-runtime-logging.html#log-targets">log targets</a>,
+such as file target or email target that actually do the job.</p>
 
-<p>Yii 1.0.0 was significantly faster than other frameworks with alike functionality
-so community grew fast.</p>
+<p>Yii&rsquo;s log targets are easy to extend but considering the popularity of PSR-3 and especially
+<a href="https://github.com/Seldaek/monolog">Monolog</a> it is tempting to reuse what&rsquo;s already done. For example, to send logs
+to a Slack chat.</p>
 
-<p>In January 2010 Yii 1.1 was out. It had form builder, relational queries in AR,
-ready to use unit-testing framework and more.</p>
+<p>I&rsquo;ve put together <a href="https://github.com/samdark/yii2-psr-log-target">an extension</a> which allows you to use any PSR-3
+compatible logger as Yii log target.</p>
 
-<p>I&rsquo;ve joined Yii team in 2010. By the end of the year we were discussing Yii 1.2
-while developing version 1.1. In may 2011 it was decided to use newer PHP versions
-and fix architectural mistakes i.e. to do 2.0. First commit was made into then
-secret repository.</p>
+<p>What is does it translating Yii&rsquo;s log levels to alike PSR-3 log levels and actually forwarding logs to PSR-3 compatible
+logger configured. Configuration is fairly easy, you can find it <a href="https://github.com/samdark/yii2-psr-log-target">at extension page</a>.</p>
 
-<p>In May 2013 Yii 2.0 code was presented to public. In October 2014 first stable release
-was out.</p>
+<h2 id="is-there-a-plan-to-extract-a-standalone-psr-3-compatible-logging-library-from-yii-2-0">Is there a plan to extract a standalone PSR-3 compatible logging library from Yii 2.0?</h2>
+
+<p>Yii was never meant to be a set of standalone libraries. Independent components are nice but there is a cost of not
+reusing what&rsquo;s available in the framework which in some case may result in bloated code and too abstract solutions.</p>
+
+<p>Logger may be an exception since it&rsquo;s not relying on the framework much, it&rsquo;s framework that relies on it. An attempt
+to extract logger may succeed and since we have a good design it may even become close in popularity to Monolog. So
+overall it is worth trying and, I think, I&rsquo;ll work on it if <a href="https://www.patreon.com/samdark">Patreon campaign</a>
+will bring me enough time for it.</p>
 
                 <br>
                 <p><a href="https://samdark.github.io/blog/">Back to posts</a></p>
@@ -188,9 +198,9 @@ was out.</p>
                 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'samdark';
-    var disqus_identifier = 'https:\/\/samdark.github.io\/blog\/the-history-of-yii-framework\/';
-    var disqus_title = 'The History of Yii Framework';
-    var disqus_url = 'https:\/\/samdark.github.io\/blog\/the-history-of-yii-framework\/';
+    var disqus_identifier = 'https:\/\/samdark.github.io\/blog\/yii-2.0-logging-and-psr-3\/';
+    var disqus_title = 'Yii 2.0 Logging and PSR-3';
+    var disqus_url = 'https:\/\/samdark.github.io\/blog\/yii-2.0-logging-and-psr-3\/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

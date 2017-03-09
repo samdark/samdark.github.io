@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Engineer having fun">
+
+<base href="https://samdark.github.io/">
+<title>
+
+
+     Yii 2.0 Logging and PSR 
+
+</title>
+<link rel="canonical" href="https://samdark.github.io/blog/yii-2.0-logging-and-psr/">
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="https://samdark.github.io/css/reset.css?t=1489055800">
+    <link rel="stylesheet" href="https://samdark.github.io/css/pygments.css?t=1489055800">
+    <link rel="stylesheet" href="https://samdark.github.io/css/main.css?t=1489055800">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://samdark.github.io/img/favicon.ico"
+
+>
+
+
+
+
+
+
+</head>
+
+
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+              <a href="https://samdark.github.io/"><img class="avatar" src="https://samdark.github.io/img/avatar.jpg" /></a>
+            
+            <a href="https://samdark.github.io/"><div class="name">Alexander Makarov / @samdark</div></a>
+            
+              <h3 class="self-intro">Engineer having fun</h3>
+            
+            <nav>
+                <ul>
+                    <li class="nav-blog"><a href="https://samdark.github.io/blog/">Blog</a></li>
+                    <li class="nav-about"><a href="https://samdark.github.io/about/">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+
+        
+            <a href="//github.com/samdark" target="_blank" rel="noopener"><img class="icon" src="https://samdark.github.io/img/github.svg" alt="github" /></a>
+        
+
+        
+            <a href="//twitter.com/sam_dark" target="_blank" rel="noopener"><img class="icon" src="https://samdark.github.io/img/twitter.svg" alt="twitter" /></a>
+        
+
+        
+            <a href="//linkedin.com/in/makarov" target="_blank" rel="noopener"><img class="icon" src="https://samdark.github.io/img/linkedin.svg" alt="linkedin" /></a>
+        
+
+        
+
+        
+
+        
+            <a href="mailto:sam@rmcreative.ru"><img class="icon" src="https://samdark.github.io/img/email.svg" alt="email" /></a>
+        
+
+        
+            <a href="https://samdark.github.io/index.xml"><img class="icon" src="https://samdark.github.io/img/rss.svg" alt="rss" /></a>
+        
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    Yii 2.0 Logging and PSR
+
+</div>
+
+                    <div class="initials"><a href="https://samdark.github.io/"></a></div>
+                </div>
+                <div class="meta">
+                    
+                    <div class="date" title='Thu Mar 9 2017 12:39:18 MSK'>Mar 9, 2017</div>
+                    
+                    
+                    <div class="reading-time"><div class="middot"></div>3 minutes read</div>
+                    
+                </div>
+            </div>
+            <div class="markdown">
+                
+
+<p>It is 2017 and major parts of PHP community are all about []PSRs: PHP standard recommendations](<a href="http://www.php-fig.org/psr/">http://www.php-fig.org/psr/</a>)
+which aim is to make parts of frameworks reusable. There is PSR-3 about logging and quite a number of logging libraries
+following it among which <a href="https://github.com/Seldaek/monolog">Monolog</a> is the most widely used one.</p>
+
+<p>There are three questions often asked about Yii 2.0 in this regard:</p>
+
+<ol>
+<li>Why Yii 2.0 isn&rsquo;t PSR-3 compatible?</li>
+<li>How do I use PSR-3 compatible logger in Yii 2.0?</li>
+<li>Is there a plan to extract a standalone PSR-3 compatible logging library from Yii 2.0?</li>
+</ol>
+
+<p>Let&rsquo;s answer these.</p>
+
+<h2 id="why-yii-2-0-isn-t-psr-3-compatible">Why Yii 2.0 isn&rsquo;t PSR-3 compatible?</h2>
+
+<p><a href="http://www.yiiframework.com/doc-2.0/guide-runtime-logging.html">Yii 2.0 logger</a> is one of the well done parts of
+the framework. It&rsquo;s stable, easy to extend, performant and really powerful when it comes to features. It was
+implemented at early stages of yet secret pre-alpha development of the framework and was not changed much since then.
+The design is very close to what was done in Yii 1.0 so we can think of 2008 as the year when logger design formed.</p>
+
+<p>The year is important because it&rsquo;s way before PHP-FIG group which is responsible for designing PSRs formed. At the time
+Yii 2.0 was in alpha stage we had a proven logger design with worked well with Yii 1.0 and Yii 1.1 and PSR-3 wasn&rsquo;t
+a thing yet: there were nothing special about loggers implementing it and there was no benefits for Yii framework
+adopting it. So then we decided not to.</p>
+
+<p>Now it&rsquo;s time to re-decide it for 2.1 since there are certain pros in being PSR-3 compatible.</p>
+
+<h2 id="how-do-i-use-psr-3-compatible-logger-in-yii-2-0">How do I use PSR-3 compatible logger in Yii 2.0?</h2>
+
+<p>Yii&rsquo;s logging facility is quite flexible. There&rsquo;s a central dispatcher component which is collecting log messages and
+then flushes them to individual <a href="http://www.yiiframework.com/doc-2.0/guide-runtime-logging.html#log-targets">log targets</a>,
+such as file target or email target that actually do the job.</p>
+
+<p>Yii&rsquo;s log targets are easy to extend but considering the popularity of PSR-3 and especially
+<a href="https://github.com/Seldaek/monolog">Monolog</a> it is tempting to reuse what&rsquo;s already done. For example, to send logs
+to a Slack chat.</p>
+
+<p>I&rsquo;ve put together <a href="https://github.com/samdark/yii2-psr-log-target">an extension</a> which allows you to use any PSR-3
+compatible logger as Yii log target.</p>
+
+<p>What is does it translating Yii&rsquo;s log levels to alike PSR-3 log levels and actually forwarding logs to PSR-3 compatible
+logger configured. Configuration is fairly easy, you can find it <a href="https://github.com/samdark/yii2-psr-log-target">at extension page</a>.</p>
+
+<h2 id="is-there-a-plan-to-extract-a-standalone-psr-3-compatible-logging-library-from-yii-2-0">Is there a plan to extract a standalone PSR-3 compatible logging library from Yii 2.0?</h2>
+
+<p>Yii was never meant to be a set of standalone libraries. Independent components are nice but there is a cost of not
+reusing what&rsquo;s available in the framework which in some case may result in bloated code and too abstract solutions.</p>
+
+<p>Logger may be an exception since it&rsquo;s not relying on the framework much, it&rsquo;s framework that relies on it. An attempt
+to extract logger may succeed and since we have a good design it may even become close in popularity to Monolog. So
+overall it is worth trying and, I think, I&rsquo;ll work on it if <a href="https://www.patreon.com/samdark">Patreon campaign</a>
+will bring me enough time for it.</p>
+
+                <br>
+                <p><a href="https://samdark.github.io/blog/">Back to posts</a></p>
+            </div>
+            <br>
+            <div class="disqus">
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'samdark';
+    var disqus_identifier = 'https:\/\/samdark.github.io\/blog\/yii-2.0-logging-and-psr\/';
+    var disqus_title = 'Yii 2.0 Logging and PSR';
+    var disqus_url = 'https:\/\/samdark.github.io\/blog\/yii-2.0-logging-and-psr\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-93053867-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+  
+
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+</body>
+</html>
+
