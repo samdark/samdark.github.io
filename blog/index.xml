@@ -140,12 +140,34 @@ binary search.&lt;/p&gt;
 &lt;p&gt;If your code is under version control, you&amp;rsquo;re checking out fairly old commit and see if it works. If it works then you&amp;rsquo;re
 checking out commit which is in the middle between commit which works and commit which does not and check again. When
 there are no commits left in between you get the commit that broke it. If you&amp;rsquo;re using git you&amp;rsquo;re lucky since it has
-built-in way to do it via &lt;code&gt;git bisect&lt;/code&gt;.&lt;/p&gt;
+built-in way to do it via &lt;code&gt;git bisect&lt;/code&gt;. It is quite simple. Let&amp;rsquo;s say you&amp;rsquo;re on current &lt;code&gt;master&lt;/code&gt; commit and you have
+a bug.&lt;/p&gt;
 
-&lt;p&gt;Alike it could be done with HTML markup. If you have weird bug, delete half of the page HTML and see if issue is still there.
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git bisect # starts the process
+git bisect bad # current commit has a bug
+git bisect good 3.4.5 # I remember that commit tagged 3.4.5 was OK
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;After that git tells you something like &lt;code&gt;Bisecting: 10 revisions left to test after this&lt;/code&gt; which means
+there are about 10 commits between good and bad revision. Also it is checking out a commit which is in
+the middle of these ten.&lt;/p&gt;
+
+&lt;p&gt;Now it&amp;rsquo;s your job to launch the browser or other client and check if the bug is still there. If yes, you&amp;rsquo;re issuing
+&lt;code&gt;git bisect bad&lt;/code&gt;. If not &amp;mdash; &lt;code&gt;git bisect good&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;git chooses either left of right part of these 10 commits and repeats again on that part only.&lt;/p&gt;
+
+&lt;p&gt;After a few checks you&amp;rsquo;ll get &lt;code&gt;1029012930192390 is first bad commit&lt;/code&gt; message which,
+if you answered correctly, indicates exact commit introduced the issue.&lt;/p&gt;
+
+&lt;p&gt;When everything is done you execute &lt;code&gt;git bisect reset&lt;/code&gt; to stop bisecting.&lt;/p&gt;
+
+&lt;p&gt;Alike it could be done with HTML markup of a single page when it&amp;rsquo;s not under version control.
+If you have weird bug, delete half of the page HTML and see if issue is still there.
 If it is then divide that HTML and check parts again. If it&amp;rsquo;s not then take other half for inspection.&lt;/p&gt;
 
-&lt;p&gt;Pro is that you&amp;rsquo;ll certainly find what caused the bug for sure. Con is that it&amp;rsquo;s not so fast.&lt;/p&gt;
+&lt;p&gt;Pro is that you&amp;rsquo;ll certainly find what caused the bug for sure. Con is that it&amp;rsquo;s not so fast in
+case you&amp;rsquo;re not using a tool like git.&lt;/p&gt;
 
 &lt;p&gt;Same method could be applied to anything. For example, it&amp;rsquo;s widely used in electronics.&lt;/p&gt;
 </description>

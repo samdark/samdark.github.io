@@ -35,9 +35,9 @@
 
 
     
-    <link rel="stylesheet" href="https://samdark.github.io/css/reset.css?t=1489055950">
-    <link rel="stylesheet" href="https://samdark.github.io/css/pygments.css?t=1489055950">
-    <link rel="stylesheet" href="https://samdark.github.io/css/main.css?t=1489055950">
+    <link rel="stylesheet" href="https://samdark.github.io/css/reset.css?t=1489066451">
+    <link rel="stylesheet" href="https://samdark.github.io/css/pygments.css?t=1489066451">
+    <link rel="stylesheet" href="https://samdark.github.io/css/main.css?t=1489066451">
     
 
 
@@ -142,12 +142,34 @@ binary search.</p>
 <p>If your code is under version control, you&rsquo;re checking out fairly old commit and see if it works. If it works then you&rsquo;re
 checking out commit which is in the middle between commit which works and commit which does not and check again. When
 there are no commits left in between you get the commit that broke it. If you&rsquo;re using git you&rsquo;re lucky since it has
-built-in way to do it via <code>git bisect</code>.</p>
+built-in way to do it via <code>git bisect</code>. It is quite simple. Let&rsquo;s say you&rsquo;re on current <code>master</code> commit and you have
+a bug.</p>
 
-<p>Alike it could be done with HTML markup. If you have weird bug, delete half of the page HTML and see if issue is still there.
+<pre><code class="language-bash">git bisect # starts the process
+git bisect bad # current commit has a bug
+git bisect good 3.4.5 # I remember that commit tagged 3.4.5 was OK
+</code></pre>
+
+<p>After that git tells you something like <code>Bisecting: 10 revisions left to test after this</code> which means
+there are about 10 commits between good and bad revision. Also it is checking out a commit which is in
+the middle of these ten.</p>
+
+<p>Now it&rsquo;s your job to launch the browser or other client and check if the bug is still there. If yes, you&rsquo;re issuing
+<code>git bisect bad</code>. If not &mdash; <code>git bisect good</code>.</p>
+
+<p>git chooses either left of right part of these 10 commits and repeats again on that part only.</p>
+
+<p>After a few checks you&rsquo;ll get <code>1029012930192390 is first bad commit</code> message which,
+if you answered correctly, indicates exact commit introduced the issue.</p>
+
+<p>When everything is done you execute <code>git bisect reset</code> to stop bisecting.</p>
+
+<p>Alike it could be done with HTML markup of a single page when it&rsquo;s not under version control.
+If you have weird bug, delete half of the page HTML and see if issue is still there.
 If it is then divide that HTML and check parts again. If it&rsquo;s not then take other half for inspection.</p>
 
-<p>Pro is that you&rsquo;ll certainly find what caused the bug for sure. Con is that it&rsquo;s not so fast.</p>
+<p>Pro is that you&rsquo;ll certainly find what caused the bug for sure. Con is that it&rsquo;s not so fast in
+case you&rsquo;re not using a tool like git.</p>
 
 <p>Same method could be applied to anything. For example, it&rsquo;s widely used in electronics.</p>
 
