@@ -17,21 +17,21 @@
       <guid>https://samdark.github.io/blog/yii-2.0-logging-and-psr-3/</guid>
       <description>
 
-&lt;p&gt;It is 2017 and major parts of PHP community are all about &lt;a href=&#34;http://www.php-fig.org/psr/&#34;&gt;PSRs: PHP standard recommendations&lt;/a&gt;
-which aim is to make parts of frameworks reusable. There is PSR-3 about logging and quite a number of logging libraries
-following it among which &lt;a href=&#34;https://github.com/Seldaek/monolog&#34;&gt;Monolog&lt;/a&gt; is the most widely used one.&lt;/p&gt;
+&lt;p&gt;It is 2017 and major parts of PHP community are all talking about &lt;a href=&#34;http://www.php-fig.org/psr/&#34;&gt;PSRs: PHP standard recommendations&lt;/a&gt;
+that aim is to make parts of frameworks reusable. The recommendation PSR-3 is about logging. Many logging libraries are
+following this recommendation, among which &lt;a href=&#34;https://github.com/Seldaek/monolog&#34;&gt;Monolog&lt;/a&gt; is the most widely used one.&lt;/p&gt;
 
-&lt;p&gt;There are three questions often asked about Yii 2.0 in this regard:&lt;/p&gt;
+&lt;p&gt;There are three questions commonly asked about Yii 2.0 with regards to PSR-3:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Why Yii 2.0 isn&amp;rsquo;t PSR-3 compatible?&lt;/li&gt;
+&lt;li&gt;Why isn&amp;rsquo;t Yii 2.0 PSR-3 compatible?&lt;/li&gt;
 &lt;li&gt;How do I use PSR-3 compatible logger in Yii 2.0?&lt;/li&gt;
 &lt;li&gt;Is there a plan to extract a standalone PSR-3 compatible logging library from Yii 2.0?&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;Let&amp;rsquo;s answer these.&lt;/p&gt;
 
-&lt;h2 id=&#34;why-yii-2-0-isn-t-psr-3-compatible&#34;&gt;Why Yii 2.0 isn&amp;rsquo;t PSR-3 compatible?&lt;/h2&gt;
+&lt;h2 id=&#34;why-isn-t-yii-2-0-psr-3-compatible&#34;&gt;Why isn&amp;rsquo;t Yii 2.0 PSR-3 compatible?&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.yiiframework.com/doc-2.0/guide-runtime-logging.html&#34;&gt;Yii 2.0 logger&lt;/a&gt; is one of the well done parts of
 the framework. It&amp;rsquo;s stable, easy to extend, performant and really powerful when it comes to features. It was
@@ -80,13 +80,13 @@ will bring me enough time for it.&lt;/p&gt;
       
       <guid>https://samdark.github.io/blog/no-kipple-please/</guid>
       <description>&lt;blockquote&gt;
-&lt;p&gt;“Kipple is useless objects, like junk mail or match folders after you use the last match or gum wrappers or yesterday&amp;rsquo;s
+&lt;p&gt;&amp;ldquo;Kipple is useless objects, like junk mail or match folders after you use the last match or gum wrappers or yesterday&amp;rsquo;s
 homeopape. When nobody&amp;rsquo;s around, kipple reproduces itself. For instance, if you go to bed leaving any kipple around
 your apartment, when you wake up the next morning there&amp;rsquo;s twice as much of it. It always gets more and more.&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;&amp;hellip;&lt;/p&gt;
 
-&lt;p&gt;&amp;ldquo;There&amp;rsquo;s the First Law of Kipple,&amp;rdquo; he said. &amp;ldquo;&amp;lsquo;Kipple drives out nonkipple.&amp;rsquo;&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;There&amp;rsquo;s the First Law of Kipple,&amp;rdquo; he said. &amp;ldquo;Kipple drives out nonkipple.&amp;rdquo;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;&lt;em&gt;Do Androids Dream of Electric Sheep? by Philip K. Dick&lt;/em&gt;&lt;/p&gt;
@@ -94,34 +94,36 @@ your apartment, when you wake up the next morning there&amp;rsquo;s twice as muc
 &lt;p&gt;IT projects are much like the apartments mentioned in Philip K. Dick novel. They tend
 to have kipple and, as with apartments, it grows every day.&lt;/p&gt;
 
-&lt;p&gt;I&amp;rsquo;ve reviewed lots of projects and one of mistakes I often see is about kipple. It looks
-minor compared to bugs or architecture mistakes but at the same time it affects both
+&lt;p&gt;I&amp;rsquo;ve reviewed many projects and one mistake that I often see is about kipple. It looks
+minor compared to bugs or architectural issues but at the same time it affects both
 project and development team significantly.&lt;/p&gt;
 
-&lt;p&gt;So kipple exists. Usually it&amp;rsquo;s cryptic unneeded stuff which one hesitates to delete for
-quite vague illogical reasons. Commented out code, files like &lt;code&gt;main.css_old&lt;/code&gt;, unused
-methods, five different versions of jQuery, &lt;code&gt;// TODO:&lt;/code&gt; etc.&lt;/p&gt;
+&lt;p&gt;So kipple exists. Usually it&amp;rsquo;s cryptic unneeded stuff that one hesitates to delete and
+it is for quite vague illogical reasons. Examples of kipple is software projects include:
+commented out code, files like &lt;code&gt;main.css_old&lt;/code&gt;, unused methods, five different versions of jQuery,
+code comments like &lt;code&gt;// TODO:&lt;/code&gt;, etc.&lt;/p&gt;
 
-&lt;p&gt;That&amp;rsquo;s why kipple is both useless and bad:&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s why kipple is both useless and problematic:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Broken_windows_theory&#34;&gt;Broken Windows Theory&lt;/a&gt; applies
-well to IT projects. If it&amp;rsquo;s allowed not to clean up it&amp;rsquo;s OK to write code which is
+well to software projects. If it&amp;rsquo;s allowed not to clean up it&amp;rsquo;s OK to write code that is
 of doubtful quality.&lt;/li&gt;
-&lt;li&gt;Often developers comment out big chunks of CSS, JavaScript and HTML which are still
-served to end user slowing page loading speed.&lt;/li&gt;
-&lt;li&gt;We&amp;rsquo;re actually reading commented out parts of code. It takes time.&lt;/li&gt;
-&lt;li&gt;Large number of unused files may and would confuse newcomers.&lt;/li&gt;
-&lt;li&gt;It is unpleasant to work with such kippled project. Feels like code is of a bad quality
-even if architecture and code itself is OK.&lt;/li&gt;
+&lt;li&gt;Often developers comment out big chunks of CSS, JavaScript and HTML that are still
+served to the end user, thus slowing page loading speed.&lt;/li&gt;
+&lt;li&gt;We&amp;rsquo;re actually reading commented out parts of code, and it takes time.&lt;/li&gt;
+&lt;li&gt;Large number of unused files can confuse newcomers.&lt;/li&gt;
+&lt;li&gt;It is unpleasant to work with such &amp;ldquo;kippled&amp;rdquo; project. It can feel like the
+code is of a bad quality even if architecture and code itself is sound.&lt;/li&gt;
 &lt;li&gt;Compile time may be increased.&lt;/li&gt;
 &lt;li&gt;Any version control system remembers everything you&amp;rsquo;ll delete. If there&amp;rsquo;s a need
-you can always get it from there. If you fail to remember where it was, tag the commit.
+you can always get it from there. If you fail to remember where it was,
+you can tag the commit.
 &lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;I know that you may say that it&amp;rsquo;s not important and there&amp;rsquo;s no time for it but I highly
-recommend trying it for a few months. You&amp;rsquo;ll see difference in both the project and
+recommend trying it for a few months. You&amp;rsquo;ll notice improvements in both the project and
 overall quality of the code your team produce.&lt;/p&gt;
 </description>
     </item>
@@ -155,44 +157,44 @@ Would really appreciate if you will support me.&lt;/p&gt;
       <pubDate>Sat, 04 Mar 2017 21:52:28 +0300</pubDate>
       
       <guid>https://samdark.github.io/blog/finding-bug-with-binary-search/</guid>
-      <description>&lt;p&gt;Once there&amp;rsquo;s a way to reproduce the issue we need to find code which causes it. Sometimes we&amp;rsquo;re getting totally stuck
-for day feeling more and more depressed and, in the end, unable to think clear. Luckily, there&amp;rsquo;s a good way to
-find bug even if you have no idea what caused it and even where to set a breakpoint for proper debugging. This way is
-binary search.&lt;/p&gt;
+      <description>&lt;p&gt;Once there&amp;rsquo;s a way to reproduce the issue we need to find code which caused it. Sometimes we are totally stuck
+for day feeling more and more depressed and, in the end, unable to think clearly. Luckily, there&amp;rsquo;s a systematic approach
+to find bug even if you have no idea what caused it and even where to set a breakpoint for proper debugging.
+This approach is known as binary search.&lt;/p&gt;
 
-&lt;p&gt;If your code is under version control, you&amp;rsquo;re checking out fairly old commit and see if it works. If it works then you&amp;rsquo;re
-checking out commit which is in the middle between commit which works and commit which does not and check again. When
-there are no commits left in between you get the commit that broke it. If you&amp;rsquo;re using git you&amp;rsquo;re lucky since it has
-built-in way to do it via &lt;code&gt;git bisect&lt;/code&gt;. It is quite simple. Let&amp;rsquo;s say you&amp;rsquo;re on current &lt;code&gt;master&lt;/code&gt; commit and you have
-a bug.&lt;/p&gt;
+&lt;p&gt;If your code is under version control, firstly you check out a fairly old commit and see if it works. If it does work
+then you check out a commit that is in the middle between the commit that works and the commit which did not and check
+again. When there are no commits remaining in between the working and non-working commits, you arrived at the commit
+that broke it. If you&amp;rsquo;re using git, you&amp;rsquo;re lucky since git has built-in tool &lt;code&gt;git bisect&lt;/code&gt; that will help with this
+process. It is quite simple. Let&amp;rsquo;s say you&amp;rsquo;re on current &lt;code&gt;master&lt;/code&gt; commit and you have a bug.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git bisect # starts the process
 git bisect bad # current commit has a bug
 git bisect good 3.4.5 # I remember that commit tagged 3.4.5 was OK
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;After that git tells you something like &lt;code&gt;Bisecting: 10 revisions left to test after this&lt;/code&gt; which means
-there are about 10 commits between good and bad revision. Also it is checking out a commit which is in
+&lt;p&gt;After that, git informs you with something like &lt;code&gt;Bisecting: 10 revisions left to test after this&lt;/code&gt;, which means
+there are about 10 commits between good and bad revisions. Also it is checking out a commit which is in
 the middle of these ten.&lt;/p&gt;
 
-&lt;p&gt;Now it&amp;rsquo;s your job to launch the browser or other client and check if the bug is still there. If yes, you&amp;rsquo;re issuing
+&lt;p&gt;Now, it&amp;rsquo;s your job to confirm if the bug is still present or otherwise. If yes, you issue
 &lt;code&gt;git bisect bad&lt;/code&gt;. If not &amp;mdash; &lt;code&gt;git bisect good&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;git chooses either left of right part of these 10 commits and repeats again on that part only.&lt;/p&gt;
+&lt;p&gt;git will choose either left or right part of these 10 commits and repeat the process.&lt;/p&gt;
 
-&lt;p&gt;After a few checks you&amp;rsquo;ll get &lt;code&gt;1029012930192390 is first bad commit&lt;/code&gt; message which,
-if you answered correctly, indicates exact commit introduced the issue.&lt;/p&gt;
+&lt;p&gt;After a few checks, you&amp;rsquo;ll get, for example, &lt;code&gt;1029012930192390 is first bad commit&lt;/code&gt; message.
+If you confirmed the presence of the bug correctly, this indicates the exact commit that introduced the issue.&lt;/p&gt;
 
-&lt;p&gt;When everything is done you execute &lt;code&gt;git bisect reset&lt;/code&gt; to stop bisecting.&lt;/p&gt;
+&lt;p&gt;When everything is done you execute &lt;code&gt;git bisect reset&lt;/code&gt; to end the process.&lt;/p&gt;
 
-&lt;p&gt;Alike it could be done with HTML markup of a single page when it&amp;rsquo;s not under version control.
-If you have weird bug, delete half of the page HTML and see if issue is still there.
-If it is then divide that HTML and check parts again. If it&amp;rsquo;s not then take other half for inspection.&lt;/p&gt;
+&lt;p&gt;Similarly, the binary search approach could be done with HTML markup of a single page when it&amp;rsquo;s not under version control.
+If you have a weird bug, delete half of the HTML page code and see if issue is still present.
+If it is, then divide that HTML and check parts again. If it&amp;rsquo;s not then take other half for inspection.&lt;/p&gt;
 
-&lt;p&gt;Pro is that you&amp;rsquo;ll certainly find what caused the bug for sure. Con is that it&amp;rsquo;s not so fast in
-case you&amp;rsquo;re not using a tool like git.&lt;/p&gt;
+&lt;p&gt;The advantage is that you&amp;rsquo;ll certainly find what caused the bug for certain. However, it is a slow process when
+you&amp;rsquo;re not using a tool like git bisect.&lt;/p&gt;
 
-&lt;p&gt;Same method could be applied to anything. For example, it&amp;rsquo;s widely used in electronics.&lt;/p&gt;
+&lt;p&gt;The same methodology can be applied to anything. For example, this process widely used in electronics.&lt;/p&gt;
 </description>
     </item>
     
@@ -204,49 +206,49 @@ case you&amp;rsquo;re not using a tool like git.&lt;/p&gt;
       <guid>https://samdark.github.io/blog/the-history-of-yii-framework/</guid>
       <description>
 
-&lt;p&gt;Yii is one of the long-living PHP frameworks out there constantly evolving with time
-as PHP is enhanced more and more. It&amp;rsquo;s interesting to know how it was made.&lt;/p&gt;
+&lt;p&gt;Yii is one of the long-living PHP frameworks out there that is constantly evolving with time
+as PHP is enhanced more and more. It&amp;rsquo;s interesting explore the history of Yii.&lt;/p&gt;
 
 &lt;h2 id=&#34;prado&#34;&gt;Prado&lt;/h2&gt;
 
-&lt;p&gt;In June 2004 Qiang Xue released first version of PRADO framework. He was inspired
+&lt;p&gt;In June 2004, Qiang Xue released the first version of PRADO framework. Prado was inspired
 by Apache Tapestry, Borland Delphi and Microsoft ASP.NET.&lt;/p&gt;
 
-&lt;p&gt;Roughly at the same time Zend conducted a competition called &amp;ldquo;gophp5&amp;rdquo; to promote
-just released PHP 5.0. Qiang re-implemented framework on PHP 5 and won the
+&lt;p&gt;Roughly at the same time, Zend conducted a competition called &amp;ldquo;gophp5&amp;rdquo; to promote
+the newly released PHP 5.0. Qiang re-implemented Prado to PHP 5 and it won the
 competition.&lt;/p&gt;
 
-&lt;p&gt;At the time project was hosted at SourceForge. In the middle of 2005 Wei Zhuo helped
-with i18n and l10n. Prado 2.0 was released.&lt;/p&gt;
+&lt;p&gt;At the time, the project was hosted on SourceForge. In the mid-2005, Wei Zhuo joined
+and helped to add i18n and l10n. Prado 2.0 was released.&lt;/p&gt;
 
-&lt;p&gt;In May 2005 it was decided to re-write framework again to include new cool features
-inspired by Microsoft ASP.NET 2.0. In April 2006 version 3.0 was released. Starting
-from it Prado team mostly on code quality and stability.&lt;/p&gt;
+&lt;p&gt;In May 2005, Prado was again rewritten to include new features inspired
+by Microsoft ASP.NET 2.0. In April 2006, version 3.0 was released. Since
+then then Prado team has mostly focused on code quality and stability.&lt;/p&gt;
 
 &lt;p&gt;PRADO is still alive and used.&lt;/p&gt;
 
 &lt;h2 id=&#34;yii&#34;&gt;Yii&lt;/h2&gt;
 
-&lt;p&gt;In October 2006 Qiang announced alpha version of Yii at PRADO forums.&lt;/p&gt;
+&lt;p&gt;In October 2006, Qiang announced an alpha version of Yii at the PRADO forums.&lt;/p&gt;
 
-&lt;p&gt;December 3rd 2008 version 1.0.0 was out. Many ideas and some code were taken
-from PRADO: ActiveRecord, i18n, l10n etc. More inspiration was from
+&lt;p&gt;On the 3rd of December 2008, Yii version 1.0.0 was released. Many ideas and some code were taken
+from PRADO, including: ActiveRecord, i18n, l10n, etc. Yii also drew more inspirations from
 RoR (convention over configuration, some AR features), symfony1 (filters,
 plugins) and Joomla (modules, message translation).&lt;/p&gt;
 
-&lt;p&gt;Yii 1.0.0 was significantly faster than other frameworks with alike functionality
+&lt;p&gt;Yii 1.0.0 was significantly faster than other frameworks of similar functionality,
 so community grew fast.&lt;/p&gt;
 
-&lt;p&gt;In January 2010 Yii 1.1 was out. It had form builder, relational queries in AR,
-ready to use unit-testing framework and more.&lt;/p&gt;
+&lt;p&gt;In January 2010, Yii 1.1 was released. It included new features such as form builder,
+relational queries in AR, ready to use unit-testing framework and more.&lt;/p&gt;
 
-&lt;p&gt;I&amp;rsquo;ve joined Yii team in 2010. By the end of the year we were discussing Yii 1.2
-while developing version 1.1. In may 2011 it was decided to use newer PHP versions
-and fix architectural mistakes i.e. to do 2.0. First commit was made into then
-secret repository.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve joined Yii team in 2010. By the end of the year, we were discussing Yii 1.2
+while developing version 1.1. In May 2011, the Yii team decided to use a newer PHP versions
+and address legacy architectural challenges. That is, to start work on new major version 2.0.
+The first commits were on a private intenal repository.&lt;/p&gt;
 
-&lt;p&gt;In May 2013 Yii 2.0 code was presented to public. In October 2014 first stable release
-was out.&lt;/p&gt;
+&lt;p&gt;In May 2013, Yii 2.0 and its source code was presented to public. In October 2014, the first stable
+version we released.&lt;/p&gt;
 </description>
     </item>
     
