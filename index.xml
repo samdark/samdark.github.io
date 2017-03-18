@@ -94,6 +94,8 @@ your apartment, when you wake up the next morning there&amp;rsquo;s twice as muc
 &lt;p&gt;IT projects are much like the apartments mentioned in Philip K. Dick novel. They tend
 to have kipple and, as with apartments, it grows every day.&lt;/p&gt;
 
+&lt;p&gt;&lt;img src=&#34;https://samdark.github.io/img/posts/kipple.png&#34; width=&#34;50%&#34; /&gt;&lt;/p&gt;
+
 &lt;p&gt;I&amp;rsquo;ve reviewed many projects and one mistake that I often see is about kipple. It looks
 minor compared to bugs or architectural issues but at the same time it affects both
 project and development team significantly.&lt;/p&gt;
@@ -197,6 +199,8 @@ git bisect good 3.4.5 # I remember that commit tagged 3.4.5 was OK
 &lt;p&gt;After that, git informs you with something like &lt;code&gt;Bisecting: 10 revisions left to test after this&lt;/code&gt;, which means
 there are about 10 commits between good and bad revisions. Also it is checking out a commit which is in
 the middle of these ten.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://samdark.github.io/img/posts/binary_search.png&#34; width=&#34;50%&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Now, it&amp;rsquo;s your job to confirm if the bug is still present or otherwise. If yes, you issue
 &lt;code&gt;git bisect bad&lt;/code&gt;. If not &amp;mdash; &lt;code&gt;git bisect good&lt;/code&gt;.&lt;/p&gt;

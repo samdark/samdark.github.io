@@ -35,9 +35,9 @@
 
 
     
-    <link rel="stylesheet" href="https://samdark.github.io/css/reset.css?t=1489486110">
-    <link rel="stylesheet" href="https://samdark.github.io/css/pygments.css?t=1489486110">
-    <link rel="stylesheet" href="https://samdark.github.io/css/main.css?t=1489486110">
+    <link rel="stylesheet" href="https://samdark.github.io/css/reset.css?t=1489829994">
+    <link rel="stylesheet" href="https://samdark.github.io/css/pygments.css?t=1489829994">
+    <link rel="stylesheet" href="https://samdark.github.io/css/main.css?t=1489829994">
     
 
 
@@ -153,6 +153,8 @@ git bisect good 3.4.5 # I remember that commit tagged 3.4.5 was OK
 <p>After that, git informs you with something like <code>Bisecting: 10 revisions left to test after this</code>, which means
 there are about 10 commits between good and bad revisions. Also it is checking out a commit which is in
 the middle of these ten.</p>
+
+<p><img src="https://samdark.github.io/img/posts/binary_search.png" width="50%" /></p>
 
 <p>Now, it&rsquo;s your job to confirm if the bug is still present or otherwise. If yes, you issue
 <code>git bisect bad</code>. If not &mdash; <code>git bisect good</code>.</p>
