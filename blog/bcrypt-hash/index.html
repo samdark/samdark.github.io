@@ -14,10 +14,10 @@
 <title>
 
 
-     Finding Bug with Binary Search 
+     bcrypt hash 
 
 </title>
-<link rel="canonical" href="https://samdark.github.io/blog/finding-bug-with-binary-search/">
+<link rel="canonical" href="https://samdark.github.io/blog/bcrypt-hash/">
 
 
 
@@ -118,7 +118,7 @@
                 <div class="title-container">
                     <div class="page-heading">
 
-    Finding Bug with Binary Search
+    bcrypt hash
 
 </div>
 
@@ -126,54 +126,38 @@
                 </div>
                 <div class="meta">
                     
-                    <div class="date" title='Sat Mar 4 2017 21:52:28 MSK'>Mar 4, 2017</div>
+                    <div class="date" title='Thu Mar 23 2017 11:41:26 MSK'>Mar 23, 2017</div>
                     
                     
-                    <div class="reading-time"><div class="middot"></div>3 minutes read</div>
+                    <div class="reading-time"><div class="middot"></div>1 minute read</div>
                     
                 </div>
             </div>
             <div class="markdown">
-                <p>Once there&rsquo;s a way to reproduce the issue we need to find code which caused it. Sometimes we are totally stuck
-for day feeling more and more depressed and, in the end, unable to think clearly. Luckily, there&rsquo;s a systematic approach
-to find bug even if you have no idea what caused it and even where to set a breakpoint for proper debugging.
-This approach is known as binary search.</p>
+                <p>bcrypt is a good way to deal with password authentication. In PHP it is available via
+<a href="https://secure.php.net/manual/en/function.crypt.php">crypt</a> with blowfish algorithm or a shortcut
+<a href="https://secure.php.net/manual/en/function.password-hash.php">password_hash</a> function current PHP versions are providing.</p>
 
-<p>If your code is under version control, firstly you check out a fairly old commit and see if it works. If it does work
-then you check out a commit that is in the middle between the commit that works and the commit which did not and check
-again. When there are no commits remaining in between the working and non-working commits, you arrived at the commit
-that broke it. If you&rsquo;re using git, you&rsquo;re lucky since git has built-in tool <code>git bisect</code> that will help with this
-process. It is quite simple. Let&rsquo;s say you&rsquo;re on current <code>master</code> commit and you have a bug.</p>
+<p>Yii framework project templates are using bcrypt for handling passwords. Framework components
+are <a href="http://www.yiiframework.com/doc-2.0/yii-base-security.html#generatePasswordHash()-detail">providing polyfills ensuring bcrypt is used correctly</a>.</p>
 
-<pre><code class="language-bash">git bisect # starts the process
-git bisect bad # current commit has a bug
-git bisect good 3.4.5 # I remember that commit tagged 3.4.5 was OK
-</code></pre>
+<p>bcrypt produces a compound hash that looks like the following:</p>
 
-<p>After that, git informs you with something like <code>Bisecting: 10 revisions left to test after this</code>, which means
-there are about 10 commits between good and bad revisions. Also it is checking out a commit which is in
-the middle of these ten.</p>
+<p>$<strong style="color: #f00">2y</strong>$<strong style="color: #0a0">13</strong>$<strong style="color: #00f">YUUgrko03UmNU/fe6gNcO.</strong><strong style="color: #00a">Hka4lrdRlkq0iJ5d4bv4fK.sKS.6jXu</strong></p>
 
-<p><img src="https://samdark.github.io/img/posts/binary_search.png" width="50%" /></p>
+<p>The string is always 60 characters long.</p>
 
-<p>Now, it&rsquo;s your job to confirm if the bug is still present or otherwise. If yes, you issue
-<code>git bisect bad</code>. If not &mdash; <code>git bisect good</code>.</p>
+<ul>
+<li><strong style="color: #f00">2y</strong> indicates algorithm. We are using blowfish so in current PHP versions it should
+always be <code>2y</code>.</li>
+<li><strong style="color: #0a0">13</strong> is computation cost. 2^13 iterations of <a href="https://en.wikipedia.org/wiki/Key_derivation_function">key derivation function</a>.</li>
+<li>Rest of the string is concatenated salt, and hash encoded with base64 with a custom set of characters.
+First 22 symbols are <strong style="color: #00f">16 bytes salt</strong>. The rest are <strong style="color: #00a">the hash itself</strong>.</li>
+</ul>
 
-<p>git will choose either left or right part of these 10 commits and repeat the process.</p>
-
-<p>After a few checks, you&rsquo;ll get, for example, <code>1029012930192390 is first bad commit</code> message.
-If you confirmed the presence of the bug correctly, this indicates the exact commit that introduced the issue.</p>
-
-<p>When everything is done you execute <code>git bisect reset</code> to end the process.</p>
-
-<p>Similarly, the binary search approach could be done with HTML markup of a single page when it&rsquo;s not under version control.
-If you have a weird bug, delete half of the HTML page code and see if issue is still present.
-If it is, then divide that HTML and check parts again. If it&rsquo;s not then take other half for inspection.</p>
-
-<p>The advantage is that you&rsquo;ll certainly find what caused the bug for certain. However, it is a slow process when
-you&rsquo;re not using a tool like git bisect.</p>
-
-<p>The same methodology can be applied to anything. For example, this process widely used in electronics.</p>
+<p>When verifying a password input bcrypt extract algorithm version, cost, salt and hash from compound hash string of
+a saved password. Then, using the data extracted, it calculates a hash of the input and compares it with the hash
+we store.</p>
 
                 <br>
                 <p><a href="https://samdark.github.io/blog/">Back to posts</a></p>
@@ -183,9 +167,9 @@ you&rsquo;re not using a tool like git bisect.</p>
                 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'samdark';
-    var disqus_identifier = 'https:\/\/samdark.github.io\/blog\/finding-bug-with-binary-search\/';
-    var disqus_title = 'Finding Bug with Binary Search';
-    var disqus_url = 'https:\/\/samdark.github.io\/blog\/finding-bug-with-binary-search\/';
+    var disqus_identifier = 'https:\/\/samdark.github.io\/blog\/bcrypt-hash\/';
+    var disqus_title = 'bcrypt hash';
+    var disqus_url = 'https:\/\/samdark.github.io\/blog\/bcrypt-hash\/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
