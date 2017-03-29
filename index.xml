@@ -6,8 +6,190 @@
     <description>Recent content on Alexander Makarov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 23 Mar 2017 11:41:26 +0300</lastBuildDate>
+    <lastBuildDate>Wed, 29 Mar 2017 16:14:29 +0300</lastBuildDate>
     <atom:link href="https://samdark.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Patrons</title>
+      <link>https://samdark.github.io/patrons/</link>
+      <pubDate>Wed, 29 Mar 2017 16:14:29 +0300</pubDate>
+      
+      <guid>https://samdark.github.io/patrons/</guid>
+      <description>
+
+&lt;p&gt;My OpenSource time is &lt;a href=&#34;https://www.patreon.com/samdark&#34;&gt;backed financially by Yii and PHP communities&lt;/a&gt; via
+&lt;a href=&#34;https://patreon.com/invite/zxlxwv&#34;&gt;Patreon&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;top-backers&#34;&gt;Top backers&lt;/h2&gt;
+
+&lt;ul id=&#34;patrons&#34;&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/brandon_kelly.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;a class=&#34;name&#34; href=&#34;https://github.com/brandonkelly&#34;&gt;Brandon Kelly&lt;/a&gt;
+        &lt;span class=&#34;info&#34;&gt;
+            &lt;a href=&#34;https://craftcms.com/&#34;&gt;Craft CMS&lt;/a&gt; and &lt;a href=&#34;http://pixelandtonic.com/&#34;&gt;Pixel &amp; Tonic&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/tobias_munk.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;a class=&#34;name&#34; href=&#34;https://github.com/schmunk42&#34;&gt;Tobias Munk&lt;/a&gt;
+        &lt;span class=&#34;info&#34;&gt;
+            &lt;a href=&#34;http://phundament.com/&#34;&gt;Phundament&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/no_photo.png&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;a class=&#34;name&#34; href=&#34;https://github.com/luke-&#34;&gt;Lucas Bartholemy&lt;/a&gt;
+        &lt;span class=&#34;info&#34;&gt;
+            &lt;a href=&#34;https://www.humhub.org/en&#34;&gt;HumHub&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/bob_violier.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;a class=&#34;name&#34; href=&#34;https://github.com/bviolier&#34;&gt;Bob Violier&lt;/a&gt;
+        &lt;span class=&#34;info&#34;&gt;
+            &lt;a href=&#34;https://www.messagebird.com/&#34;&gt;MessageBird&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/timur_ruziev.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;a class=&#34;name&#34; href=&#34;https://github.com/resurtm&#34;&gt;Timur Ruziev&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/dragan_zivkovic.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;a class=&#34;name&#34; href=&#34;https://github.com/dzivkovic&#34;&gt;Dragan Zivkovic&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/no_photo.png&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;span class=&#34;name&#34;&gt;Paul Heisig&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/ilya_pistol.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;a class=&#34;name&#34; href=&#34;https://github.com/pistol88&#34;&gt;Ilya Pistol&lt;/a&gt;
+        &lt;span class=&#34;info&#34;&gt;
+            &lt;a href=&#34;http://nethammer.ru/&#34;&gt;Nethammer&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/serban_cristian.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;a class=&#34;name&#34; href=&#34;https://github.com/twisted1919&#34;&gt;Serban Cristian&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/daniel_fly.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;span class=&#34;name&#34;&gt;Daniel Fly&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/no_photo.png&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;a class=&#34;name&#34; href=&#34;https://github.com/Caravus&#34;&gt;Evgeniy Denisenko&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/no_photo.png&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;a class=&#34;name&#34; href=&#34;https://github.com/djeux&#34;&gt;djeux&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/ulisses_vaquero.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;a class=&#34;name&#34; href=&#34;https://github.com/ulissesvaquero&#34;&gt;Ulisses Vaquero&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/judd_bundy.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;a class=&#34;name&#34; href=&#34;https://github.com/dataskills&#34;&gt;Judd Bundy&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/alexander_bondarev.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;span class=&#34;name&#34;&gt;Alexander Bondarev&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/pavel_tetyaev.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;a class=&#34;name&#34; href=&#34;https://github.com/pahanini&#34;&gt;Pavel Tetyaev&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/sergey_senokossov.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;span class=&#34;name&#34;&gt;Sergey Senokossov&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/maxim_smirnov.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;span class=&#34;name&#34;&gt;Maxim Smirnov&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/ivan_filatov.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;a class=&#34;name&#34; href=&#34;https://github.com/Offout&#34;&gt;Ivan Filatov&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/no_photo.png&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;span class=&#34;name&#34;&gt;James crittenden&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/no_photo.png&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;span class=&#34;name&#34;&gt;John Wales&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/vuong_minh.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;a class=&#34;name&#34; href=&#34;https://github.com/vuongminh&#34;&gt;Vuong Minh&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/no_photo.png&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;span class=&#34;name&#34;&gt;alexvil&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/chris_smith.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;a class=&#34;name&#34; href=&#34;https://github.com/cgsmith&#34;&gt;Chris Smith&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/anton_shelyganov.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;a class=&#34;name&#34; href=&#34;https://github.com/antonshell&#34;&gt;Anton Shelyganov&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/petr_myazin.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;a class=&#34;name&#34; href=&#34;https://github.com/pqr&#34;&gt;Petr Myazin&lt;/a&gt;
+        &lt;span class=&#34;info&#34;&gt;
+            &lt;a href=&#34;https://5minphp.ru/&#34;&gt;Пятиминутка PHP&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/scott_arciszewski.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;a class=&#34;name&#34; href=&#34;https://github.com/sarciszewski&#34;&gt;Scott Arciszewski&lt;/a&gt;
+        &lt;span class=&#34;info&#34;&gt;
+            &lt;a href=&#34;https://paragonie.com/&#34;&gt;Paragon Initiative Enterprises&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/nikola_trifunovic.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;a class=&#34;name&#34; href=&#34;https://github.com/johonunu&#34;&gt;Nikola Trifunović&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/no_photo.png&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;span class=&#34;name&#34;&gt;Chris Weyland&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/alexander_kozhevnikov.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;a class=&#34;name&#34; href=&#34;https://github.com/bethrezen&#34;&gt;Alexander Kozhevnikov&lt;/a&gt;
+        &lt;span class=&#34;info&#34;&gt;
+            &lt;a href=&#34;https://dotplant.ru/&#34;&gt;dotPlant2 CMS&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/justin_cherniak.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;a class=&#34;name&#34; href=&#34;https://github.com/jcherniak&#34;&gt;Justin Cherniak&lt;/a&gt;
+        &lt;span class=&#34;info&#34;&gt;
+            &lt;a href=&#34;https://www.pinfirelabs.com/&#34;&gt;Pinfire labs&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/rodolfo_carmona.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;span class=&#34;name&#34;&gt;Rodolfo Carmona&lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/pawel_brzozowsky.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;a class=&#34;name&#34; href=&#34;https://github.com/bizley&#34;&gt;Paweł Brzozowski&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Big thank you to the ones backed me, listed and unlisted. I would really appreciate if you will
+support me as well.&lt;/p&gt;
+
+&lt;p&gt;If any info should be added, corrected or removed, email me at &lt;a href=&#34;mailto:sam@rmcreative.ru&#34;&gt;sam@rmcreative.ru&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>bcrypt hash</title>
@@ -191,6 +373,8 @@ Would really appreciate if you will support me.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Code Reviews (basic security, Yii usage, cleanness, possible bugs etc.).&lt;/li&gt;
 &lt;li&gt;Consulting (both Yii-related and not).&lt;/li&gt;
+&lt;li&gt;Bootstrapping commuities.&lt;/li&gt;
+&lt;li&gt;Checking project is good for OpenSource before publishing.&lt;/li&gt;
 &lt;li&gt;Training and instruction.&lt;/li&gt;
 &lt;li&gt;Public speaking.&lt;/li&gt;
 &lt;li&gt;Technical writing.&lt;/li&gt;
