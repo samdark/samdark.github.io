@@ -6,8 +6,77 @@
     <description>Recent content in Blog on Alexander Makarov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 17 Apr 2017 13:49:29 +0300</lastBuildDate>
+    <lastBuildDate>Tue, 18 Apr 2017 12:58:47 +0300</lastBuildDate>
     <atom:link href="https://samdark.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Yii Q&amp;A 1</title>
+      <link>https://samdark.github.io/blog/yii-qa-1/</link>
+      <pubDate>Tue, 18 Apr 2017 12:58:47 +0300</pubDate>
+      
+      <guid>https://samdark.github.io/blog/yii-qa-1/</guid>
+      <description>&lt;p&gt;Some questions I&amp;rsquo;m answering are asked often so I decided to publish answers here. Feel free to ask more in comments.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Can you clarify please who has what role in Yii 2 maintenance and development?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/qiangxue/&#34;&gt;@qiangxue&lt;/a&gt;, Qiang Xue — creator of Yii, see below&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/samdark/&#34;&gt;@samdark&lt;/a&gt;, Alexander Makarov — everything&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cebe/&#34;&gt;@cebe&lt;/a&gt;, Carsten Brandt — everything&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/klimov-paul/&#34;&gt;@klimov-paul&lt;/a&gt;, Klimov Paul — everything. Focuses on code&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/silverfire/&#34;&gt;@silverfire&lt;/a&gt;, Dmitry Naumenko — everything. Temporarily busy with own projects&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/arogachev/&#34;&gt;@arogachev&lt;/a&gt;, Alexey Rogachev — everything. Focuses on JavaScript. Temporarily busy with own projects&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/dynasource/&#34;&gt;@dynasource&lt;/a&gt;, Boudewijn Vahrmeijer — everything. Temporarily busy with own projects&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/mdomba/&#34;&gt;@mdomba&lt;/a&gt;, Maurizio Domba Cerin — forums, community&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/schmunk42/&#34;&gt;@schmunk42&lt;/a&gt;, Tobias Munk — &lt;a href=&#34;https://github.com/yiisoft/yii2-docker&#34;&gt;Docker images&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/mikehaertl/&#34;&gt;@mikehaertl&lt;/a&gt;, Michael Härtl — &lt;a href=&#34;https://github.com/yiisoft/yii2-docker&#34;&gt;Docker images&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/beowulfenator/&#34;&gt;@beowulfenator&lt;/a&gt;, Konstantin Sirotkin — &lt;a href=&#34;https://github.com/yiisoft/yii2-elasticsearch&#34;&gt;Elastic search extension&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Additionally, there are &lt;a href=&#34;https://github.com/yiisoft/yii2/graphs/contributors&#34;&gt;many active contributors&lt;/a&gt; who take care
+about many aspects of the framework.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Are you now the project lead?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Yii doesn&amp;rsquo;t work this way. The structure is more or less flat.&lt;/p&gt;
+
+&lt;p&gt;Smaller decisions are made mostly individually. Strategical decisions are discussed within core team. Usually there is a
+compromise. If not, we do either voting or forced decision (extremely rare).&lt;/p&gt;
+
+&lt;p&gt;Personally, I do many things about Yii: development, issues, forums and various communities, announcements and media,
+conferences, and, of course, trying out new things for the next versions.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;What is the role of Qiang — is he not involved in Yii 2 development anymore?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Yes. Qiang still gives advice if needed and manages some parts of Yii infrastructure. He isn&amp;rsquo;t active about development
+and isn&amp;rsquo;t going to get back anytime soon.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;What&amp;rsquo;s the roadmap for Yii 2 development?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;There&amp;rsquo;s &lt;a href=&#34;https://github.com/yiisoft/yii2/wiki/Plan-for-next-major-versions&#34;&gt;a wiki page&lt;/a&gt; which has ideas and work in
+progress roadmap.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Which version of PHP will be required by the next Yii?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Most likely, PHP 7.1.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Is there going to be another Yii 1.1 relase?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Yes. &lt;a href=&#34;https://github.com/yiisoft/yii/milestones/1.1.18&#34;&gt;We&amp;rsquo;re almost there&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Are traits evil?</title>
