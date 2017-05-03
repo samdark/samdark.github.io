@@ -47,6 +47,10 @@
   </url>
   
   <url>
+    <loc>https://samdark.github.io/travel/on-planes/</loc>
+  </url>
+  
+  <url>
     <loc>https://samdark.github.io/</loc>
     <lastmod>2017-04-18T12:58:47+03:00</lastmod>
     <priority>0</priority>
@@ -55,6 +59,11 @@
   <url>
     <loc>https://samdark.github.io/blog/</loc>
     <lastmod>2017-04-18T12:58:47+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://samdark.github.io/travel/</loc>
     <priority>0</priority>
   </url>
   
