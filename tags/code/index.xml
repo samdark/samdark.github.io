@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Code on Alexander Makarov</title>
+    <link>https://samdark.github.io/tags/code/</link>
+    <description>Recent content in Code on Alexander Makarov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 05 Mar 2017 21:52:28 +0300</lastBuildDate>
+    
+	<atom:link href="https://samdark.github.io/tags/code/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>No Kipple Please</title>
+      <link>https://samdark.github.io/blog/no-kipple-please/</link>
+      <pubDate>Sun, 05 Mar 2017 21:52:28 +0300</pubDate>
+      
+      <guid>https://samdark.github.io/blog/no-kipple-please/</guid>
+      <description>&amp;ldquo;Kipple is useless objects, like junk mail or match folders after you use the last match or gum wrappers or yesterday&amp;rsquo;s homeopape. When nobody&amp;rsquo;s around, kipple reproduces itself. For instance, if you go to bed leaving any kipple around your apartment, when you wake up the next morning there&amp;rsquo;s twice as much of it. It always gets more and more.&amp;rdquo;
+&amp;hellip;
+&amp;ldquo;There&amp;rsquo;s the First Law of Kipple,&amp;rdquo; he said. &amp;ldquo;Kipple drives out nonkipple.</description>
+    </item>
+    
+  </channel>
+</rss>

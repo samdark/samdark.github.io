@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://samdark.github.io/blog/why-am-i-getting-dull-images-after-processing-raw-files/</loc>
+    <lastmod>2017-05-08T00:40:17+03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://samdark.github.io/blog/yii-qa-1/</loc>
     <lastmod>2017-04-18T12:58:47+03:00</lastmod>
   </url>
@@ -48,13 +53,31 @@
   
   <url>
     <loc>https://samdark.github.io/</loc>
-    <lastmod>2017-04-18T12:58:47+03:00</lastmod>
+    <lastmod>2017-05-08T00:40:17+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://samdark.github.io/tags/bcrypt/</loc>
+    <lastmod>2017-03-23T11:41:26+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://samdark.github.io/tags/binary-search/</loc>
+    <lastmod>2017-03-04T21:52:28+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://samdark.github.io/tags/bisect/</loc>
+    <lastmod>2017-03-04T21:52:28+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://samdark.github.io/blog/</loc>
-    <lastmod>2017-04-18T12:58:47+03:00</lastmod>
+    <lastmod>2017-05-08T00:40:17+03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -64,7 +87,98 @@
   </url>
   
   <url>
+    <loc>https://samdark.github.io/tags/code/</loc>
+    <lastmod>2017-03-05T21:52:28+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://samdark.github.io/tags/color/</loc>
+    <lastmod>2017-05-08T00:40:17+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://samdark.github.io/tags/dull/</loc>
+    <lastmod>2017-05-08T00:40:17+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://samdark.github.io/tags/git/</loc>
+    <lastmod>2017-03-04T21:52:28+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://samdark.github.io/tags/log/</loc>
+    <lastmod>2017-03-09T12:39:18+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://samdark.github.io/tags/password/</loc>
+    <lastmod>2017-03-23T11:41:26+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://samdark.github.io/tags/photography/</loc>
+    <lastmod>2017-05-08T00:40:17+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://samdark.github.io/tags/photoshop/</loc>
+    <lastmod>2017-05-08T00:40:17+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://samdark.github.io/tags/php/</loc>
+    <lastmod>2017-04-17T13:49:29+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://samdark.github.io/tags/psr/</loc>
+    <lastmod>2017-03-09T12:39:18+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://samdark.github.io/tags/psr-3/</loc>
+    <lastmod>2017-03-09T12:39:18+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://samdark.github.io/tags/qa/</loc>
+    <lastmod>2017-04-18T12:58:47+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://samdark.github.io/tags/raw/</loc>
+    <lastmod>2017-05-08T00:40:17+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://samdark.github.io/tags/</loc>
+    <lastmod>2017-03-23T11:41:26+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://samdark.github.io/tags/trait/</loc>
+    <lastmod>2017-04-17T13:49:29+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://samdark.github.io/tags/yii/</loc>
+    <lastmod>2017-04-18T12:58:47+03:00</lastmod>
     <priority>0</priority>
   </url>
   
