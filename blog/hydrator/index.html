@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Engineer having fun">
+
+<base href="https://samdark.github.io/">
+<title>
+
+
+     Hydrator 
+
+</title>
+<link rel="canonical" href="https://samdark.github.io/blog/hydrator/">
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="https://samdark.github.io/css/reset.css?t=1494626464">
+    <link rel="stylesheet" href="https://samdark.github.io/css/pygments.css?t=1494626464">
+    <link rel="stylesheet" href="https://samdark.github.io/css/main.css?t=1494626464">
+    
+        <link rel="stylesheet" href="https://samdark.github.io/css/override.css?t=1494626464">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://samdark.github.io/img/favicon.ico"
+
+>
+
+
+
+
+
+
+</head>
+
+
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+              <a href="https://samdark.github.io/"><img class="avatar" src="https://samdark.github.io/img/avatar.jpg" /></a>
+            
+            <a href="https://samdark.github.io/"><div class="name">Alexander Makarov / @samdark</div></a>
+            
+              <h3 class="self-intro">Engineer having fun</h3>
+            
+            <nav>
+                <ul>
+                    <li class="nav-blog"><a href="https://samdark.github.io/blog/">Blog</a></li>
+                    <li class="nav-blog"><a href="https://samdark.github.io/patrons/">Patrons</a></li>
+                    <li class="nav-about"><a href="https://samdark.github.io/about/">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+
+        
+            <a href="//github.com/samdark" target="_blank" rel="noopener"><img class="icon" src="https://samdark.github.io/img/github.svg" alt="github" /></a>
+        
+
+        
+            <a href="//twitter.com/sam_dark" target="_blank" rel="noopener"><img class="icon" src="https://samdark.github.io/img/twitter.svg" alt="twitter" /></a>
+        
+
+        
+            <a href="//linkedin.com/in/makarov" target="_blank" rel="noopener"><img class="icon" src="https://samdark.github.io/img/linkedin.svg" alt="linkedin" /></a>
+        
+
+        
+
+        
+
+        
+            <a href="mailto:sam@rmcreative.ru"><img class="icon" src="https://samdark.github.io/img/email.svg" alt="email" /></a>
+        
+
+        
+            <a href="https://samdark.github.io/index.xml"><img class="icon" src="https://samdark.github.io/img/rss.svg" alt="rss" /></a>
+        
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    Hydrator
+
+</div>
+
+                    <div class="initials"><a href="https://samdark.github.io/"></a></div>
+                </div>
+                <div class="meta">
+                    
+                    <div class="date" title='Sat May 13 2017 00:59:27 MSK'>May 13, 2017</div>
+                    
+                    
+                    <div class="reading-time"><div class="middot"></div>2 minutes read</div>
+                    
+                </div>
+            </div>
+            <div class="markdown">
+                
+
+<p>November 2016 I&rsquo;ve implemented and released a <a href="https://github.com/samdark/hydrator">Hydrator library</a> but never properly
+announced it. As far as I know, the &ldquo;hydrator&rdquo; term was first used in <a href="http://hibernate.org/orm/">Hibernate Java ORM</a>.
+The job of a hydrator is to fill an object with data or extract data from an object without calling constructor or extra
+getter-setter methods. It allows you to directly work with private properties which should be persisted to database
+or loaded from database while not exposing these properties thus keeping public interface clean.</p>
+
+<p>Internally it uses <a href="http://php.net/manual/en/book.reflection.php">PHP reflection</a>.</p>
+
+<p><img src="https://samdark.github.io/img/posts/hydration.png" alt="" /></p>
+
+<h2 id="usage">Usage</h2>
+
+<p>Consider we have a <code>Post</code> entity which represents a blog post. It has a title and a text. A unique id is generated to
+identify it.</p>
+
+<pre><code class="language-php">class Post
+{
+    private $id;
+    protected $title;
+    protected $text;
+
+    public function __construct($title, $text)
+    {
+        $this-&gt;id = uniqid('post_', true);
+        $this-&gt;title = $title;
+        $this-&gt;text = $text;
+    }
+   
+    public function getId()
+    {
+        return $this-&gt;id;
+    }
+    
+    public function getTitle()
+    {
+        return $this-&gt;title;
+    }
+    
+    public function setTitle($title)
+    {
+        $this-&gt;title = $title;
+    }
+    
+    public function getText()
+    {
+        return $this-&gt;text;
+    }
+    
+    public function setText()
+    {
+        return $this-&gt;text;
+    }
+}
+</code></pre>
+
+<p>Saving a post to database:</p>
+
+<pre><code class="language-php">$post = new Post('First post', 'Hell, it is a first post.');
+
+$postHydrator = new \samdark\hydrator\Hydrator([
+    'id' =&gt; 'id',
+    'title' =&gt; 'title',
+    'text' =&gt; 'text',
+]);
+
+$data = $postHydrator-&gt;extract($post);
+save_to_database($data);
+</code></pre>
+
+<p>Loading post from database:</p>
+
+<pre><code class="language-php">&lt;?php
+$data = load_from_database();
+
+$postHydrator = new \samdark\hydrator\Hydrator([
+    'id' =&gt; 'id',
+    'title' =&gt; 'title',
+    'text' =&gt; 'text',
+]);
+
+$post = $postHydrator-&gt;hydrate($data, Post::class);
+echo $post-&gt;getId();
+</code></pre>
+
+<p>Filling existing post object with data:</p>
+
+<pre><code class="language-php">$data = load_from_database();
+
+$postHydrator = new \samdark\hydrator\Hydrator([
+    'title' =&gt; 'title',
+    'text' =&gt; 'text',
+]);
+
+$post = get_post();
+$post = $postHydrator-&gt;hydrateInto($data, $post);
+echo $post-&gt;getTitle();
+</code></pre>
+
+<h2 id="usage-in-yii">Usage in Yii</h2>
+
+<p>It&rsquo;s not currently used in Yii in any way. One may use it to implement his own data mapping
+in a repository in case of purchasing
+<a href="https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html">clean architecture</a>
+and <a href="https://en.wikipedia.org/wiki/Domain-driven_design">domain driven design</a> where encapsulation is uber-important.</p>
+
+                <br>
+
+                <ul id="tags">
+                    
+                    <li><a href="https://samdark.github.io/tags/php">php</a> </li>
+                    
+                    <li><a href="https://samdark.github.io/tags/hydrator">hydrator</a> </li>
+                    
+                </ul>
+
+                <p><a href="https://samdark.github.io/blog/">Back to posts</a></p>
+            </div>
+            <br>
+            <div class="disqus">
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'samdark';
+    var disqus_identifier = 'https:\/\/samdark.github.io\/blog\/hydrator\/';
+    var disqus_title = 'Hydrator';
+    var disqus_url = 'https:\/\/samdark.github.io\/blog\/hydrator\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-93053867-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+  
+
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+</body>
+</html>
+

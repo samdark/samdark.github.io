@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Engineer having fun">
+
+<base href="https://samdark.github.io/">
+<title>
+
+
+     SMS Security and Alternatives 
+
+</title>
+<link rel="canonical" href="https://samdark.github.io/blog/sms-security-and-alternatives/">
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="https://samdark.github.io/css/reset.css?t=1494626196">
+    <link rel="stylesheet" href="https://samdark.github.io/css/pygments.css?t=1494626196">
+    <link rel="stylesheet" href="https://samdark.github.io/css/main.css?t=1494626196">
+    
+        <link rel="stylesheet" href="https://samdark.github.io/css/override.css?t=1494626196">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://samdark.github.io/img/favicon.ico"
+
+>
+
+
+
+
+
+
+</head>
+
+
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+              <a href="https://samdark.github.io/"><img class="avatar" src="https://samdark.github.io/img/avatar.jpg" /></a>
+            
+            <a href="https://samdark.github.io/"><div class="name">Alexander Makarov / @samdark</div></a>
+            
+              <h3 class="self-intro">Engineer having fun</h3>
+            
+            <nav>
+                <ul>
+                    <li class="nav-blog"><a href="https://samdark.github.io/blog/">Blog</a></li>
+                    <li class="nav-blog"><a href="https://samdark.github.io/patrons/">Patrons</a></li>
+                    <li class="nav-about"><a href="https://samdark.github.io/about/">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+
+        
+            <a href="//github.com/samdark" target="_blank" rel="noopener"><img class="icon" src="https://samdark.github.io/img/github.svg" alt="github" /></a>
+        
+
+        
+            <a href="//twitter.com/sam_dark" target="_blank" rel="noopener"><img class="icon" src="https://samdark.github.io/img/twitter.svg" alt="twitter" /></a>
+        
+
+        
+            <a href="//linkedin.com/in/makarov" target="_blank" rel="noopener"><img class="icon" src="https://samdark.github.io/img/linkedin.svg" alt="linkedin" /></a>
+        
+
+        
+
+        
+
+        
+            <a href="mailto:sam@rmcreative.ru"><img class="icon" src="https://samdark.github.io/img/email.svg" alt="email" /></a>
+        
+
+        
+            <a href="https://samdark.github.io/index.xml"><img class="icon" src="https://samdark.github.io/img/rss.svg" alt="rss" /></a>
+        
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    SMS Security and Alternatives
+
+</div>
+
+                    <div class="initials"><a href="https://samdark.github.io/"></a></div>
+                </div>
+                <div class="meta">
+                    
+                    <div class="date" title='Mon Mar 6 2017 00:49:31 MSK'>Mar 6, 2017</div>
+                    
+                    
+                    <div class="reading-time"><div class="middot"></div>2 minutes read</div>
+                    
+                </div>
+            </div>
+            <div class="markdown">
+                
+
+<p>The idea of two factor authentication is simple. One may get your password by fiddling with your wireless network
+connection but that should not give attacker an access to the system because login process asks for additional
+confirmation. This confirmation, a second factor, is a short token that is nowadays typically sent via SMS.</p>
+
+<p>SMS has certain pros. There is no need to install any special applications or being connected to Internet.
+It works even on Nokia 3310. Everything&rsquo;s great, right? Well, no.</p>
+
+<h2 id="what-s-wrong-with-sms">What&rsquo;s wrong with SMS?</h2>
+
+<p>The problem is that SMS is not a secure channel. 2016 clearly proved that. Details are summed very well in Fortune&rsquo;s
+&ldquo;<a href="http://fortune.com/2016/07/26/nist-sms-two-factor/">Time Is Running Out For This Popular Online Security Technique</a>&rdquo;
+article.</p>
+
+<p>So knowing your password and having access to your SMS (yes, that&rsquo;s still not trivial) attacker can get your account.</p>
+
+<p>Are there safer channels? Yes. Definitely.</p>
+
+<h2 id="one-time-passwords">One time passwords</h2>
+
+<p>One time passwords are tokens that could be used only once and that change
+often. These are not vulnerable to replay attack and are commonly used as
+a second authentication factor.</p>
+
+<p>Tokens could be obtained either from hardware device such as
+<a href="https://www.yubico.com/products/yubikey-hardware/yubikey/">YubiKey</a>
+or software such as <a href="https://code.google.com/p/google-authenticator/">Google Authenticator</a>.</p>
+
+<p>There are two common kinds of one time passwords: HOTP (HMAC-based one time password)
+and TOTP (Time-based one time password). In both cases each
+one time password is an sha1 of a shared secret and a moving factor.
+Subsequent passwords are different each time.</p>
+
+<ul>
+<li>In case of HOTP a moving factor is a counter. Each password generation increases the counter.</li>
+<li>In case of TOTP a moving factor is unix time.</li>
+</ul>
+
+<p>Since HOTP may be valid for a long time and TOTP is changed often by itself, TOTP is considered
+being safer.</p>
+
+<h2 id="https-github-com-hackedd-php-oath"><a href="https://github.com/hackedd/php-oath">https://github.com/hackedd/php-oath</a></h2>
+
+<h2 id="https-github-com-spomky-labs-otphp"><a href="https://github.com/Spomky-Labs/otphp">https://github.com/Spomky-Labs/otphp</a></h2>
+
+<h2 id="https-github-com-lelag-otphp"><a href="https://github.com/lelag/otphp">https://github.com/lelag/otphp</a></h2>
+
+<h2 id="https-github-com-jakobo-hotp-php"><a href="https://github.com/Jakobo/hotp-php">https://github.com/Jakobo/hotp-php</a></h2>
+
+<h2 id="integrating-with-google-authenticator">Integrating with Google Authenticator</h2>
+
+<p>Google Authenticator accepts a shared key in a QR-code form. In order to generate it&hellip;</p>
+
+<p>Resetting is not a good idea.</p>
+
+                <br>
+
+                <ul id="tags">
+                    
+                    <li><a href="https://samdark.github.io/tags/security">security</a> </li>
+                    
+                    <li><a href="https://samdark.github.io/tags/sms">sms</a> </li>
+                    
+                    <li><a href="https://samdark.github.io/tags/hotp">hotp</a> </li>
+                    
+                    <li><a href="https://samdark.github.io/tags/totp">totp</a> </li>
+                    
+                </ul>
+
+                <p><a href="https://samdark.github.io/blog/">Back to posts</a></p>
+            </div>
+            <br>
+            <div class="disqus">
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'samdark';
+    var disqus_identifier = 'https:\/\/samdark.github.io\/blog\/sms-security-and-alternatives\/';
+    var disqus_title = 'SMS Security and Alternatives';
+    var disqus_url = 'https:\/\/samdark.github.io\/blog\/sms-security-and-alternatives\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-93053867-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+  
+
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+</body>
+</html>
+

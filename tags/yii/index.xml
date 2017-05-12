@@ -2,14 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Yii on Alexander Makarov</title>
-    <link>https://samdark.github.io/tags/yii/</link>
+    <link>https://samdark.github.io/tags/yii/index.xml</link>
     <description>Recent content in Yii on Alexander Makarov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 18 Apr 2017 12:58:47 +0300</lastBuildDate>
-    
-	<atom:link href="https://samdark.github.io/tags/yii/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="https://samdark.github.io/tags/yii/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Yii Q&amp;A 1</title>
@@ -17,9 +14,67 @@
       <pubDate>Tue, 18 Apr 2017 12:58:47 +0300</pubDate>
       
       <guid>https://samdark.github.io/blog/yii-qa-1/</guid>
-      <description>Some questions I&amp;rsquo;m answering are asked often so I decided to publish answers here. Feel free to ask more in comments.
- Can you clarify please who has what role in Yii 2 maintenance and development?
-  @qiangxue, Qiang Xue — creator of Yii, see below @samdark, Alexander Makarov — everything @cebe, Carsten Brandt — everything @klimov-paul, Klimov Paul — everything. Focuses on code @silverfire, Dmitry Naumenko — everything. Temporarily busy with own projects @arogachev, Alexey Rogachev — everything.</description>
+      <description>&lt;p&gt;Some questions I&amp;rsquo;m answering are asked often so I decided to publish answers here. Feel free to ask more in comments.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Can you clarify please who has what role in Yii 2 maintenance and development?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/qiangxue/&#34;&gt;@qiangxue&lt;/a&gt;, Qiang Xue — creator of Yii, see below&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/samdark/&#34;&gt;@samdark&lt;/a&gt;, Alexander Makarov — everything&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cebe/&#34;&gt;@cebe&lt;/a&gt;, Carsten Brandt — everything&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/klimov-paul/&#34;&gt;@klimov-paul&lt;/a&gt;, Klimov Paul — everything. Focuses on code&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/silverfire/&#34;&gt;@silverfire&lt;/a&gt;, Dmitry Naumenko — everything. Temporarily busy with own projects&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/arogachev/&#34;&gt;@arogachev&lt;/a&gt;, Alexey Rogachev — everything. Focuses on JavaScript. Temporarily busy with own projects&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/dynasource/&#34;&gt;@dynasource&lt;/a&gt;, Boudewijn Vahrmeijer — everything. Temporarily busy with own projects&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/mdomba/&#34;&gt;@mdomba&lt;/a&gt;, Maurizio Domba Cerin — forums, community&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/schmunk42/&#34;&gt;@schmunk42&lt;/a&gt;, Tobias Munk — &lt;a href=&#34;https://github.com/yiisoft/yii2-docker&#34;&gt;Docker images&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/mikehaertl/&#34;&gt;@mikehaertl&lt;/a&gt;, Michael Härtl — &lt;a href=&#34;https://github.com/yiisoft/yii2-docker&#34;&gt;Docker images&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/beowulfenator/&#34;&gt;@beowulfenator&lt;/a&gt;, Konstantin Sirotkin — &lt;a href=&#34;https://github.com/yiisoft/yii2-elasticsearch&#34;&gt;Elastic search extension&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Additionally, there are &lt;a href=&#34;https://github.com/yiisoft/yii2/graphs/contributors&#34;&gt;many active contributors&lt;/a&gt; who take care
+about many aspects of the framework.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Are you now the project lead?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Yii doesn&amp;rsquo;t work this way. The structure is more or less flat.&lt;/p&gt;
+
+&lt;p&gt;Smaller decisions are made mostly individually. Strategical decisions are discussed within core team. Usually there is a
+compromise. If not, we do either voting or forced decision (extremely rare).&lt;/p&gt;
+
+&lt;p&gt;Personally, I do many things about Yii: development, issues, forums and various communities, announcements and media,
+conferences, and, of course, trying out new things for the next versions.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;What is the role of Qiang — is he not involved in Yii 2 development anymore?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Yes. Qiang still gives advice if needed and manages some parts of Yii infrastructure. He isn&amp;rsquo;t active about development
+and isn&amp;rsquo;t going to get back anytime soon.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;What&amp;rsquo;s the roadmap for Yii 2 development?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;There&amp;rsquo;s &lt;a href=&#34;https://github.com/yiisoft/yii2/wiki/Plan-for-next-major-versions&#34;&gt;a wiki page&lt;/a&gt; which has ideas and work in
+progress roadmap.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Which version of PHP will be required by the next Yii?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Most likely, PHP 7.1.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Is there going to be another Yii 1.1 relase?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Yes. &lt;a href=&#34;https://github.com/yiisoft/yii/milestones/1.1.18&#34;&gt;We&amp;rsquo;re almost there&lt;/a&gt;.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -28,9 +83,157 @@
       <pubDate>Mon, 17 Apr 2017 13:49:29 +0300</pubDate>
       
       <guid>https://samdark.github.io/blog/are-traits-evil/</guid>
-      <description>When I have started a Patreon campaign, I have promised to answer questions. First question came from Daniel Fly and is about PHP traits:
- What do you think about Traits in PHP? Do you think they are evil and should avoid using them? If using them what are some common pitfalls fx where not to use them? Maybe you got some bad or good experience?
- What are traits?</description>
+      <description>
+
+&lt;p&gt;When I have started &lt;a href=&#34;https://www.patreon.com/samdark&#34;&gt;a Patreon campaign&lt;/a&gt;, I have promised to answer questions.
+First question came from Daniel Fly and is about &lt;a href=&#34;http://php.net/manual/en/language.oop5.traits.php&#34;&gt;PHP traits&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;What do you think about Traits in PHP? Do you think they are evil and should avoid using them? If using them what
+  are some common pitfalls fx where not to use them? Maybe you got some bad or good experience?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;what-are-traits&#34;&gt;What are traits?&lt;/h2&gt;
+
+&lt;p&gt;PHP manual defines traits as the following:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Traits are a mechanism for code reuse in single inheritance languages such as PHP. A Trait is intended to reduce some
+limitations of single inheritance by enabling a developer to reuse sets of methods freely in several independent
+classes living in different class hierarchies. The semantics of the combination of Traits and classes is defined
+in a way which reduces complexity, and avoids the typical problems associated with multiple inheritance and Mixins.&lt;/p&gt;
+
+&lt;p&gt;A Trait is similar to a class, but only intended to group functionality in a fine-grained and consistent way. It is
+not possible to instantiate a Trait on its own. It is an addition to traditional inheritance and enables horizontal
+composition of behavior; that is, the application of class members without requiring inheritance.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;That is a way lengthy description. In simple words, if we are not touching inheritance aspect, traits are an enhanced way
+to copy-paste.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+trait Dumper
+{
+    public function dump($var)
+    {
+        echo &#39;&amp;lt;pre&amp;gt;&#39; . print_r($var, true) . &#39;&amp;lt;/pre&amp;gt;&#39;;
+    }
+}
+ 
+class MyClass
+{
+    use Dumper;
+}
+ 
+$myClass = new MyClass();
+$myClass-&amp;gt;dump(&#39;test&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The code above would work similar to:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+class MyClass
+{
+    public function dump($var)
+    {
+        echo &#39;&amp;lt;pre&amp;gt;&#39; . print_r($var, true) . &#39;&amp;lt;/pre&amp;gt;&#39;;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;traits-and-yii&#34;&gt;Traits and Yii&lt;/h2&gt;
+
+&lt;p&gt;Yii uses traits for low level functionality and common database layer code. Traits were considered to be used for
+behaviors in 2.0 and will be considered again for 2.1.&lt;/p&gt;
+
+&lt;h3 id=&#34;behaviors&#34;&gt;Behaviors&lt;/h3&gt;
+
+&lt;p&gt;I have started looking at traits in &lt;a href=&#34;http://rmcreative.ru/blog/post/traits-v-trunk-php&#34;&gt;August 2010&lt;/a&gt; when they were merged
+into PHP &lt;code&gt;trunk&lt;/code&gt; (that is how &lt;code&gt;master&lt;/code&gt; was called in CVS/SVN). By that time Yii 1.x had behaviors concept which is similar
+to Ruby mixins and is handy for seamlessly adding extra abilities such as &lt;code&gt;SoftDeleteable&lt;/code&gt; or &lt;code&gt;Versionable&lt;/code&gt; to
+a class. The main difference is that behavior has its own state and could be attached/detached in runtime while trait
+has no own state at all.&lt;/p&gt;
+
+&lt;p&gt;Traits were released before Yii 2.0 so when designing it we considered using them instead of 1.1 behaviors and decided
+not to. At that time there were no good ideas on how to make trait powered behavior configurable and
+attachable/detachable at runtime.&lt;/p&gt;
+
+&lt;p&gt;For 2.1 the idea popped up again. We have found ways to solve configurability by using abstract methods.
+Attaching/detaching proved to be unsolvable but enabling/disabling via subscribing and unsubscribing to/from events is
+possible. Final decision is still to be made&amp;hellip;&lt;/p&gt;
+
+&lt;h3 id=&#34;low-level-functionality&#34;&gt;Low level functionality&lt;/h3&gt;
+
+&lt;p&gt;Yii uses traits for common low level functionality:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/yiisoft/yii2/blob/master/framework/base/ArrayableTrait.php&#34;&gt;ArrayableTrait&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/yiisoft/yii2/blob/master/framework/base/ArrayAccessTrait.php&#34;&gt;ArrayAccessTrait&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;That is the most straightforward and correct use for traits.&lt;/p&gt;
+
+&lt;h3 id=&#34;database-layer-common-code&#34;&gt;Database layer common code&lt;/h3&gt;
+
+&lt;p&gt;A bit less straightforward is use of traits in Yii&amp;rsquo;s database layer:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/yiisoft/yii2/blob/master/framework/db/ActiveQueryTrait.php&#34;&gt;ActiveQueryTrait&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/yiisoft/yii2/blob/master/framework/db/ActiveRelationTrait.php&#34;&gt;ActiveRelationTrait&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/yiisoft/yii2/blob/master/framework/db/QueryTrait.php&#34;&gt;QueryTrait&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/yiisoft/yii2/blob/master/framework/db/SchemaBuilderTrait.php&#34;&gt;SchemaBuilderTrait&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/yiisoft/yii2/blob/master/framework/db/ViewFinderTrait.php&#34;&gt;ViewFinderTrait&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Database layer in Yii 2.0 has the same interface for both relational databases and noSQLs.
+Common parts in interface implementations are extracted into traits to keep inheritance tree
+smaller and to be able not to override too many methods for noSQLs which are different from traditional databases.&lt;/p&gt;
+
+&lt;p&gt;Personally I am not happy with this implementation looking from pure object-oriented perspective.
+It could have been done using composition and normal classes to be more testable and easier to read. Still, traits usage
+is justifiable because it saves tons of method calls thus making database layer significantly faster. Additionally,
+we dealt with testing it despite it not being straightforward.&lt;/p&gt;
+
+&lt;h2 id=&#34;common-pitfalls&#34;&gt;Common pitfalls&lt;/h2&gt;
+
+&lt;p&gt;When you think about using a trait, think twice.&lt;/p&gt;
+
+&lt;h3 id=&#34;no-encapsulation&#34;&gt;No encapsulation&lt;/h3&gt;
+
+&lt;p&gt;When using traits, you should understand the copy-paste aspect of it. Everything inside the trait is magically copied
+to the class as is. Of course, you can deal with naming conflicts when using a trait but that does not change the fact
+much. Because of that, it is wise to keep amount of code a trait contains to the minimum.&lt;/p&gt;
+
+&lt;p&gt;Ideal usage of traits is about small and simple pieces of code.&lt;/p&gt;
+
+&lt;h3 id=&#34;state&#34;&gt;State&lt;/h3&gt;
+
+&lt;p&gt;Since traits lack proper encapsulation, in order to deal with state you either should add private properties to
+the trait or declare &lt;code&gt;static&lt;/code&gt; variables inside a method. Both could lead to issues.&lt;/p&gt;
+
+&lt;p&gt;Private properties are copied to the class using a trait. Possible issues are naming conflicts and accidental
+modification of the property. Because in runtime properties are copied into class, class has access to private ones.&lt;/p&gt;
+
+&lt;p&gt;Using &lt;code&gt;static&lt;/code&gt; means all your objects using a trait would share the same state which is not always desired.&lt;/p&gt;
+
+&lt;h2 id=&#34;are-traits-evil&#34;&gt;Are traits evil?&lt;/h2&gt;
+
+&lt;p&gt;Short answer: depending on how you use traits.&lt;/p&gt;
+
+&lt;p&gt;Same as copy-paste they are evil to some degree but there is nothing absolutely evil or absolutely good.&lt;/p&gt;
+
+&lt;p&gt;Traits are useful for reusable interface implementations without the need for a base class. In other cases it is
+better to stick with objects composition.&lt;/p&gt;
+
+&lt;h2 id=&#34;further-reading&#34;&gt;Further reading&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sitepoint.com/using-traits-in-php-5-4/&#34;&gt;Using Traits in PHP 5.4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sitepoint.com/php-traits-good-or-bad/&#34;&gt;PHP Traits: Good or Bad?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://rosstuck.com/how-i-use-traits/&#34;&gt;How I Use Traits&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/PHP/comments/65uyv3/are_traits_evil/&#34;&gt;Comments for this very post at reddit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
     </item>
     
     <item>
@@ -39,9 +242,62 @@
       <pubDate>Thu, 09 Mar 2017 12:39:18 +0300</pubDate>
       
       <guid>https://samdark.github.io/blog/yii-2.0-logging-and-psr-3/</guid>
-      <description>It is 2017 and major parts of PHP community are all talking about PSRs: PHP standard recommendations that aim is to make parts of frameworks reusable. The recommendation PSR-3 is about logging. Many logging libraries are following this recommendation, among which Monolog is the most widely used one.
-There are three questions commonly asked about Yii 2.0 with regards to PSR-3:
- Why isn&amp;rsquo;t Yii 2.0 PSR-3 compatible? How do I use PSR-3 compatible logger in Yii 2.</description>
+      <description>
+
+&lt;p&gt;It is 2017 and major parts of PHP community are all talking about &lt;a href=&#34;http://www.php-fig.org/psr/&#34;&gt;PSRs: PHP standard recommendations&lt;/a&gt;
+that aim is to make parts of frameworks reusable. The recommendation PSR-3 is about logging. Many logging libraries are
+following this recommendation, among which &lt;a href=&#34;https://github.com/Seldaek/monolog&#34;&gt;Monolog&lt;/a&gt; is the most widely used one.&lt;/p&gt;
+
+&lt;p&gt;There are three questions commonly asked about Yii 2.0 with regards to PSR-3:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Why isn&amp;rsquo;t Yii 2.0 PSR-3 compatible?&lt;/li&gt;
+&lt;li&gt;How do I use PSR-3 compatible logger in Yii 2.0?&lt;/li&gt;
+&lt;li&gt;Is there a plan to extract a standalone PSR-3 compatible logging library from Yii 2.0?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Let&amp;rsquo;s answer these.&lt;/p&gt;
+
+&lt;h2 id=&#34;why-isn-t-yii-2-0-psr-3-compatible&#34;&gt;Why isn&amp;rsquo;t Yii 2.0 PSR-3 compatible?&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.yiiframework.com/doc-2.0/guide-runtime-logging.html&#34;&gt;Yii 2.0 logger&lt;/a&gt; is one of the well done parts of
+the framework. It&amp;rsquo;s stable, easy to extend, performant and really powerful when it comes to features. It was
+implemented at early stages of yet secret pre-alpha development of the framework and was not changed much since then.
+The design is very close to what was done in Yii 1.0 so we can think of 2008 as the year when logger design formed.&lt;/p&gt;
+
+&lt;p&gt;The year is important because it&amp;rsquo;s way before PHP-FIG group which is responsible for designing PSRs formed. At the time
+Yii 2.0 was in alpha stage we had a proven logger design with worked well with Yii 1.0 and Yii 1.1 and PSR-3 wasn&amp;rsquo;t
+a thing yet: there were nothing special about loggers implementing it and there was no benefits for Yii framework
+adopting it. So then we decided not to.&lt;/p&gt;
+
+&lt;p&gt;Now it&amp;rsquo;s time to re-decide it for 2.1 since there are certain pros in being PSR-3 compatible.&lt;/p&gt;
+
+&lt;h2 id=&#34;how-do-i-use-psr-3-compatible-logger-in-yii-2-0&#34;&gt;How do I use PSR-3 compatible logger in Yii 2.0?&lt;/h2&gt;
+
+&lt;p&gt;Yii&amp;rsquo;s logging facility is quite flexible. There&amp;rsquo;s a central dispatcher component which is collecting log messages and
+then flushes them to individual &lt;a href=&#34;http://www.yiiframework.com/doc-2.0/guide-runtime-logging.html#log-targets&#34;&gt;log targets&lt;/a&gt;,
+such as file target or email target that actually do the job.&lt;/p&gt;
+
+&lt;p&gt;Yii&amp;rsquo;s log targets are easy to extend but considering the popularity of PSR-3 and especially
+&lt;a href=&#34;https://github.com/Seldaek/monolog&#34;&gt;Monolog&lt;/a&gt; it is tempting to reuse what&amp;rsquo;s already done. For example, to send logs
+to a Slack chat.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve put together &lt;a href=&#34;https://github.com/samdark/yii2-psr-log-target&#34;&gt;an extension&lt;/a&gt; which allows you to use any PSR-3
+compatible logger as Yii log target.&lt;/p&gt;
+
+&lt;p&gt;What is does it translating Yii&amp;rsquo;s log levels to alike PSR-3 log levels and actually forwarding logs to PSR-3 compatible
+logger configured. Configuration is fairly easy, you can find it &lt;a href=&#34;https://github.com/samdark/yii2-psr-log-target&#34;&gt;at extension page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;is-there-a-plan-to-extract-a-standalone-psr-3-compatible-logging-library-from-yii-2-0&#34;&gt;Is there a plan to extract a standalone PSR-3 compatible logging library from Yii 2.0?&lt;/h2&gt;
+
+&lt;p&gt;Yii was never meant to be a set of standalone libraries. Independent components are nice but there is a cost of not
+reusing what&amp;rsquo;s available in the framework which in some case may result in bloated code and too abstract solutions.&lt;/p&gt;
+
+&lt;p&gt;Logger may be an exception since it&amp;rsquo;s not relying on the framework much, it&amp;rsquo;s framework that relies on it. An attempt
+to extract logger may succeed and since we have a good design it may even become close in popularity to Monolog. So
+overall it is worth trying and, I think, I&amp;rsquo;ll work on it if &lt;a href=&#34;https://www.patreon.com/samdark&#34;&gt;Patreon campaign&lt;/a&gt;
+will bring me enough time for it.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -50,9 +306,52 @@ There are three questions commonly asked about Yii 2.0 with regards to PSR-3:
       <pubDate>Sat, 04 Mar 2017 21:52:28 +0300</pubDate>
       
       <guid>https://samdark.github.io/blog/the-history-of-yii-framework/</guid>
-      <description>Yii is one of the long-living PHP frameworks out there that is constantly evolving with time as PHP is enhanced more and more. It&amp;rsquo;s interesting explore the history of Yii.
-Prado In June 2004, Qiang Xue released the first version of PRADO framework. Prado was inspired by Apache Tapestry, Borland Delphi and Microsoft ASP.NET.
-Roughly at the same time, Zend conducted a competition called &amp;ldquo;gophp5&amp;rdquo; to promote the newly released PHP 5.</description>
+      <description>
+
+&lt;p&gt;Yii is one of the long-living PHP frameworks out there that is constantly evolving with time
+as PHP is enhanced more and more. It&amp;rsquo;s interesting explore the history of Yii.&lt;/p&gt;
+
+&lt;h2 id=&#34;prado&#34;&gt;Prado&lt;/h2&gt;
+
+&lt;p&gt;In June 2004, Qiang Xue released the first version of PRADO framework. Prado was inspired
+by Apache Tapestry, Borland Delphi and Microsoft ASP.NET.&lt;/p&gt;
+
+&lt;p&gt;Roughly at the same time, Zend conducted a competition called &amp;ldquo;gophp5&amp;rdquo; to promote
+the newly released PHP 5.0. Qiang re-implemented Prado to PHP 5 and it won the
+competition.&lt;/p&gt;
+
+&lt;p&gt;At the time, the project was hosted on SourceForge. In the mid-2005, Wei Zhuo joined
+and helped to add i18n and l10n. Prado 2.0 was released.&lt;/p&gt;
+
+&lt;p&gt;In May 2005, Prado was again rewritten to include new features inspired
+by Microsoft ASP.NET 2.0. In April 2006, version 3.0 was released. Since
+then then Prado team has mostly focused on code quality and stability.&lt;/p&gt;
+
+&lt;p&gt;PRADO is still alive and used.&lt;/p&gt;
+
+&lt;h2 id=&#34;yii&#34;&gt;Yii&lt;/h2&gt;
+
+&lt;p&gt;In October 2006, Qiang announced an alpha version of Yii at the PRADO forums.&lt;/p&gt;
+
+&lt;p&gt;On the 3rd of December 2008, Yii version 1.0.0 was released. Many ideas and some code were taken
+from PRADO, including: ActiveRecord, i18n, l10n, etc. Yii also drew more inspirations from
+RoR (convention over configuration, some AR features), symfony1 (filters,
+plugins) and Joomla (modules, message translation).&lt;/p&gt;
+
+&lt;p&gt;Yii 1.0.0 was significantly faster than other frameworks of similar functionality,
+so community grew fast.&lt;/p&gt;
+
+&lt;p&gt;In January 2010, Yii 1.1 was released. It included new features such as form builder,
+relational queries in AR, ready to use unit-testing framework and more.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve joined Yii team in 2010. By the end of the year, we were discussing Yii 1.2
+while developing version 1.1. In May 2011, the Yii team decided to use a newer PHP versions
+and address legacy architectural challenges. That is, to start work on new major version 2.0.
+The first commits were on a private intenal repository.&lt;/p&gt;
+
+&lt;p&gt;In May 2013, Yii 2.0 and its source code was presented to public. In October 2014, the first stable
+version we released.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

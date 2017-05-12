@@ -2,14 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Photography on Alexander Makarov</title>
-    <link>https://samdark.github.io/tags/photography/</link>
+    <link>https://samdark.github.io/tags/photography/index.xml</link>
     <description>Recent content in Photography on Alexander Makarov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 08 May 2017 00:40:17 +0300</lastBuildDate>
-    
-	<atom:link href="https://samdark.github.io/tags/photography/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="https://samdark.github.io/tags/photography/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Why am I getting dull images after processing RAW files?!</title>
@@ -17,7 +14,19 @@
       <pubDate>Mon, 08 May 2017 00:40:17 +0300</pubDate>
       
       <guid>https://samdark.github.io/blog/why-am-i-getting-dull-images-after-processing-raw-files/</guid>
-      <description>I&amp;rsquo;m not a pro photographer but love to travel with a camera so I&amp;rsquo;m making some pictures from time to time. Some time ago I&amp;rsquo;ve started shooting in RAW and post-processing it to JPEG-s at home. After some practice I&amp;rsquo;ve managed to get slightly better JPEG-s than camera was making automatically. Everything was well (except tons of unprocessed RAWs, of course) but after re-installing OS something went wrong. I was doing everything as before but resulting JPEGs were simply dull colored and greyish.</description>
+      <description>&lt;p&gt;I&amp;rsquo;m not a pro photographer but love to travel with a camera so I&amp;rsquo;m making some pictures from time to time. Some time ago
+I&amp;rsquo;ve started shooting in RAW and post-processing it to JPEG-s at home. After some practice I&amp;rsquo;ve managed to get slightly
+better JPEG-s than camera was making automatically. Everything was well (except tons of unprocessed RAWs, of course) but
+after re-installing OS something went wrong. I was doing everything as before but resulting JPEGs were simply dull
+colored and greyish.&lt;/p&gt;
+
+&lt;p&gt;Research revealed that wrong color space and depth were set in processing software. I&amp;rsquo;m using Adobe Camera RAW but
+I&amp;rsquo;m pretty sure alike settings are in other software as well. After setting color space to sRGB and depth to 16 bit
+everything went back to normal. JPEGs became juicy again.&lt;/p&gt;
+
+&lt;p&gt;If you wonder about the difference between color spaces, here&amp;rsquo;s
+&lt;a href=&#34;https://fstoppers.com/pictures/adobergb-vs-srgb-3167&#34;&gt;a good article by Zach Sutton about it&lt;/a&gt;.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

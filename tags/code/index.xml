@@ -2,14 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Code on Alexander Makarov</title>
-    <link>https://samdark.github.io/tags/code/</link>
+    <link>https://samdark.github.io/tags/code/index.xml</link>
     <description>Recent content in Code on Alexander Makarov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 05 Mar 2017 21:52:28 +0300</lastBuildDate>
-    
-	<atom:link href="https://samdark.github.io/tags/code/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="https://samdark.github.io/tags/code/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>No Kipple Please</title>
@@ -17,9 +14,55 @@
       <pubDate>Sun, 05 Mar 2017 21:52:28 +0300</pubDate>
       
       <guid>https://samdark.github.io/blog/no-kipple-please/</guid>
-      <description>&amp;ldquo;Kipple is useless objects, like junk mail or match folders after you use the last match or gum wrappers or yesterday&amp;rsquo;s homeopape. When nobody&amp;rsquo;s around, kipple reproduces itself. For instance, if you go to bed leaving any kipple around your apartment, when you wake up the next morning there&amp;rsquo;s twice as much of it. It always gets more and more.&amp;rdquo;
-&amp;hellip;
-&amp;ldquo;There&amp;rsquo;s the First Law of Kipple,&amp;rdquo; he said. &amp;ldquo;Kipple drives out nonkipple.</description>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Kipple is useless objects, like junk mail or match folders after you use the last match or gum wrappers or yesterday&amp;rsquo;s
+homeopape. When nobody&amp;rsquo;s around, kipple reproduces itself. For instance, if you go to bed leaving any kipple around
+your apartment, when you wake up the next morning there&amp;rsquo;s twice as much of it. It always gets more and more.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;There&amp;rsquo;s the First Law of Kipple,&amp;rdquo; he said. &amp;ldquo;Kipple drives out nonkipple.&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;em&gt;Do Androids Dream of Electric Sheep? by Philip K. Dick&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;IT projects are much like the apartments mentioned in Philip K. Dick novel. They tend
+to have kipple and, as with apartments, it grows every day.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://samdark.github.io/img/posts/kipple.png&#34; width=&#34;50%&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve reviewed many projects and one mistake that I often see is about kipple. It looks
+minor compared to bugs or architectural issues but at the same time it affects both
+project and development team significantly.&lt;/p&gt;
+
+&lt;p&gt;So kipple exists. Usually it&amp;rsquo;s cryptic unneeded stuff that one hesitates to delete and
+it is for quite vague illogical reasons. Examples of kipple is software projects include:
+commented out code, files like &lt;code&gt;main.css_old&lt;/code&gt;, unused methods, five different versions of jQuery,
+code comments like &lt;code&gt;// TODO:&lt;/code&gt;, etc.&lt;/p&gt;
+
+&lt;p&gt;That&amp;rsquo;s why kipple is both useless and problematic:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Broken_windows_theory&#34;&gt;Broken Windows Theory&lt;/a&gt; applies
+well to software projects. If it&amp;rsquo;s allowed not to clean up it&amp;rsquo;s OK to write code that is
+of doubtful quality.&lt;/li&gt;
+&lt;li&gt;Often developers comment out big chunks of CSS, JavaScript and HTML that are still
+served to the end user, thus slowing page loading speed.&lt;/li&gt;
+&lt;li&gt;We&amp;rsquo;re actually reading commented out parts of code, and it takes time.&lt;/li&gt;
+&lt;li&gt;Large number of unused files can confuse newcomers.&lt;/li&gt;
+&lt;li&gt;It is unpleasant to work with such &amp;ldquo;kippled&amp;rdquo; project. It can feel like the
+code is of a bad quality even if architecture and code itself is sound.&lt;/li&gt;
+&lt;li&gt;Compile time may be increased.&lt;/li&gt;
+&lt;li&gt;Any version control system remembers everything you&amp;rsquo;ll delete. If there&amp;rsquo;s a need
+you can always get it from there. If you fail to remember where it was,
+you can tag the commit.
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I know that you may say that it&amp;rsquo;s not important and there&amp;rsquo;s no time for it but I highly
+recommend trying it for a few months. You&amp;rsquo;ll notice improvements in both the project and
+overall quality of the code your team produce.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

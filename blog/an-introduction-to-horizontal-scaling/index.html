@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Engineer having fun">
+
+<base href="https://samdark.github.io/">
+<title>
+
+
+     An introduction to horizontal scaling 
+
+</title>
+<link rel="canonical" href="https://samdark.github.io/blog/an-introduction-to-horizontal-scaling/">
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="https://samdark.github.io/css/reset.css?t=1494626196">
+    <link rel="stylesheet" href="https://samdark.github.io/css/pygments.css?t=1494626196">
+    <link rel="stylesheet" href="https://samdark.github.io/css/main.css?t=1494626196">
+    
+        <link rel="stylesheet" href="https://samdark.github.io/css/override.css?t=1494626196">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://samdark.github.io/img/favicon.ico"
+
+>
+
+
+
+
+
+
+</head>
+
+
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+              <a href="https://samdark.github.io/"><img class="avatar" src="https://samdark.github.io/img/avatar.jpg" /></a>
+            
+            <a href="https://samdark.github.io/"><div class="name">Alexander Makarov / @samdark</div></a>
+            
+              <h3 class="self-intro">Engineer having fun</h3>
+            
+            <nav>
+                <ul>
+                    <li class="nav-blog"><a href="https://samdark.github.io/blog/">Blog</a></li>
+                    <li class="nav-blog"><a href="https://samdark.github.io/patrons/">Patrons</a></li>
+                    <li class="nav-about"><a href="https://samdark.github.io/about/">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+
+        
+            <a href="//github.com/samdark" target="_blank" rel="noopener"><img class="icon" src="https://samdark.github.io/img/github.svg" alt="github" /></a>
+        
+
+        
+            <a href="//twitter.com/sam_dark" target="_blank" rel="noopener"><img class="icon" src="https://samdark.github.io/img/twitter.svg" alt="twitter" /></a>
+        
+
+        
+            <a href="//linkedin.com/in/makarov" target="_blank" rel="noopener"><img class="icon" src="https://samdark.github.io/img/linkedin.svg" alt="linkedin" /></a>
+        
+
+        
+
+        
+
+        
+            <a href="mailto:sam@rmcreative.ru"><img class="icon" src="https://samdark.github.io/img/email.svg" alt="email" /></a>
+        
+
+        
+            <a href="https://samdark.github.io/index.xml"><img class="icon" src="https://samdark.github.io/img/rss.svg" alt="rss" /></a>
+        
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    An introduction to horizontal scaling
+
+</div>
+
+                    <div class="initials"><a href="https://samdark.github.io/"></a></div>
+                </div>
+                <div class="meta">
+                    
+                    <div class="date" title='Wed Mar 22 2017 00:14:02 MSK'>Mar 22, 2017</div>
+                    
+                    
+                    <div class="reading-time"><div class="middot"></div>7 minutes read</div>
+                    
+                </div>
+            </div>
+            <div class="markdown">
+                
+
+<p>Web is an exciting place. Hundreds of startups are launched every day. Majority of what&rsquo;s launched is never getting
+any popular. I was lucky to work on some projects which actually got really popular. These projects experienced significant
+performance problems which were solved by scaling.</p>
+
+<p>Let&rsquo;s begin with the basics. Scaling is an ability to improve overall performance fast by adding more computing resources.</p>
+
+<p>Either because of time contraints or other reasons optimizing code can be a bad option. In this case a solution is
+adding more servers (horizontal scaling) or adding more resorces such as RAM, CPU, or disk space to an existing server
+(vertical scaling).</p>
+
+<h2 id="why-should-i-care">Why should I care?</h2>
+
+<p>An important question usually asked at this point is &ldquo;why should I care if I have a single server and it works well&rdquo;?</p>
+
+<p>The answer is that if you don&rsquo;t plan for the future popularity may destroy the service if it won&rsquo;t be able to serve
+with acceptable performance.</p>
+
+<h2 id="how-to-find-out">How to find out?</h2>
+
+<p>There are two utilities, ApacheBench known as &ldquo;ab&rdquo; (part of <a href="https://httpd.apache.org/">Apache httpd</a>) and <a href="https://github.com/JoeDog/siege">siege</a>.
+Both are helpful for checking how the service in question behaves under peak loads created by high traffic.
+They are issuing many concurrent queries you define and measuring performance: requests per second, overall time to serve
+all requests, etc.</p>
+
+<p>Here&rsquo;s how ApacheBench outputs results:</p>
+
+<pre><code>$ ab -n 100 -c 2 http://example.com/
+
+This is ApacheBench, Version 2.3 &lt;$Revision: 1757674 $&gt;
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking example.com (be patient).....done
+
+
+Server Software:        ECS
+Server Hostname:        example.com
+Server Port:            80
+
+Document Path:          /
+Document Length:        1270 bytes
+
+Concurrency Level:      2
+Time taken for tests:   12.363 seconds
+Complete requests:      100
+Failed requests:        0
+Total transferred:      160000 bytes
+HTML transferred:       127000 bytes
+Requests per second:    8.09 [#/sec] (mean)
+Time per request:       247.258 [ms] (mean)
+Time per request:       123.629 [ms] (mean, across all concurrent requests)
+Transfer rate:          12.64 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:      117  121   2.5    123     124
+Processing:   118  124   2.2    124     129
+Waiting:      118  124   2.2    124     129
+Total:        236  245   3.2    246     248
+
+Percentage of the requests served within a certain time (ms)
+  50%    246
+  66%    247
+  75%    247
+  80%    247
+  90%    247
+  95%    248
+  98%    248
+  99%    248
+ 100%    248 (longest request)
+</code></pre>
+
+<p>In the above command arguments <code>n</code> is a number of queries to issue, <code>с</code> is how many queries should be done concurrently.</p>
+
+<p>In case of Siege it&rsquo;s like the following:</p>
+
+<pre><code>$ siege -b -c10 -t60S http://example.com/
+
+** SIEGE 2.72
+** Preparing 10 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...      done.
+
+Transactions:               4066 hits
+Availability:             100.00 %
+Elapsed time:              60.00 secs
+Data transferred:          13.73 MB
+Response time:              0.22 secs
+Transaction rate:          67.77 trans/sec
+Throughput:             0.23 MB/sec
+Concurrency:               14.95
+Successful transactions:        4066
+Failed transactions:               0
+Longest transaction:            3.28
+</code></pre>
+
+<p>In the above command arguments <code>-t</code> is a number seconds to issue queries, <code>-с</code> is how many queries should be done
+concurrently.</p>
+
+<p>Both command outputs give us RPS, i.e. how many requests per second your server is able to process. Having the number you
+may estimate how many users is that. There&rsquo;s no ready to use formula for this estimate becaue all projects are different
+but it definitely worth checking this number in detail.</p>
+
+<p>Another parameter is Response time. Time it takes from the beginning of the request to the end of response when it&rsquo;s
+fully sent to end user. Again, reponse time may vary from project to project. Overall something like 300 ms is acceptable.
+Higher response time is definitely a problem since these 300ms is the time server works. Additional time adds up for
+rendering the page, loading images and styles. That is usually another 300-600 ms.</p>
+
+<h2 id="ok-should-i-prepare-for-scaling-now">OK. Should I prepare for scaling now?</h2>
+
+<p>It depends. Sometimes it&rsquo;s too early. If a project has stable slow growth and surpises are unlikely to happen
+you may solve performance problems with updating software, doing obvious fixes in the code etc. Why not? For, example,
+simply updating PHP may give you very significant performance gain. Installing and tuning Opcache gives a boost well.</p>
+
+<blockquote>
+<p>Tip: In order to tune OpCache install one of GUIs for it. Personally I prefer <a href="https://github.com/amnuts/opcache-gui">opcache-gui</a>
+  but any would do. Key metrics there are hits (how many times code was read from cache) and misses (how many times
+  code was read from disk). Ideally, after executing whole project code hit rate should be 100%. If there are misses
+  you should allocate more memory.</p>
+</blockquote>
+
+<p>Then you&rsquo;re replacing Apache with nginx to save memory, turning on data cache etc. When easy optimizations are done you
+start spending more and more time for less and less performance gain.</p>
+
+<p>So in the end by doing easy performance optimizations you&rsquo;re not saving issue permanently but instead buying time
+to prepare for scaling.</p>
+
+<h2 id="don-t-assume">Don&rsquo;t assume</h2>
+
+<p>A common mistake of tuning performance or scaling is doing it blidly without finding out why the service in question is
+slow. It happens that after days of blind tuning you achieve nothing. Then you find out that a single index is missing
+from your database. You add it and immediately performance is instantly excellent.</p>
+
+<p>So the first rule is &ldquo;Don&rsquo;t assume. Measure!&rdquo;. And in order to measure we need information.
+If you have a performance problem, try to find an easy solution such as caching front page or turning on cache first.
+When it&rsquo;s back to normal, take some time and set up more monitoring. It will show you what is really lacking. Fix the
+issue and do it again in a week. In a steadily growing project you can&rsquo;t afford not to monitor and not no work
+on performance constantly.</p>
+
+<p>So what info usual monitoring provides us? High disk I/O, low memory, high CPU load, not enough bandwidth are quite
+obvious. If may make sense to check for peaks daily because while average could be OK, at certain moments load could be
+too high. Depending on the root cause, solution is diffent in each case. For example, to solve disk I/O problem of MySQL
+you can either add another disk to the same physical server or set up a separate server for managing files separately from
+database.</p>
+
+<p>So obvious things are:</p>
+
+<ul>
+<li>Availability. Is the server alive?</li>
+<li>Lack of resources: disk space, I/O, bandwidth, CPU load, etc.</li>
+<li>Errors.</li>
+</ul>
+
+<h3 id="monitoring-resources">Monitoring resources</h3>
+
+<p>Here&rsquo;s a list of good tools for you:</p>
+
+<ul>
+<li><a href="http://mmonit.com/monit/">Monit</a></li>
+<li><a href="http://www.zabbix.com/">Zabbix</a></li>
+<li><a href="http://munin-monitoring.org/">Munin</a></li>
+<li><a href="https://www.nagios.org/">Nagios</a></li>
+<li><a href="https://www.serverdensity.com/">ServerDensity</a></li>
+</ul>
+
+<p>First four are installable tools. Fifth is a SaaS.</p>
+
+<h3 id="monitoring-errors">Monitoring errors</h3>
+
+<p>For errors it&rsquo;s great to use one of log aggregation tools:</p>
+
+<ul>
+<li><a href="https://rollbar.com/">Rollbar</a></li>
+<li><a href="https://sentry.io/welcome/">Sentry</a></li>
+</ul>
+
+<p>There are obviously more but I&rsquo;ve tried only these two and settled down with Rollbar.</p>
+
+<p>Usually one is writing everything to a log file and then checking it from time to time. Additionally it&rsquo;s common to send
+emails or SMS messages with error. That&rsquo;s OK but only if you don&rsquo;t have much traffic. If you do and there&rsquo;s an error then
+you&rsquo;ll get thousands emails and SMS messages in no time. It usually results in both mailbox overflow and total loss of
+developer concentration. After some time he starts ignoring these messages.</p>
+
+<p>Both services linked above are grouping alike error messages giving you nunber of occurences for each group and sorting
+by the number of occurences. So you see what your bug fixing priorities are.</p>
+
+<p>Sentry could be installed on your own server since it&rsquo;s OpenSourced. Rollbar is paid SaaS only. I absolutely love their
+payments model since they&rsquo;re charging more if you have more errors. Additional reason to fix errors.</p>
+
+<h3 id="parameters-to-check">Parameters to check</h3>
+
+<p>RPS and Responce time. RPS is going down or response time goes up you need to take care of it.</p>
+
+<p>Same a about number of processes, number of threads, queue sizes. If any of these are going up,
+something is definitely wrong and you need to dig into it immediately.</p>
+
+<p>You should pay attention to business side of things as well since monitoring could display
+that everything is technically fine: response time is great. At the same time, you track
+signups and signups number decreased a lot. In this case you should look for individual pages
+to be rendered too slow or have problems.</p>
+
+<p>For the purpose Google Analytics is good for
+websites. Mixpanel is good for events of both deskop, mobile and websites.</p>
+
+<p>Of course, you can set up your own solution but it saves time to use external services.</p>
+
+<p>The project should be full with analyics so you always know what happens when instead of working
+blindly.</p>
+
+<h2 id="when">When?</h2>
+
+<p><a href="https://habrahabr.ru/company/oleg-bunin/blog/319526/">https://habrahabr.ru/company/oleg-bunin/blog/319526/</a></p>
+
+                <br>
+
+                <ul id="tags">
+                    
+                </ul>
+
+                <p><a href="https://samdark.github.io/blog/">Back to posts</a></p>
+            </div>
+            <br>
+            <div class="disqus">
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'samdark';
+    var disqus_identifier = 'https:\/\/samdark.github.io\/blog\/an-introduction-to-horizontal-scaling\/';
+    var disqus_title = 'An introduction to horizontal scaling';
+    var disqus_url = 'https:\/\/samdark.github.io\/blog\/an-introduction-to-horizontal-scaling\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-93053867-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+  
+
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+</body>
+</html>
+

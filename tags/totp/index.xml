@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Totp on Alexander Makarov</title>
+    <link>https://samdark.github.io/tags/totp/index.xml</link>
+    <description>Recent content in Totp on Alexander Makarov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <atom:link href="https://samdark.github.io/tags/totp/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>SMS Security and Alternatives</title>
+      <link>https://samdark.github.io/blog/sms-security-and-alternatives/</link>
+      <pubDate>Mon, 06 Mar 2017 00:49:31 +0300</pubDate>
+      
+      <guid>https://samdark.github.io/blog/sms-security-and-alternatives/</guid>
+      <description>
+
+&lt;p&gt;The idea of two factor authentication is simple. One may get your password by fiddling with your wireless network
+connection but that should not give attacker an access to the system because login process asks for additional
+confirmation. This confirmation, a second factor, is a short token that is nowadays typically sent via SMS.&lt;/p&gt;
+
+&lt;p&gt;SMS has certain pros. There is no need to install any special applications or being connected to Internet.
+It works even on Nokia 3310. Everything&amp;rsquo;s great, right? Well, no.&lt;/p&gt;
+
+&lt;h2 id=&#34;what-s-wrong-with-sms&#34;&gt;What&amp;rsquo;s wrong with SMS?&lt;/h2&gt;
+
+&lt;p&gt;The problem is that SMS is not a secure channel. 2016 clearly proved that. Details are summed very well in Fortune&amp;rsquo;s
+&amp;ldquo;&lt;a href=&#34;http://fortune.com/2016/07/26/nist-sms-two-factor/&#34;&gt;Time Is Running Out For This Popular Online Security Technique&lt;/a&gt;&amp;rdquo;
+article.&lt;/p&gt;
+
+&lt;p&gt;So knowing your password and having access to your SMS (yes, that&amp;rsquo;s still not trivial) attacker can get your account.&lt;/p&gt;
+
+&lt;p&gt;Are there safer channels? Yes. Definitely.&lt;/p&gt;
+
+&lt;h2 id=&#34;one-time-passwords&#34;&gt;One time passwords&lt;/h2&gt;
+
+&lt;p&gt;One time passwords are tokens that could be used only once and that change
+often. These are not vulnerable to replay attack and are commonly used as
+a second authentication factor.&lt;/p&gt;
+
+&lt;p&gt;Tokens could be obtained either from hardware device such as
+&lt;a href=&#34;https://www.yubico.com/products/yubikey-hardware/yubikey/&#34;&gt;YubiKey&lt;/a&gt;
+or software such as &lt;a href=&#34;https://code.google.com/p/google-authenticator/&#34;&gt;Google Authenticator&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;There are two common kinds of one time passwords: HOTP (HMAC-based one time password)
+and TOTP (Time-based one time password). In both cases each
+one time password is an sha1 of a shared secret and a moving factor.
+Subsequent passwords are different each time.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In case of HOTP a moving factor is a counter. Each password generation increases the counter.&lt;/li&gt;
+&lt;li&gt;In case of TOTP a moving factor is unix time.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Since HOTP may be valid for a long time and TOTP is changed often by itself, TOTP is considered
+being safer.&lt;/p&gt;
+
+&lt;h2 id=&#34;https-github-com-hackedd-php-oath&#34;&gt;&lt;a href=&#34;https://github.com/hackedd/php-oath&#34;&gt;https://github.com/hackedd/php-oath&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;https-github-com-spomky-labs-otphp&#34;&gt;&lt;a href=&#34;https://github.com/Spomky-Labs/otphp&#34;&gt;https://github.com/Spomky-Labs/otphp&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;https-github-com-lelag-otphp&#34;&gt;&lt;a href=&#34;https://github.com/lelag/otphp&#34;&gt;https://github.com/lelag/otphp&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;https-github-com-jakobo-hotp-php&#34;&gt;&lt;a href=&#34;https://github.com/Jakobo/hotp-php&#34;&gt;https://github.com/Jakobo/hotp-php&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&#34;integrating-with-google-authenticator&#34;&gt;Integrating with Google Authenticator&lt;/h2&gt;
+
+&lt;p&gt;Google Authenticator accepts a shared key in a QR-code form. In order to generate it&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Resetting is not a good idea.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
