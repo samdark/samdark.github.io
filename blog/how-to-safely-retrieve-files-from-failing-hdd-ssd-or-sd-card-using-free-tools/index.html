@@ -35,11 +35,11 @@
 
 
     
-    <link rel="stylesheet" href="https://samdark.github.io/css/reset.css?t=1494626196">
-    <link rel="stylesheet" href="https://samdark.github.io/css/pygments.css?t=1494626196">
-    <link rel="stylesheet" href="https://samdark.github.io/css/main.css?t=1494626196">
+    <link rel="stylesheet" href="https://samdark.github.io/css/reset.css?t=1495016744">
+    <link rel="stylesheet" href="https://samdark.github.io/css/pygments.css?t=1495016744">
+    <link rel="stylesheet" href="https://samdark.github.io/css/main.css?t=1495016744">
     
-        <link rel="stylesheet" href="https://samdark.github.io/css/override.css?t=1494626196">
+        <link rel="stylesheet" href="https://samdark.github.io/css/override.css?t=1495016744">
     
 
 
@@ -129,7 +129,7 @@
                 </div>
                 <div class="meta">
                     
-                    <div class="date" title='Sat Mar 4 2017 21:52:28 MSK'>Mar 4, 2017</div>
+                    <div class="date" title='Wed May 17 2017 13:24:11 MSK'>May 17, 2017</div>
                     
                     
                     <div class="reading-time"><div class="middot"></div>3 minutes read</div>
@@ -137,28 +137,28 @@
                 </div>
             </div>
             <div class="markdown">
-                <p>All the drives we&rsquo;re using to store our precious photos and videos aren&rsquo;t 100% reliable. Everybody knows that and know
-that there&rsquo;s a need to back everything up but even if you&rsquo;re backing everything up, there are cases when drive fails
-and you have nowhere to get its contents from aside from the drive itself.</p>
+                <p>All the drives we are using to store our precious photos and videos are not 100% reliable. Everybody should know that and
+back everything up but even if you are doing it properly, there are cases when drive fails
+and you have nowhere to get its contents except from the drive itself.</p>
 
-<p>It happened to me recently. 23 GB SD card from a trip almost full of very precious shots was corrupted when inserted
-into cheap PC card reader.</p>
+<p>It happened to me recently. 23 GB SD card from a trip almost full of precious shots was corrupted when inserted
+into a cheap PC card reader.</p>
 
-<p>As a result both Windows PC and Mac weren&rsquo;t able to read anything from the card and were prompting to format it instead.
+<p>As a result, both Windows PC and Mac were unable to read anything from the card and were prompting to format it instead.
 After trying lots of commercial software designed specifically for recovering photos and files from SD cards I was lost.
 None worked well. One of the tools was able to recover some photos. About 2% of what was there initially.</p>
 
-<p>// insert good photo I&rsquo;ve actually recovered here</p>
+<p><img src="https://samdark.github.io/img/posts/photo_fox.jpg" alt="A fox in the wild. Bygdøy, Oslo" /></p>
 
-<p>After that I&rsquo;ve found out how to do it properly and, surprisingly, for free.</p>
+<p>I did not give up and finally found out how to do it properly and, surprisingly, for free.</p>
 
-<p>First of all, drive may degrade so it&rsquo;s not a good idea to try reading from it repeatedly. It may not hold it and die
-entirely. So we need a tool to copy entire drive to an image file on a local disk byte by byte reading as much as we can.
+<p>First, drive may degrade so it is a bad idea to try reading from it repeatedly. It may fail and die
+entirely. We need a tool to copy entire drive to an image file on a local disk byte by byte reading as much as we can.
 Such a tool exists and is called <a href="https://www.gnu.org/software/ddrescue/">GNU Ddrescue</a>. The only con of it is that it
-requires MacOS or Linux to run but it&rsquo;s not a problem since there are live CDs available. In particular, there&rsquo;s
-<a href="http://www.knopper.net/knoppix/index-en.html">Knoppix</a> which has all the tools on board.</p>
+requires MacOS or Linux to run but it is not a problem since there are live CDs available. In particular, there is
+<a href="http://www.knopper.net/knoppix/index-en.html">Knoppix</a> which has all the tools bundled.</p>
 
-<p>So we&rsquo;re opening console and trying to find out which drives we have. In order to do it use
+<p>So we are opening console and trying to find out which drives we have. In order to do it use
 <code>fdisk -l</code> on Linux and <code>/Applications/Utilities/diskutil</code> list on MacOS. On MacOS prefer disk names which start with
 <code>/dev/r</code> which are raw disks with buffer-less communication.</p>
 
@@ -171,17 +171,19 @@ requires MacOS or Linux to run but it&rsquo;s not a problem since there are live
 </code></pre>
 
 <p><code>/mnt/sdb1/bad_drive.img</code> is a path to image file to create. Obviously, it should be on another disk and you should
-have at least same amount of space available as the side of original disk you&rsquo;re restoring.</p>
+have at least the same amount of space available as the side of original disk you are restoring.</p>
 
-<p>As it&rsquo;s done, we need to actually get our data from the disk image we have. There&rsquo;s another tool for that called
-<a href="http://www.cgsecurity.org/wiki/PhotoRec">PhotoRec</a>. Again, it&rsquo;s a console tool.</p>
+<p>As it is done, we need to actually get our data from the disk image we have. There is another tool for that called
+<a href="http://www.cgsecurity.org/wiki/PhotoRec">PhotoRec</a>. Again, it is a console tool.</p>
 
 <p>Launch it as <code>./photorec /mnt/sdb1/bad_drive.img</code> then
 <a href="http://www.cgsecurity.org/wiki/PhotoRec_Step_By_Step">follow instructions</a>. At this point you can try various options
-as many times as you want since image file isn&rsquo;t affected and is on a well working drive so there&rsquo;s little chance to
+as many times as you want since image file is not affected and is on a well working drive so there is little chance to
 lose data because of messing with original drive.</p>
 
-<p>That&rsquo;s it. Using these two tools I was able to recover all of the precious photos from corrupted SD card.</p>
+<p>That is it. Using these two tools I was able to recover all the precious photos from corrupted SD card.</p>
+
+<p><img src="https://samdark.github.io/img/posts/photo_mustang.jpg" alt="Someone parked right at the pier. Aker Brygge, Oslo" /></p>
 
                 <br>
 
