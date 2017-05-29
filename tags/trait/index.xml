@@ -2,11 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Trait on Alexander Makarov</title>
-    <link>https://samdark.github.io/tags/trait/index.xml</link>
+    <link>https://samdark.github.io/tags/trait/</link>
     <description>Recent content in Trait on Alexander Makarov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <atom:link href="https://samdark.github.io/tags/trait/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 17 Apr 2017 13:49:29 +0300</lastBuildDate>
+    
+	<atom:link href="https://samdark.github.io/tags/trait/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Are traits evil?</title>
@@ -14,157 +17,9 @@
       <pubDate>Mon, 17 Apr 2017 13:49:29 +0300</pubDate>
       
       <guid>https://samdark.github.io/blog/are-traits-evil/</guid>
-      <description>
-
-&lt;p&gt;When I have started &lt;a href=&#34;https://www.patreon.com/samdark&#34;&gt;a Patreon campaign&lt;/a&gt;, I have promised to answer questions.
-First question came from Daniel Fly and is about &lt;a href=&#34;http://php.net/manual/en/language.oop5.traits.php&#34;&gt;PHP traits&lt;/a&gt;:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;What do you think about Traits in PHP? Do you think they are evil and should avoid using them? If using them what
-  are some common pitfalls fx where not to use them? Maybe you got some bad or good experience?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;what-are-traits&#34;&gt;What are traits?&lt;/h2&gt;
-
-&lt;p&gt;PHP manual defines traits as the following:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Traits are a mechanism for code reuse in single inheritance languages such as PHP. A Trait is intended to reduce some
-limitations of single inheritance by enabling a developer to reuse sets of methods freely in several independent
-classes living in different class hierarchies. The semantics of the combination of Traits and classes is defined
-in a way which reduces complexity, and avoids the typical problems associated with multiple inheritance and Mixins.&lt;/p&gt;
-
-&lt;p&gt;A Trait is similar to a class, but only intended to group functionality in a fine-grained and consistent way. It is
-not possible to instantiate a Trait on its own. It is an addition to traditional inheritance and enables horizontal
-composition of behavior; that is, the application of class members without requiring inheritance.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;That is a way lengthy description. In simple words, if we are not touching inheritance aspect, traits are an enhanced way
-to copy-paste.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-trait Dumper
-{
-    public function dump($var)
-    {
-        echo &#39;&amp;lt;pre&amp;gt;&#39; . print_r($var, true) . &#39;&amp;lt;/pre&amp;gt;&#39;;
-    }
-}
- 
-class MyClass
-{
-    use Dumper;
-}
- 
-$myClass = new MyClass();
-$myClass-&amp;gt;dump(&#39;test&#39;);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The code above would work similar to:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-class MyClass
-{
-    public function dump($var)
-    {
-        echo &#39;&amp;lt;pre&amp;gt;&#39; . print_r($var, true) . &#39;&amp;lt;/pre&amp;gt;&#39;;
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;traits-and-yii&#34;&gt;Traits and Yii&lt;/h2&gt;
-
-&lt;p&gt;Yii uses traits for low level functionality and common database layer code. Traits were considered to be used for
-behaviors in 2.0 and will be considered again for 2.1.&lt;/p&gt;
-
-&lt;h3 id=&#34;behaviors&#34;&gt;Behaviors&lt;/h3&gt;
-
-&lt;p&gt;I have started looking at traits in &lt;a href=&#34;http://rmcreative.ru/blog/post/traits-v-trunk-php&#34;&gt;August 2010&lt;/a&gt; when they were merged
-into PHP &lt;code&gt;trunk&lt;/code&gt; (that is how &lt;code&gt;master&lt;/code&gt; was called in CVS/SVN). By that time Yii 1.x had behaviors concept which is similar
-to Ruby mixins and is handy for seamlessly adding extra abilities such as &lt;code&gt;SoftDeleteable&lt;/code&gt; or &lt;code&gt;Versionable&lt;/code&gt; to
-a class. The main difference is that behavior has its own state and could be attached/detached in runtime while trait
-has no own state at all.&lt;/p&gt;
-
-&lt;p&gt;Traits were released before Yii 2.0 so when designing it we considered using them instead of 1.1 behaviors and decided
-not to. At that time there were no good ideas on how to make trait powered behavior configurable and
-attachable/detachable at runtime.&lt;/p&gt;
-
-&lt;p&gt;For 2.1 the idea popped up again. We have found ways to solve configurability by using abstract methods.
-Attaching/detaching proved to be unsolvable but enabling/disabling via subscribing and unsubscribing to/from events is
-possible. Final decision is still to be made&amp;hellip;&lt;/p&gt;
-
-&lt;h3 id=&#34;low-level-functionality&#34;&gt;Low level functionality&lt;/h3&gt;
-
-&lt;p&gt;Yii uses traits for common low level functionality:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/yiisoft/yii2/blob/master/framework/base/ArrayableTrait.php&#34;&gt;ArrayableTrait&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/yiisoft/yii2/blob/master/framework/base/ArrayAccessTrait.php&#34;&gt;ArrayAccessTrait&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;That is the most straightforward and correct use for traits.&lt;/p&gt;
-
-&lt;h3 id=&#34;database-layer-common-code&#34;&gt;Database layer common code&lt;/h3&gt;
-
-&lt;p&gt;A bit less straightforward is use of traits in Yii&amp;rsquo;s database layer:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/yiisoft/yii2/blob/master/framework/db/ActiveQueryTrait.php&#34;&gt;ActiveQueryTrait&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/yiisoft/yii2/blob/master/framework/db/ActiveRelationTrait.php&#34;&gt;ActiveRelationTrait&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/yiisoft/yii2/blob/master/framework/db/QueryTrait.php&#34;&gt;QueryTrait&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/yiisoft/yii2/blob/master/framework/db/SchemaBuilderTrait.php&#34;&gt;SchemaBuilderTrait&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/yiisoft/yii2/blob/master/framework/db/ViewFinderTrait.php&#34;&gt;ViewFinderTrait&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Database layer in Yii 2.0 has the same interface for both relational databases and noSQLs.
-Common parts in interface implementations are extracted into traits to keep inheritance tree
-smaller and to be able not to override too many methods for noSQLs which are different from traditional databases.&lt;/p&gt;
-
-&lt;p&gt;Personally I am not happy with this implementation looking from pure object-oriented perspective.
-It could have been done using composition and normal classes to be more testable and easier to read. Still, traits usage
-is justifiable because it saves tons of method calls thus making database layer significantly faster. Additionally,
-we dealt with testing it despite it not being straightforward.&lt;/p&gt;
-
-&lt;h2 id=&#34;common-pitfalls&#34;&gt;Common pitfalls&lt;/h2&gt;
-
-&lt;p&gt;When you think about using a trait, think twice.&lt;/p&gt;
-
-&lt;h3 id=&#34;no-encapsulation&#34;&gt;No encapsulation&lt;/h3&gt;
-
-&lt;p&gt;When using traits, you should understand the copy-paste aspect of it. Everything inside the trait is magically copied
-to the class as is. Of course, you can deal with naming conflicts when using a trait but that does not change the fact
-much. Because of that, it is wise to keep amount of code a trait contains to the minimum.&lt;/p&gt;
-
-&lt;p&gt;Ideal usage of traits is about small and simple pieces of code.&lt;/p&gt;
-
-&lt;h3 id=&#34;state&#34;&gt;State&lt;/h3&gt;
-
-&lt;p&gt;Since traits lack proper encapsulation, in order to deal with state you either should add private properties to
-the trait or declare &lt;code&gt;static&lt;/code&gt; variables inside a method. Both could lead to issues.&lt;/p&gt;
-
-&lt;p&gt;Private properties are copied to the class using a trait. Possible issues are naming conflicts and accidental
-modification of the property. Because in runtime properties are copied into class, class has access to private ones.&lt;/p&gt;
-
-&lt;p&gt;Using &lt;code&gt;static&lt;/code&gt; means all your objects using a trait would share the same state which is not always desired.&lt;/p&gt;
-
-&lt;h2 id=&#34;are-traits-evil&#34;&gt;Are traits evil?&lt;/h2&gt;
-
-&lt;p&gt;Short answer: depending on how you use traits.&lt;/p&gt;
-
-&lt;p&gt;Same as copy-paste they are evil to some degree but there is nothing absolutely evil or absolutely good.&lt;/p&gt;
-
-&lt;p&gt;Traits are useful for reusable interface implementations without the need for a base class. In other cases it is
-better to stick with objects composition.&lt;/p&gt;
-
-&lt;h2 id=&#34;further-reading&#34;&gt;Further reading&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.sitepoint.com/using-traits-in-php-5-4/&#34;&gt;Using Traits in PHP 5.4&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.sitepoint.com/php-traits-good-or-bad/&#34;&gt;PHP Traits: Good or Bad?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://rosstuck.com/how-i-use-traits/&#34;&gt;How I Use Traits&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/PHP/comments/65uyv3/are_traits_evil/&#34;&gt;Comments for this very post at reddit&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>When I have started a Patreon campaign, I have promised to answer questions. First question came from Daniel Fly and is about PHP traits:
+ What do you think about Traits in PHP? Do you think they are evil and should avoid using them? If using them what are some common pitfalls fx where not to use them? Maybe you got some bad or good experience?
+ What are traits?</description>
     </item>
     
   </channel>

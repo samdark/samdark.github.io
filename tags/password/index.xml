@@ -2,11 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Password on Alexander Makarov</title>
-    <link>https://samdark.github.io/tags/password/index.xml</link>
+    <link>https://samdark.github.io/tags/password/</link>
     <description>Recent content in Password on Alexander Makarov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <atom:link href="https://samdark.github.io/tags/password/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 23 Mar 2017 11:41:26 +0300</lastBuildDate>
+    
+	<atom:link href="https://samdark.github.io/tags/password/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>bcrypt hash</title>
@@ -14,31 +17,12 @@
       <pubDate>Thu, 23 Mar 2017 11:41:26 +0300</pubDate>
       
       <guid>https://samdark.github.io/blog/bcrypt-hash/</guid>
-      <description>&lt;p&gt;bcrypt is a good way to deal with password authentication. In PHP it is available via
-&lt;a href=&#34;https://secure.php.net/manual/en/function.crypt.php&#34;&gt;crypt&lt;/a&gt; with blowfish algorithm or a shortcut
-&lt;a href=&#34;https://secure.php.net/manual/en/function.password-hash.php&#34;&gt;password_hash&lt;/a&gt; function current PHP versions are providing.&lt;/p&gt;
-
-&lt;p&gt;Yii framework project templates are using bcrypt for handling passwords. Framework components
-are &lt;a href=&#34;http://www.yiiframework.com/doc-2.0/yii-base-security.html#generatePasswordHash()-detail&#34;&gt;providing polyfills ensuring bcrypt is used correctly&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;bcrypt produces a compound hash that looks like the following:&lt;/p&gt;
-
-&lt;p&gt;$&lt;strong style=&#34;color: #f00&#34;&gt;2y&lt;/strong&gt;$&lt;strong style=&#34;color: #0a0&#34;&gt;13&lt;/strong&gt;$&lt;strong style=&#34;color: #00f&#34;&gt;YUUgrko03UmNU/fe6gNcO.&lt;/strong&gt;&lt;strong style=&#34;color: #00a&#34;&gt;Hka4lrdRlkq0iJ5d4bv4fK.sKS.6jXu&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The string is always 60 characters long.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong style=&#34;color: #f00&#34;&gt;2y&lt;/strong&gt; indicates algorithm. We are using blowfish so in current PHP versions it should
-always be &lt;code&gt;2y&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;strong style=&#34;color: #0a0&#34;&gt;13&lt;/strong&gt; is computation cost. 2^13 iterations of &lt;a href=&#34;https://en.wikipedia.org/wiki/Key_derivation_function&#34;&gt;key derivation function&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Rest of the string is concatenated salt, and hash encoded with base64 with a custom set of characters.
-First 22 symbols are &lt;strong style=&#34;color: #00f&#34;&gt;16 bytes salt&lt;/strong&gt;. The rest are &lt;strong style=&#34;color: #00a&#34;&gt;the hash itself&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;When verifying a password input bcrypt extract algorithm version, cost, salt and hash from compound hash string of
-a saved password. Then, using the data extracted, it calculates a hash of the input and compares it with the hash
-we store.&lt;/p&gt;
-</description>
+      <description>bcrypt is a good way to deal with password authentication. In PHP it is available via crypt with blowfish algorithm or a shortcut password_hash function current PHP versions are providing.
+Yii framework project templates are using bcrypt for handling passwords. Framework components are providing polyfills ensuring bcrypt is used correctly.
+bcrypt produces a compound hash that looks like the following:
+$2y$13$YUUgrko03UmNU/fe6gNcO.Hka4lrdRlkq0iJ5d4bv4fK.sKS.6jXu
+The string is always 60 characters long.
+ 2y indicates algorithm.</description>
     </item>
     
   </channel>

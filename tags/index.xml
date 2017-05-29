@@ -57,6 +57,15 @@
     </item>
     
     <item>
+      <title>Data</title>
+      <link>https://samdark.github.io/tags/data/</link>
+      <pubDate>Wed, 17 May 2017 13:24:11 +0300</pubDate>
+      
+      <guid>https://samdark.github.io/tags/data/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Dull</title>
       <link>https://samdark.github.io/tags/dull/</link>
       <pubDate>Mon, 08 May 2017 00:40:17 +0300</pubDate>
@@ -66,11 +75,29 @@
     </item>
     
     <item>
+      <title>Free</title>
+      <link>https://samdark.github.io/tags/free/</link>
+      <pubDate>Wed, 17 May 2017 13:24:11 +0300</pubDate>
+      
+      <guid>https://samdark.github.io/tags/free/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Git</title>
       <link>https://samdark.github.io/tags/git/</link>
       <pubDate>Sat, 04 Mar 2017 21:52:28 +0300</pubDate>
       
       <guid>https://samdark.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hydrator</title>
+      <link>https://samdark.github.io/tags/hydrator/</link>
+      <pubDate>Sat, 13 May 2017 00:59:27 +0300</pubDate>
+      
+      <guid>https://samdark.github.io/tags/hydrator/</guid>
       <description></description>
     </item>
     
@@ -95,7 +122,7 @@
     <item>
       <title>Photography</title>
       <link>https://samdark.github.io/tags/photography/</link>
-      <pubDate>Mon, 08 May 2017 00:40:17 +0300</pubDate>
+      <pubDate>Wed, 17 May 2017 13:24:11 +0300</pubDate>
       
       <guid>https://samdark.github.io/tags/photography/</guid>
       <description></description>
@@ -113,7 +140,7 @@
     <item>
       <title>Php</title>
       <link>https://samdark.github.io/tags/php/</link>
-      <pubDate>Mon, 17 Apr 2017 13:49:29 +0300</pubDate>
+      <pubDate>Sat, 13 May 2017 00:59:27 +0300</pubDate>
       
       <guid>https://samdark.github.io/tags/php/</guid>
       <description></description>
@@ -152,6 +179,24 @@
       <pubDate>Mon, 08 May 2017 00:40:17 +0300</pubDate>
       
       <guid>https://samdark.github.io/tags/raw/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recovery</title>
+      <link>https://samdark.github.io/tags/recovery/</link>
+      <pubDate>Wed, 17 May 2017 13:24:11 +0300</pubDate>
+      
+      <guid>https://samdark.github.io/tags/recovery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reliable</title>
+      <link>https://samdark.github.io/tags/reliable/</link>
+      <pubDate>Wed, 17 May 2017 13:24:11 +0300</pubDate>
+      
+      <guid>https://samdark.github.io/tags/reliable/</guid>
       <description></description>
     </item>
     

@@ -92,6 +92,11 @@
   </url>
   
   <url>
+    <loc>https://samdark.github.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://samdark.github.io/tags/code/</loc>
     <lastmod>2017-03-05T21:52:28+03:00</lastmod>
     <priority>0</priority>
@@ -201,6 +206,7 @@
   
   <url>
     <loc>https://samdark.github.io/tags/</loc>
+    <lastmod>2017-03-23T11:41:26+03:00</lastmod>
     <priority>0</priority>
   </url>
   

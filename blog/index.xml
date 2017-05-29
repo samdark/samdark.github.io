@@ -2,12 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on Alexander Makarov</title>
-    <link>https://samdark.github.io/blog/index.xml</link>
+    <link>https://samdark.github.io/blog/</link>
     <description>Recent content in Blog on Alexander Makarov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Wed, 17 May 2017 13:24:11 +0300</lastBuildDate>
-    <atom:link href="https://samdark.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://samdark.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>How to safely retrieve files from failing HDD, SSD or SD card using free tools</title>
@@ -15,54 +17,8 @@
       <pubDate>Wed, 17 May 2017 13:24:11 +0300</pubDate>
       
       <guid>https://samdark.github.io/blog/how-to-safely-retrieve-files-from-failing-hdd-ssd-or-sd-card-using-free-tools/</guid>
-      <description>&lt;p&gt;All the drives we are using to store our precious photos and videos are not 100% reliable. Everybody should know that and
-back everything up but even if you are doing it properly, there are cases when drive fails
-and you have nowhere to get its contents except from the drive itself.&lt;/p&gt;
-
-&lt;p&gt;It happened to me recently. 23 GB SD card from a trip almost full of precious shots was corrupted when inserted
-into a cheap PC card reader.&lt;/p&gt;
-
-&lt;p&gt;As a result, both Windows PC and Mac were unable to read anything from the card and were prompting to format it instead.
-After trying lots of commercial software designed specifically for recovering photos and files from SD cards I was lost.
-None worked well. One of the tools was able to recover some photos. About 2% of what was there initially.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://samdark.github.io/img/posts/photo_fox.jpg&#34; alt=&#34;A fox in the wild. Bygdøy, Oslo&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I did not give up and finally found out how to do it properly and, surprisingly, for free.&lt;/p&gt;
-
-&lt;p&gt;First, drive may degrade so it is a bad idea to try reading from it repeatedly. It may fail and die
-entirely. We need a tool to copy entire drive to an image file on a local disk byte by byte reading as much as we can.
-Such a tool exists and is called &lt;a href=&#34;https://www.gnu.org/software/ddrescue/&#34;&gt;GNU Ddrescue&lt;/a&gt;. The only con of it is that it
-requires MacOS or Linux to run but it is not a problem since there are live CDs available. In particular, there is
-&lt;a href=&#34;http://www.knopper.net/knoppix/index-en.html&#34;&gt;Knoppix&lt;/a&gt; which has all the tools bundled.&lt;/p&gt;
-
-&lt;p&gt;So we are opening console and trying to find out which drives we have. In order to do it use
-&lt;code&gt;fdisk -l&lt;/code&gt; on Linux and &lt;code&gt;/Applications/Utilities/diskutil&lt;/code&gt; list on MacOS. On MacOS prefer disk names which start with
-&lt;code&gt;/dev/r&lt;/code&gt; which are raw disks with buffer-less communication.&lt;/p&gt;
-
-&lt;p&gt;Now, as you know drive names:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# get most of the error-free data quickly
-./ddrescue -n /dev/old_disk /mnt/sdb1/bad_drive.img rescued.log
-# then attempt to get data which is in bad areas
-./ddrescue -r 1 /dev/old_disk /mnt/sdb1/bad_drive.img rescued.log
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;/mnt/sdb1/bad_drive.img&lt;/code&gt; is a path to image file to create. Obviously, it should be on another disk and you should
-have at least the same amount of space available as the side of original disk you are restoring.&lt;/p&gt;
-
-&lt;p&gt;As it is done, we need to actually get our data from the disk image we have. There is another tool for that called
-&lt;a href=&#34;http://www.cgsecurity.org/wiki/PhotoRec&#34;&gt;PhotoRec&lt;/a&gt;. Again, it is a console tool.&lt;/p&gt;
-
-&lt;p&gt;Launch it as &lt;code&gt;./photorec /mnt/sdb1/bad_drive.img&lt;/code&gt; then
-&lt;a href=&#34;http://www.cgsecurity.org/wiki/PhotoRec_Step_By_Step&#34;&gt;follow instructions&lt;/a&gt;. At this point you can try various options
-as many times as you want since image file is not affected and is on a well working drive so there is little chance to
-lose data because of messing with original drive.&lt;/p&gt;
-
-&lt;p&gt;That is it. Using these two tools I was able to recover all the precious photos from corrupted SD card.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://samdark.github.io/img/posts/photo_mustang.jpg&#34; alt=&#34;Someone parked right at the pier. Aker Brygge, Oslo&#34; /&gt;&lt;/p&gt;
-</description>
+      <description>All the drives we are using to store our precious photos and videos are not 100% reliable. Everybody should know that and back everything up but even if you are doing it properly, there are cases when drive fails and you have nowhere to get its contents except from the drive itself.
+It happened to me recently. 23 GB SD card from a trip almost full of precious shots was corrupted when inserted into a cheap PC card reader.</description>
     </item>
     
     <item>
@@ -71,113 +27,7 @@ lose data because of messing with original drive.&lt;/p&gt;
       <pubDate>Sat, 13 May 2017 00:59:27 +0300</pubDate>
       
       <guid>https://samdark.github.io/blog/hydrator/</guid>
-      <description>
-
-&lt;p&gt;November 2016 I&amp;rsquo;ve implemented and released a &lt;a href=&#34;https://github.com/samdark/hydrator&#34;&gt;Hydrator library&lt;/a&gt; but never properly
-announced it. As far as I know, the &amp;ldquo;hydrator&amp;rdquo; term was first used in &lt;a href=&#34;http://hibernate.org/orm/&#34;&gt;Hibernate Java ORM&lt;/a&gt;.
-The job of a hydrator is to fill an object with data or extract data from an object without calling constructor or extra
-getter-setter methods. It allows you to directly work with private properties which should be persisted to database
-or loaded from database while not exposing these properties thus keeping public interface clean.&lt;/p&gt;
-
-&lt;p&gt;Internally it uses &lt;a href=&#34;http://php.net/manual/en/book.reflection.php&#34;&gt;PHP reflection&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://samdark.github.io/img/posts/hydration.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
-
-&lt;p&gt;Consider we have a &lt;code&gt;Post&lt;/code&gt; entity which represents a blog post. It has a title and a text. A unique id is generated to
-identify it.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;class Post
-{
-    private $id;
-    protected $title;
-    protected $text;
-
-    public function __construct($title, $text)
-    {
-        $this-&amp;gt;id = uniqid(&#39;post_&#39;, true);
-        $this-&amp;gt;title = $title;
-        $this-&amp;gt;text = $text;
-    }
-   
-    public function getId()
-    {
-        return $this-&amp;gt;id;
-    }
-    
-    public function getTitle()
-    {
-        return $this-&amp;gt;title;
-    }
-    
-    public function setTitle($title)
-    {
-        $this-&amp;gt;title = $title;
-    }
-    
-    public function getText()
-    {
-        return $this-&amp;gt;text;
-    }
-    
-    public function setText()
-    {
-        return $this-&amp;gt;text;
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Saving a post to database:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;$post = new Post(&#39;First post&#39;, &#39;Hell, it is a first post.&#39;);
-
-$postHydrator = new \samdark\hydrator\Hydrator([
-    &#39;id&#39; =&amp;gt; &#39;id&#39;,
-    &#39;title&#39; =&amp;gt; &#39;title&#39;,
-    &#39;text&#39; =&amp;gt; &#39;text&#39;,
-]);
-
-$data = $postHydrator-&amp;gt;extract($post);
-save_to_database($data);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Loading post from database:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-$data = load_from_database();
-
-$postHydrator = new \samdark\hydrator\Hydrator([
-    &#39;id&#39; =&amp;gt; &#39;id&#39;,
-    &#39;title&#39; =&amp;gt; &#39;title&#39;,
-    &#39;text&#39; =&amp;gt; &#39;text&#39;,
-]);
-
-$post = $postHydrator-&amp;gt;hydrate($data, Post::class);
-echo $post-&amp;gt;getId();
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Filling existing post object with data:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;$data = load_from_database();
-
-$postHydrator = new \samdark\hydrator\Hydrator([
-    &#39;title&#39; =&amp;gt; &#39;title&#39;,
-    &#39;text&#39; =&amp;gt; &#39;text&#39;,
-]);
-
-$post = get_post();
-$post = $postHydrator-&amp;gt;hydrateInto($data, $post);
-echo $post-&amp;gt;getTitle();
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;usage-in-yii&#34;&gt;Usage in Yii&lt;/h2&gt;
-
-&lt;p&gt;It&amp;rsquo;s not currently used in Yii in any way. One may use it to implement his own data mapping
-in a repository in case of purchasing
-&lt;a href=&#34;https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html&#34;&gt;clean architecture&lt;/a&gt;
-and &lt;a href=&#34;https://en.wikipedia.org/wiki/Domain-driven_design&#34;&gt;domain driven design&lt;/a&gt; where encapsulation is uber-important.&lt;/p&gt;
-</description>
+      <description>November 2016 I&amp;rsquo;ve implemented and released a Hydrator library but never properly announced it. As far as I know, the &amp;ldquo;hydrator&amp;rdquo; term was first used in Hibernate Java ORM. The job of a hydrator is to fill an object with data or extract data from an object without calling constructor or extra getter-setter methods. It allows you to directly work with private properties which should be persisted to database or loaded from database while not exposing these properties thus keeping public interface clean.</description>
     </item>
     
     <item>
@@ -186,19 +36,7 @@ and &lt;a href=&#34;https://en.wikipedia.org/wiki/Domain-driven_design&#34;&gt;d
       <pubDate>Mon, 08 May 2017 00:40:17 +0300</pubDate>
       
       <guid>https://samdark.github.io/blog/why-am-i-getting-dull-images-after-processing-raw-files/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m not a pro photographer but love to travel with a camera so I&amp;rsquo;m making some pictures from time to time. Some time ago
-I&amp;rsquo;ve started shooting in RAW and post-processing it to JPEG-s at home. After some practice I&amp;rsquo;ve managed to get slightly
-better JPEG-s than camera was making automatically. Everything was well (except tons of unprocessed RAWs, of course) but
-after re-installing OS something went wrong. I was doing everything as before but resulting JPEGs were simply dull
-colored and greyish.&lt;/p&gt;
-
-&lt;p&gt;Research revealed that wrong color space and depth were set in processing software. I&amp;rsquo;m using Adobe Camera RAW but
-I&amp;rsquo;m pretty sure alike settings are in other software as well. After setting color space to sRGB and depth to 16 bit
-everything went back to normal. JPEGs became juicy again.&lt;/p&gt;
-
-&lt;p&gt;If you wonder about the difference between color spaces, here&amp;rsquo;s
-&lt;a href=&#34;https://fstoppers.com/pictures/adobergb-vs-srgb-3167&#34;&gt;a good article by Zach Sutton about it&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>I&amp;rsquo;m not a pro photographer but love to travel with a camera so I&amp;rsquo;m making some pictures from time to time. Some time ago I&amp;rsquo;ve started shooting in RAW and post-processing it to JPEG-s at home. After some practice I&amp;rsquo;ve managed to get slightly better JPEG-s than camera was making automatically. Everything was well (except tons of unprocessed RAWs, of course) but after re-installing OS something went wrong. I was doing everything as before but resulting JPEGs were simply dull colored and greyish.</description>
     </item>
     
     <item>
@@ -207,67 +45,9 @@ everything went back to normal. JPEGs became juicy again.&lt;/p&gt;
       <pubDate>Tue, 18 Apr 2017 12:58:47 +0300</pubDate>
       
       <guid>https://samdark.github.io/blog/yii-qa-1/</guid>
-      <description>&lt;p&gt;Some questions I&amp;rsquo;m answering are asked often so I decided to publish answers here. Feel free to ask more in comments.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Can you clarify please who has what role in Yii 2 maintenance and development?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/qiangxue/&#34;&gt;@qiangxue&lt;/a&gt;, Qiang Xue — creator of Yii, see below&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/samdark/&#34;&gt;@samdark&lt;/a&gt;, Alexander Makarov — everything&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/cebe/&#34;&gt;@cebe&lt;/a&gt;, Carsten Brandt — everything&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/klimov-paul/&#34;&gt;@klimov-paul&lt;/a&gt;, Klimov Paul — everything. Focuses on code&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/silverfire/&#34;&gt;@silverfire&lt;/a&gt;, Dmitry Naumenko — everything. Temporarily busy with own projects&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/arogachev/&#34;&gt;@arogachev&lt;/a&gt;, Alexey Rogachev — everything. Focuses on JavaScript. Temporarily busy with own projects&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/dynasource/&#34;&gt;@dynasource&lt;/a&gt;, Boudewijn Vahrmeijer — everything. Temporarily busy with own projects&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/mdomba/&#34;&gt;@mdomba&lt;/a&gt;, Maurizio Domba Cerin — forums, community&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/schmunk42/&#34;&gt;@schmunk42&lt;/a&gt;, Tobias Munk — &lt;a href=&#34;https://github.com/yiisoft/yii2-docker&#34;&gt;Docker images&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/mikehaertl/&#34;&gt;@mikehaertl&lt;/a&gt;, Michael Härtl — &lt;a href=&#34;https://github.com/yiisoft/yii2-docker&#34;&gt;Docker images&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/beowulfenator/&#34;&gt;@beowulfenator&lt;/a&gt;, Konstantin Sirotkin — &lt;a href=&#34;https://github.com/yiisoft/yii2-elasticsearch&#34;&gt;Elastic search extension&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Additionally, there are &lt;a href=&#34;https://github.com/yiisoft/yii2/graphs/contributors&#34;&gt;many active contributors&lt;/a&gt; who take care
-about many aspects of the framework.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Are you now the project lead?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Yii doesn&amp;rsquo;t work this way. The structure is more or less flat.&lt;/p&gt;
-
-&lt;p&gt;Smaller decisions are made mostly individually. Strategical decisions are discussed within core team. Usually there is a
-compromise. If not, we do either voting or forced decision (extremely rare).&lt;/p&gt;
-
-&lt;p&gt;Personally, I do many things about Yii: development, issues, forums and various communities, announcements and media,
-conferences, and, of course, trying out new things for the next versions.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;What is the role of Qiang — is he not involved in Yii 2 development anymore?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Yes. Qiang still gives advice if needed and manages some parts of Yii infrastructure. He isn&amp;rsquo;t active about development
-and isn&amp;rsquo;t going to get back anytime soon.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;What&amp;rsquo;s the roadmap for Yii 2 development?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;There&amp;rsquo;s &lt;a href=&#34;https://github.com/yiisoft/yii2/wiki/Plan-for-next-major-versions&#34;&gt;a wiki page&lt;/a&gt; which has ideas and work in
-progress roadmap.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Which version of PHP will be required by the next Yii?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Most likely, PHP 7.1.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Is there going to be another Yii 1.1 relase?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Yes. &lt;a href=&#34;https://github.com/yiisoft/yii/milestones/1.1.18&#34;&gt;We&amp;rsquo;re almost there&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>Some questions I&amp;rsquo;m answering are asked often so I decided to publish answers here. Feel free to ask more in comments.
+ Can you clarify please who has what role in Yii 2 maintenance and development?
+  @qiangxue, Qiang Xue — creator of Yii, see below @samdark, Alexander Makarov — everything @cebe, Carsten Brandt — everything @klimov-paul, Klimov Paul — everything. Focuses on code @silverfire, Dmitry Naumenko — everything. Temporarily busy with own projects @arogachev, Alexey Rogachev — everything.</description>
     </item>
     
     <item>
@@ -276,157 +56,9 @@ progress roadmap.&lt;/p&gt;
       <pubDate>Mon, 17 Apr 2017 13:49:29 +0300</pubDate>
       
       <guid>https://samdark.github.io/blog/are-traits-evil/</guid>
-      <description>
-
-&lt;p&gt;When I have started &lt;a href=&#34;https://www.patreon.com/samdark&#34;&gt;a Patreon campaign&lt;/a&gt;, I have promised to answer questions.
-First question came from Daniel Fly and is about &lt;a href=&#34;http://php.net/manual/en/language.oop5.traits.php&#34;&gt;PHP traits&lt;/a&gt;:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;What do you think about Traits in PHP? Do you think they are evil and should avoid using them? If using them what
-  are some common pitfalls fx where not to use them? Maybe you got some bad or good experience?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;what-are-traits&#34;&gt;What are traits?&lt;/h2&gt;
-
-&lt;p&gt;PHP manual defines traits as the following:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Traits are a mechanism for code reuse in single inheritance languages such as PHP. A Trait is intended to reduce some
-limitations of single inheritance by enabling a developer to reuse sets of methods freely in several independent
-classes living in different class hierarchies. The semantics of the combination of Traits and classes is defined
-in a way which reduces complexity, and avoids the typical problems associated with multiple inheritance and Mixins.&lt;/p&gt;
-
-&lt;p&gt;A Trait is similar to a class, but only intended to group functionality in a fine-grained and consistent way. It is
-not possible to instantiate a Trait on its own. It is an addition to traditional inheritance and enables horizontal
-composition of behavior; that is, the application of class members without requiring inheritance.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;That is a way lengthy description. In simple words, if we are not touching inheritance aspect, traits are an enhanced way
-to copy-paste.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-trait Dumper
-{
-    public function dump($var)
-    {
-        echo &#39;&amp;lt;pre&amp;gt;&#39; . print_r($var, true) . &#39;&amp;lt;/pre&amp;gt;&#39;;
-    }
-}
- 
-class MyClass
-{
-    use Dumper;
-}
- 
-$myClass = new MyClass();
-$myClass-&amp;gt;dump(&#39;test&#39;);
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The code above would work similar to:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
-class MyClass
-{
-    public function dump($var)
-    {
-        echo &#39;&amp;lt;pre&amp;gt;&#39; . print_r($var, true) . &#39;&amp;lt;/pre&amp;gt;&#39;;
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;traits-and-yii&#34;&gt;Traits and Yii&lt;/h2&gt;
-
-&lt;p&gt;Yii uses traits for low level functionality and common database layer code. Traits were considered to be used for
-behaviors in 2.0 and will be considered again for 2.1.&lt;/p&gt;
-
-&lt;h3 id=&#34;behaviors&#34;&gt;Behaviors&lt;/h3&gt;
-
-&lt;p&gt;I have started looking at traits in &lt;a href=&#34;http://rmcreative.ru/blog/post/traits-v-trunk-php&#34;&gt;August 2010&lt;/a&gt; when they were merged
-into PHP &lt;code&gt;trunk&lt;/code&gt; (that is how &lt;code&gt;master&lt;/code&gt; was called in CVS/SVN). By that time Yii 1.x had behaviors concept which is similar
-to Ruby mixins and is handy for seamlessly adding extra abilities such as &lt;code&gt;SoftDeleteable&lt;/code&gt; or &lt;code&gt;Versionable&lt;/code&gt; to
-a class. The main difference is that behavior has its own state and could be attached/detached in runtime while trait
-has no own state at all.&lt;/p&gt;
-
-&lt;p&gt;Traits were released before Yii 2.0 so when designing it we considered using them instead of 1.1 behaviors and decided
-not to. At that time there were no good ideas on how to make trait powered behavior configurable and
-attachable/detachable at runtime.&lt;/p&gt;
-
-&lt;p&gt;For 2.1 the idea popped up again. We have found ways to solve configurability by using abstract methods.
-Attaching/detaching proved to be unsolvable but enabling/disabling via subscribing and unsubscribing to/from events is
-possible. Final decision is still to be made&amp;hellip;&lt;/p&gt;
-
-&lt;h3 id=&#34;low-level-functionality&#34;&gt;Low level functionality&lt;/h3&gt;
-
-&lt;p&gt;Yii uses traits for common low level functionality:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/yiisoft/yii2/blob/master/framework/base/ArrayableTrait.php&#34;&gt;ArrayableTrait&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/yiisoft/yii2/blob/master/framework/base/ArrayAccessTrait.php&#34;&gt;ArrayAccessTrait&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;That is the most straightforward and correct use for traits.&lt;/p&gt;
-
-&lt;h3 id=&#34;database-layer-common-code&#34;&gt;Database layer common code&lt;/h3&gt;
-
-&lt;p&gt;A bit less straightforward is use of traits in Yii&amp;rsquo;s database layer:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/yiisoft/yii2/blob/master/framework/db/ActiveQueryTrait.php&#34;&gt;ActiveQueryTrait&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/yiisoft/yii2/blob/master/framework/db/ActiveRelationTrait.php&#34;&gt;ActiveRelationTrait&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/yiisoft/yii2/blob/master/framework/db/QueryTrait.php&#34;&gt;QueryTrait&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/yiisoft/yii2/blob/master/framework/db/SchemaBuilderTrait.php&#34;&gt;SchemaBuilderTrait&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/yiisoft/yii2/blob/master/framework/db/ViewFinderTrait.php&#34;&gt;ViewFinderTrait&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Database layer in Yii 2.0 has the same interface for both relational databases and noSQLs.
-Common parts in interface implementations are extracted into traits to keep inheritance tree
-smaller and to be able not to override too many methods for noSQLs which are different from traditional databases.&lt;/p&gt;
-
-&lt;p&gt;Personally I am not happy with this implementation looking from pure object-oriented perspective.
-It could have been done using composition and normal classes to be more testable and easier to read. Still, traits usage
-is justifiable because it saves tons of method calls thus making database layer significantly faster. Additionally,
-we dealt with testing it despite it not being straightforward.&lt;/p&gt;
-
-&lt;h2 id=&#34;common-pitfalls&#34;&gt;Common pitfalls&lt;/h2&gt;
-
-&lt;p&gt;When you think about using a trait, think twice.&lt;/p&gt;
-
-&lt;h3 id=&#34;no-encapsulation&#34;&gt;No encapsulation&lt;/h3&gt;
-
-&lt;p&gt;When using traits, you should understand the copy-paste aspect of it. Everything inside the trait is magically copied
-to the class as is. Of course, you can deal with naming conflicts when using a trait but that does not change the fact
-much. Because of that, it is wise to keep amount of code a trait contains to the minimum.&lt;/p&gt;
-
-&lt;p&gt;Ideal usage of traits is about small and simple pieces of code.&lt;/p&gt;
-
-&lt;h3 id=&#34;state&#34;&gt;State&lt;/h3&gt;
-
-&lt;p&gt;Since traits lack proper encapsulation, in order to deal with state you either should add private properties to
-the trait or declare &lt;code&gt;static&lt;/code&gt; variables inside a method. Both could lead to issues.&lt;/p&gt;
-
-&lt;p&gt;Private properties are copied to the class using a trait. Possible issues are naming conflicts and accidental
-modification of the property. Because in runtime properties are copied into class, class has access to private ones.&lt;/p&gt;
-
-&lt;p&gt;Using &lt;code&gt;static&lt;/code&gt; means all your objects using a trait would share the same state which is not always desired.&lt;/p&gt;
-
-&lt;h2 id=&#34;are-traits-evil&#34;&gt;Are traits evil?&lt;/h2&gt;
-
-&lt;p&gt;Short answer: depending on how you use traits.&lt;/p&gt;
-
-&lt;p&gt;Same as copy-paste they are evil to some degree but there is nothing absolutely evil or absolutely good.&lt;/p&gt;
-
-&lt;p&gt;Traits are useful for reusable interface implementations without the need for a base class. In other cases it is
-better to stick with objects composition.&lt;/p&gt;
-
-&lt;h2 id=&#34;further-reading&#34;&gt;Further reading&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.sitepoint.com/using-traits-in-php-5-4/&#34;&gt;Using Traits in PHP 5.4&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.sitepoint.com/php-traits-good-or-bad/&#34;&gt;PHP Traits: Good or Bad?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://rosstuck.com/how-i-use-traits/&#34;&gt;How I Use Traits&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/PHP/comments/65uyv3/are_traits_evil/&#34;&gt;Comments for this very post at reddit&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>When I have started a Patreon campaign, I have promised to answer questions. First question came from Daniel Fly and is about PHP traits:
+ What do you think about Traits in PHP? Do you think they are evil and should avoid using them? If using them what are some common pitfalls fx where not to use them? Maybe you got some bad or good experience?
+ What are traits?</description>
     </item>
     
     <item>
@@ -435,31 +67,12 @@ better to stick with objects composition.&lt;/p&gt;
       <pubDate>Thu, 23 Mar 2017 11:41:26 +0300</pubDate>
       
       <guid>https://samdark.github.io/blog/bcrypt-hash/</guid>
-      <description>&lt;p&gt;bcrypt is a good way to deal with password authentication. In PHP it is available via
-&lt;a href=&#34;https://secure.php.net/manual/en/function.crypt.php&#34;&gt;crypt&lt;/a&gt; with blowfish algorithm or a shortcut
-&lt;a href=&#34;https://secure.php.net/manual/en/function.password-hash.php&#34;&gt;password_hash&lt;/a&gt; function current PHP versions are providing.&lt;/p&gt;
-
-&lt;p&gt;Yii framework project templates are using bcrypt for handling passwords. Framework components
-are &lt;a href=&#34;http://www.yiiframework.com/doc-2.0/yii-base-security.html#generatePasswordHash()-detail&#34;&gt;providing polyfills ensuring bcrypt is used correctly&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;bcrypt produces a compound hash that looks like the following:&lt;/p&gt;
-
-&lt;p&gt;$&lt;strong style=&#34;color: #f00&#34;&gt;2y&lt;/strong&gt;$&lt;strong style=&#34;color: #0a0&#34;&gt;13&lt;/strong&gt;$&lt;strong style=&#34;color: #00f&#34;&gt;YUUgrko03UmNU/fe6gNcO.&lt;/strong&gt;&lt;strong style=&#34;color: #00a&#34;&gt;Hka4lrdRlkq0iJ5d4bv4fK.sKS.6jXu&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The string is always 60 characters long.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong style=&#34;color: #f00&#34;&gt;2y&lt;/strong&gt; indicates algorithm. We are using blowfish so in current PHP versions it should
-always be &lt;code&gt;2y&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;strong style=&#34;color: #0a0&#34;&gt;13&lt;/strong&gt; is computation cost. 2^13 iterations of &lt;a href=&#34;https://en.wikipedia.org/wiki/Key_derivation_function&#34;&gt;key derivation function&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Rest of the string is concatenated salt, and hash encoded with base64 with a custom set of characters.
-First 22 symbols are &lt;strong style=&#34;color: #00f&#34;&gt;16 bytes salt&lt;/strong&gt;. The rest are &lt;strong style=&#34;color: #00a&#34;&gt;the hash itself&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;When verifying a password input bcrypt extract algorithm version, cost, salt and hash from compound hash string of
-a saved password. Then, using the data extracted, it calculates a hash of the input and compares it with the hash
-we store.&lt;/p&gt;
-</description>
+      <description>bcrypt is a good way to deal with password authentication. In PHP it is available via crypt with blowfish algorithm or a shortcut password_hash function current PHP versions are providing.
+Yii framework project templates are using bcrypt for handling passwords. Framework components are providing polyfills ensuring bcrypt is used correctly.
+bcrypt produces a compound hash that looks like the following:
+$2y$13$YUUgrko03UmNU/fe6gNcO.Hka4lrdRlkq0iJ5d4bv4fK.sKS.6jXu
+The string is always 60 characters long.
+ 2y indicates algorithm.</description>
     </item>
     
     <item>
@@ -468,62 +81,9 @@ we store.&lt;/p&gt;
       <pubDate>Thu, 09 Mar 2017 12:39:18 +0300</pubDate>
       
       <guid>https://samdark.github.io/blog/yii-2.0-logging-and-psr-3/</guid>
-      <description>
-
-&lt;p&gt;It is 2017 and major parts of PHP community are all talking about &lt;a href=&#34;http://www.php-fig.org/psr/&#34;&gt;PSRs: PHP standard recommendations&lt;/a&gt;
-that aim is to make parts of frameworks reusable. The recommendation PSR-3 is about logging. Many logging libraries are
-following this recommendation, among which &lt;a href=&#34;https://github.com/Seldaek/monolog&#34;&gt;Monolog&lt;/a&gt; is the most widely used one.&lt;/p&gt;
-
-&lt;p&gt;There are three questions commonly asked about Yii 2.0 with regards to PSR-3:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Why isn&amp;rsquo;t Yii 2.0 PSR-3 compatible?&lt;/li&gt;
-&lt;li&gt;How do I use PSR-3 compatible logger in Yii 2.0?&lt;/li&gt;
-&lt;li&gt;Is there a plan to extract a standalone PSR-3 compatible logging library from Yii 2.0?&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Let&amp;rsquo;s answer these.&lt;/p&gt;
-
-&lt;h2 id=&#34;why-isn-t-yii-2-0-psr-3-compatible&#34;&gt;Why isn&amp;rsquo;t Yii 2.0 PSR-3 compatible?&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.yiiframework.com/doc-2.0/guide-runtime-logging.html&#34;&gt;Yii 2.0 logger&lt;/a&gt; is one of the well done parts of
-the framework. It&amp;rsquo;s stable, easy to extend, performant and really powerful when it comes to features. It was
-implemented at early stages of yet secret pre-alpha development of the framework and was not changed much since then.
-The design is very close to what was done in Yii 1.0 so we can think of 2008 as the year when logger design formed.&lt;/p&gt;
-
-&lt;p&gt;The year is important because it&amp;rsquo;s way before PHP-FIG group which is responsible for designing PSRs formed. At the time
-Yii 2.0 was in alpha stage we had a proven logger design with worked well with Yii 1.0 and Yii 1.1 and PSR-3 wasn&amp;rsquo;t
-a thing yet: there were nothing special about loggers implementing it and there was no benefits for Yii framework
-adopting it. So then we decided not to.&lt;/p&gt;
-
-&lt;p&gt;Now it&amp;rsquo;s time to re-decide it for 2.1 since there are certain pros in being PSR-3 compatible.&lt;/p&gt;
-
-&lt;h2 id=&#34;how-do-i-use-psr-3-compatible-logger-in-yii-2-0&#34;&gt;How do I use PSR-3 compatible logger in Yii 2.0?&lt;/h2&gt;
-
-&lt;p&gt;Yii&amp;rsquo;s logging facility is quite flexible. There&amp;rsquo;s a central dispatcher component which is collecting log messages and
-then flushes them to individual &lt;a href=&#34;http://www.yiiframework.com/doc-2.0/guide-runtime-logging.html#log-targets&#34;&gt;log targets&lt;/a&gt;,
-such as file target or email target that actually do the job.&lt;/p&gt;
-
-&lt;p&gt;Yii&amp;rsquo;s log targets are easy to extend but considering the popularity of PSR-3 and especially
-&lt;a href=&#34;https://github.com/Seldaek/monolog&#34;&gt;Monolog&lt;/a&gt; it is tempting to reuse what&amp;rsquo;s already done. For example, to send logs
-to a Slack chat.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve put together &lt;a href=&#34;https://github.com/samdark/yii2-psr-log-target&#34;&gt;an extension&lt;/a&gt; which allows you to use any PSR-3
-compatible logger as Yii log target.&lt;/p&gt;
-
-&lt;p&gt;What is does it translating Yii&amp;rsquo;s log levels to alike PSR-3 log levels and actually forwarding logs to PSR-3 compatible
-logger configured. Configuration is fairly easy, you can find it &lt;a href=&#34;https://github.com/samdark/yii2-psr-log-target&#34;&gt;at extension page&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;is-there-a-plan-to-extract-a-standalone-psr-3-compatible-logging-library-from-yii-2-0&#34;&gt;Is there a plan to extract a standalone PSR-3 compatible logging library from Yii 2.0?&lt;/h2&gt;
-
-&lt;p&gt;Yii was never meant to be a set of standalone libraries. Independent components are nice but there is a cost of not
-reusing what&amp;rsquo;s available in the framework which in some case may result in bloated code and too abstract solutions.&lt;/p&gt;
-
-&lt;p&gt;Logger may be an exception since it&amp;rsquo;s not relying on the framework much, it&amp;rsquo;s framework that relies on it. An attempt
-to extract logger may succeed and since we have a good design it may even become close in popularity to Monolog. So
-overall it is worth trying and, I think, I&amp;rsquo;ll work on it if &lt;a href=&#34;https://www.patreon.com/samdark&#34;&gt;Patreon campaign&lt;/a&gt;
-will bring me enough time for it.&lt;/p&gt;
-</description>
+      <description>It is 2017 and major parts of PHP community are all talking about PSRs: PHP standard recommendations that aim is to make parts of frameworks reusable. The recommendation PSR-3 is about logging. Many logging libraries are following this recommendation, among which Monolog is the most widely used one.
+There are three questions commonly asked about Yii 2.0 with regards to PSR-3:
+ Why isn&amp;rsquo;t Yii 2.0 PSR-3 compatible? How do I use PSR-3 compatible logger in Yii 2.</description>
     </item>
     
     <item>
@@ -532,55 +92,9 @@ will bring me enough time for it.&lt;/p&gt;
       <pubDate>Sun, 05 Mar 2017 21:52:28 +0300</pubDate>
       
       <guid>https://samdark.github.io/blog/no-kipple-please/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;&amp;ldquo;Kipple is useless objects, like junk mail or match folders after you use the last match or gum wrappers or yesterday&amp;rsquo;s
-homeopape. When nobody&amp;rsquo;s around, kipple reproduces itself. For instance, if you go to bed leaving any kipple around
-your apartment, when you wake up the next morning there&amp;rsquo;s twice as much of it. It always gets more and more.&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;&amp;ldquo;There&amp;rsquo;s the First Law of Kipple,&amp;rdquo; he said. &amp;ldquo;Kipple drives out nonkipple.&amp;rdquo;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;em&gt;Do Androids Dream of Electric Sheep? by Philip K. Dick&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;IT projects are much like the apartments mentioned in Philip K. Dick novel. They tend
-to have kipple and, as with apartments, it grows every day.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://samdark.github.io/img/posts/kipple.png&#34; width=&#34;50%&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve reviewed many projects and one mistake that I often see is about kipple. It looks
-minor compared to bugs or architectural issues but at the same time it affects both
-project and development team significantly.&lt;/p&gt;
-
-&lt;p&gt;So kipple exists. Usually it&amp;rsquo;s cryptic unneeded stuff that one hesitates to delete and
-it is for quite vague illogical reasons. Examples of kipple is software projects include:
-commented out code, files like &lt;code&gt;main.css_old&lt;/code&gt;, unused methods, five different versions of jQuery,
-code comments like &lt;code&gt;// TODO:&lt;/code&gt;, etc.&lt;/p&gt;
-
-&lt;p&gt;That&amp;rsquo;s why kipple is both useless and problematic:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Broken_windows_theory&#34;&gt;Broken Windows Theory&lt;/a&gt; applies
-well to software projects. If it&amp;rsquo;s allowed not to clean up it&amp;rsquo;s OK to write code that is
-of doubtful quality.&lt;/li&gt;
-&lt;li&gt;Often developers comment out big chunks of CSS, JavaScript and HTML that are still
-served to the end user, thus slowing page loading speed.&lt;/li&gt;
-&lt;li&gt;We&amp;rsquo;re actually reading commented out parts of code, and it takes time.&lt;/li&gt;
-&lt;li&gt;Large number of unused files can confuse newcomers.&lt;/li&gt;
-&lt;li&gt;It is unpleasant to work with such &amp;ldquo;kippled&amp;rdquo; project. It can feel like the
-code is of a bad quality even if architecture and code itself is sound.&lt;/li&gt;
-&lt;li&gt;Compile time may be increased.&lt;/li&gt;
-&lt;li&gt;Any version control system remembers everything you&amp;rsquo;ll delete. If there&amp;rsquo;s a need
-you can always get it from there. If you fail to remember where it was,
-you can tag the commit.
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I know that you may say that it&amp;rsquo;s not important and there&amp;rsquo;s no time for it but I highly
-recommend trying it for a few months. You&amp;rsquo;ll notice improvements in both the project and
-overall quality of the code your team produce.&lt;/p&gt;
-</description>
+      <description>&amp;ldquo;Kipple is useless objects, like junk mail or match folders after you use the last match or gum wrappers or yesterday&amp;rsquo;s homeopape. When nobody&amp;rsquo;s around, kipple reproduces itself. For instance, if you go to bed leaving any kipple around your apartment, when you wake up the next morning there&amp;rsquo;s twice as much of it. It always gets more and more.&amp;rdquo;
+&amp;hellip;
+&amp;ldquo;There&amp;rsquo;s the First Law of Kipple,&amp;rdquo; he said. &amp;ldquo;Kipple drives out nonkipple.</description>
     </item>
     
     <item>
@@ -589,47 +103,7 @@ overall quality of the code your team produce.&lt;/p&gt;
       <pubDate>Sat, 04 Mar 2017 21:52:28 +0300</pubDate>
       
       <guid>https://samdark.github.io/blog/finding-bug-with-binary-search/</guid>
-      <description>&lt;p&gt;Once there&amp;rsquo;s a way to reproduce the issue we need to find code which caused it. Sometimes we are totally stuck
-for day feeling more and more depressed and, in the end, unable to think clearly. Luckily, there&amp;rsquo;s a systematic approach
-to find bug even if you have no idea what caused it and even where to set a breakpoint for proper debugging.
-This approach is known as binary search.&lt;/p&gt;
-
-&lt;p&gt;If your code is under version control, firstly you check out a fairly old commit and see if it works. If it does work
-then you check out a commit that is in the middle between the commit that works and the commit which did not and check
-again. When there are no commits remaining in between the working and non-working commits, you arrived at the commit
-that broke it. If you&amp;rsquo;re using git, you&amp;rsquo;re lucky since git has built-in tool &lt;code&gt;git bisect&lt;/code&gt; that will help with this
-process. It is quite simple. Let&amp;rsquo;s say you&amp;rsquo;re on current &lt;code&gt;master&lt;/code&gt; commit and you have a bug.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git bisect # starts the process
-git bisect bad # current commit has a bug
-git bisect good 3.4.5 # I remember that commit tagged 3.4.5 was OK
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;After that, git informs you with something like &lt;code&gt;Bisecting: 10 revisions left to test after this&lt;/code&gt;, which means
-there are about 10 commits between good and bad revisions. Also it is checking out a commit which is in
-the middle of these ten.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://samdark.github.io/img/posts/binary_search.png&#34; width=&#34;50%&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Now, it&amp;rsquo;s your job to confirm if the bug is still present or otherwise. If yes, you issue
-&lt;code&gt;git bisect bad&lt;/code&gt;. If not &amp;mdash; &lt;code&gt;git bisect good&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;git will choose either left or right part of these 10 commits and repeat the process.&lt;/p&gt;
-
-&lt;p&gt;After a few checks, you&amp;rsquo;ll get, for example, &lt;code&gt;1029012930192390 is first bad commit&lt;/code&gt; message.
-If you confirmed the presence of the bug correctly, this indicates the exact commit that introduced the issue.&lt;/p&gt;
-
-&lt;p&gt;When everything is done you execute &lt;code&gt;git bisect reset&lt;/code&gt; to end the process.&lt;/p&gt;
-
-&lt;p&gt;Similarly, the binary search approach could be done with HTML markup of a single page when it&amp;rsquo;s not under version control.
-If you have a weird bug, delete half of the HTML page code and see if issue is still present.
-If it is, then divide that HTML and check parts again. If it&amp;rsquo;s not then take other half for inspection.&lt;/p&gt;
-
-&lt;p&gt;The advantage is that you&amp;rsquo;ll certainly find what caused the bug for certain. However, it is a slow process when
-you&amp;rsquo;re not using a tool like git bisect.&lt;/p&gt;
-
-&lt;p&gt;The same methodology can be applied to anything. For example, this process widely used in electronics.&lt;/p&gt;
-</description>
+      <description>Once there&amp;rsquo;s a way to reproduce the issue we need to find code which caused it. Sometimes we are totally stuck for day feeling more and more depressed and, in the end, unable to think clearly. Luckily, there&amp;rsquo;s a systematic approach to find bug even if you have no idea what caused it and even where to set a breakpoint for proper debugging. This approach is known as binary search.</description>
     </item>
     
     <item>
@@ -638,52 +112,9 @@ you&amp;rsquo;re not using a tool like git bisect.&lt;/p&gt;
       <pubDate>Sat, 04 Mar 2017 21:52:28 +0300</pubDate>
       
       <guid>https://samdark.github.io/blog/the-history-of-yii-framework/</guid>
-      <description>
-
-&lt;p&gt;Yii is one of the long-living PHP frameworks out there that is constantly evolving with time
-as PHP is enhanced more and more. It&amp;rsquo;s interesting explore the history of Yii.&lt;/p&gt;
-
-&lt;h2 id=&#34;prado&#34;&gt;Prado&lt;/h2&gt;
-
-&lt;p&gt;In June 2004, Qiang Xue released the first version of PRADO framework. Prado was inspired
-by Apache Tapestry, Borland Delphi and Microsoft ASP.NET.&lt;/p&gt;
-
-&lt;p&gt;Roughly at the same time, Zend conducted a competition called &amp;ldquo;gophp5&amp;rdquo; to promote
-the newly released PHP 5.0. Qiang re-implemented Prado to PHP 5 and it won the
-competition.&lt;/p&gt;
-
-&lt;p&gt;At the time, the project was hosted on SourceForge. In the mid-2005, Wei Zhuo joined
-and helped to add i18n and l10n. Prado 2.0 was released.&lt;/p&gt;
-
-&lt;p&gt;In May 2005, Prado was again rewritten to include new features inspired
-by Microsoft ASP.NET 2.0. In April 2006, version 3.0 was released. Since
-then then Prado team has mostly focused on code quality and stability.&lt;/p&gt;
-
-&lt;p&gt;PRADO is still alive and used.&lt;/p&gt;
-
-&lt;h2 id=&#34;yii&#34;&gt;Yii&lt;/h2&gt;
-
-&lt;p&gt;In October 2006, Qiang announced an alpha version of Yii at the PRADO forums.&lt;/p&gt;
-
-&lt;p&gt;On the 3rd of December 2008, Yii version 1.0.0 was released. Many ideas and some code were taken
-from PRADO, including: ActiveRecord, i18n, l10n, etc. Yii also drew more inspirations from
-RoR (convention over configuration, some AR features), symfony1 (filters,
-plugins) and Joomla (modules, message translation).&lt;/p&gt;
-
-&lt;p&gt;Yii 1.0.0 was significantly faster than other frameworks of similar functionality,
-so community grew fast.&lt;/p&gt;
-
-&lt;p&gt;In January 2010, Yii 1.1 was released. It included new features such as form builder,
-relational queries in AR, ready to use unit-testing framework and more.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve joined Yii team in 2010. By the end of the year, we were discussing Yii 1.2
-while developing version 1.1. In May 2011, the Yii team decided to use a newer PHP versions
-and address legacy architectural challenges. That is, to start work on new major version 2.0.
-The first commits were on a private intenal repository.&lt;/p&gt;
-
-&lt;p&gt;In May 2013, Yii 2.0 and its source code was presented to public. In October 2014, the first stable
-version we released.&lt;/p&gt;
-</description>
+      <description>Yii is one of the long-living PHP frameworks out there that is constantly evolving with time as PHP is enhanced more and more. It&amp;rsquo;s interesting explore the history of Yii.
+Prado In June 2004, Qiang Xue released the first version of PRADO framework. Prado was inspired by Apache Tapestry, Borland Delphi and Microsoft ASP.NET.
+Roughly at the same time, Zend conducted a competition called &amp;ldquo;gophp5&amp;rdquo; to promote the newly released PHP 5.</description>
     </item>
     
   </channel>

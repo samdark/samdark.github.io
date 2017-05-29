@@ -2,11 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Photography on Alexander Makarov</title>
-    <link>https://samdark.github.io/tags/photography/index.xml</link>
+    <link>https://samdark.github.io/tags/photography/</link>
     <description>Recent content in Photography on Alexander Makarov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <atom:link href="https://samdark.github.io/tags/photography/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 May 2017 13:24:11 +0300</lastBuildDate>
+    
+	<atom:link href="https://samdark.github.io/tags/photography/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>How to safely retrieve files from failing HDD, SSD or SD card using free tools</title>
@@ -14,54 +17,8 @@
       <pubDate>Wed, 17 May 2017 13:24:11 +0300</pubDate>
       
       <guid>https://samdark.github.io/blog/how-to-safely-retrieve-files-from-failing-hdd-ssd-or-sd-card-using-free-tools/</guid>
-      <description>&lt;p&gt;All the drives we are using to store our precious photos and videos are not 100% reliable. Everybody should know that and
-back everything up but even if you are doing it properly, there are cases when drive fails
-and you have nowhere to get its contents except from the drive itself.&lt;/p&gt;
-
-&lt;p&gt;It happened to me recently. 23 GB SD card from a trip almost full of precious shots was corrupted when inserted
-into a cheap PC card reader.&lt;/p&gt;
-
-&lt;p&gt;As a result, both Windows PC and Mac were unable to read anything from the card and were prompting to format it instead.
-After trying lots of commercial software designed specifically for recovering photos and files from SD cards I was lost.
-None worked well. One of the tools was able to recover some photos. About 2% of what was there initially.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://samdark.github.io/img/posts/photo_fox.jpg&#34; alt=&#34;A fox in the wild. Bygdøy, Oslo&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I did not give up and finally found out how to do it properly and, surprisingly, for free.&lt;/p&gt;
-
-&lt;p&gt;First, drive may degrade so it is a bad idea to try reading from it repeatedly. It may fail and die
-entirely. We need a tool to copy entire drive to an image file on a local disk byte by byte reading as much as we can.
-Such a tool exists and is called &lt;a href=&#34;https://www.gnu.org/software/ddrescue/&#34;&gt;GNU Ddrescue&lt;/a&gt;. The only con of it is that it
-requires MacOS or Linux to run but it is not a problem since there are live CDs available. In particular, there is
-&lt;a href=&#34;http://www.knopper.net/knoppix/index-en.html&#34;&gt;Knoppix&lt;/a&gt; which has all the tools bundled.&lt;/p&gt;
-
-&lt;p&gt;So we are opening console and trying to find out which drives we have. In order to do it use
-&lt;code&gt;fdisk -l&lt;/code&gt; on Linux and &lt;code&gt;/Applications/Utilities/diskutil&lt;/code&gt; list on MacOS. On MacOS prefer disk names which start with
-&lt;code&gt;/dev/r&lt;/code&gt; which are raw disks with buffer-less communication.&lt;/p&gt;
-
-&lt;p&gt;Now, as you know drive names:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# get most of the error-free data quickly
-./ddrescue -n /dev/old_disk /mnt/sdb1/bad_drive.img rescued.log
-# then attempt to get data which is in bad areas
-./ddrescue -r 1 /dev/old_disk /mnt/sdb1/bad_drive.img rescued.log
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;/mnt/sdb1/bad_drive.img&lt;/code&gt; is a path to image file to create. Obviously, it should be on another disk and you should
-have at least the same amount of space available as the side of original disk you are restoring.&lt;/p&gt;
-
-&lt;p&gt;As it is done, we need to actually get our data from the disk image we have. There is another tool for that called
-&lt;a href=&#34;http://www.cgsecurity.org/wiki/PhotoRec&#34;&gt;PhotoRec&lt;/a&gt;. Again, it is a console tool.&lt;/p&gt;
-
-&lt;p&gt;Launch it as &lt;code&gt;./photorec /mnt/sdb1/bad_drive.img&lt;/code&gt; then
-&lt;a href=&#34;http://www.cgsecurity.org/wiki/PhotoRec_Step_By_Step&#34;&gt;follow instructions&lt;/a&gt;. At this point you can try various options
-as many times as you want since image file is not affected and is on a well working drive so there is little chance to
-lose data because of messing with original drive.&lt;/p&gt;
-
-&lt;p&gt;That is it. Using these two tools I was able to recover all the precious photos from corrupted SD card.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://samdark.github.io/img/posts/photo_mustang.jpg&#34; alt=&#34;Someone parked right at the pier. Aker Brygge, Oslo&#34; /&gt;&lt;/p&gt;
-</description>
+      <description>All the drives we are using to store our precious photos and videos are not 100% reliable. Everybody should know that and back everything up but even if you are doing it properly, there are cases when drive fails and you have nowhere to get its contents except from the drive itself.
+It happened to me recently. 23 GB SD card from a trip almost full of precious shots was corrupted when inserted into a cheap PC card reader.</description>
     </item>
     
     <item>
@@ -70,19 +27,7 @@ lose data because of messing with original drive.&lt;/p&gt;
       <pubDate>Mon, 08 May 2017 00:40:17 +0300</pubDate>
       
       <guid>https://samdark.github.io/blog/why-am-i-getting-dull-images-after-processing-raw-files/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m not a pro photographer but love to travel with a camera so I&amp;rsquo;m making some pictures from time to time. Some time ago
-I&amp;rsquo;ve started shooting in RAW and post-processing it to JPEG-s at home. After some practice I&amp;rsquo;ve managed to get slightly
-better JPEG-s than camera was making automatically. Everything was well (except tons of unprocessed RAWs, of course) but
-after re-installing OS something went wrong. I was doing everything as before but resulting JPEGs were simply dull
-colored and greyish.&lt;/p&gt;
-
-&lt;p&gt;Research revealed that wrong color space and depth were set in processing software. I&amp;rsquo;m using Adobe Camera RAW but
-I&amp;rsquo;m pretty sure alike settings are in other software as well. After setting color space to sRGB and depth to 16 bit
-everything went back to normal. JPEGs became juicy again.&lt;/p&gt;
-
-&lt;p&gt;If you wonder about the difference between color spaces, here&amp;rsquo;s
-&lt;a href=&#34;https://fstoppers.com/pictures/adobergb-vs-srgb-3167&#34;&gt;a good article by Zach Sutton about it&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>I&amp;rsquo;m not a pro photographer but love to travel with a camera so I&amp;rsquo;m making some pictures from time to time. Some time ago I&amp;rsquo;ve started shooting in RAW and post-processing it to JPEG-s at home. After some practice I&amp;rsquo;ve managed to get slightly better JPEG-s than camera was making automatically. Everything was well (except tons of unprocessed RAWs, of course) but after re-installing OS something went wrong. I was doing everything as before but resulting JPEGs were simply dull colored and greyish.</description>
     </item>
     
   </channel>
