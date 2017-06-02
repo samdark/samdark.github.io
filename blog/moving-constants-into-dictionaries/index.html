@@ -14,10 +14,10 @@
 <title>
 
 
-     bcrypt hash 
+     Moving constants into dictionaries 
 
 </title>
-<link rel="canonical" href="https://samdark.github.io/blog/bcrypt-hash/">
+<link rel="canonical" href="https://samdark.github.io/blog/moving-constants-into-dictionaries/">
 
 
 
@@ -121,7 +121,7 @@
                 <div class="title-container">
                     <div class="page-heading">
 
-    bcrypt hash
+    Moving constants into dictionaries
 
 </div>
 
@@ -129,48 +129,178 @@
                 </div>
                 <div class="meta">
                     
-                    <div class="date" title='Thu Mar 23 2017 11:41:26 MSK'>Mar 23, 2017</div>
+                    <div class="date" title='Fri Jun 2 2017 03:03:04 MSK'>Jun 2, 2017</div>
                     
                     
-                    <div class="reading-time"><div class="middot"></div>1 minute read</div>
+                    <div class="reading-time"><div class="middot"></div>2 minutes read</div>
                     
                 </div>
             </div>
             <div class="markdown">
-                <p>bcrypt is a good way to deal with password authentication. In PHP it is available via
-<a href="https://secure.php.net/manual/en/function.crypt.php">crypt</a> with blowfish algorithm or a shortcut
-<a href="https://secure.php.net/manual/en/function.password-hash.php">password_hash</a> function current PHP versions are providing.</p>
+                <p>Extracting constants makes code much cleaner compared to using values directly. It eliminates typos and makes it possible
+to use IDE autocomplete and refactoring.</p>
 
-<p>Yii framework project templates are using bcrypt for handling passwords. Framework components
-are <a href="http://www.yiiframework.com/doc-2.0/yii-base-security.html#generatePasswordHash()-detail">providing polyfills ensuring bcrypt is used correctly</a>.</p>
+<p>Typically, after extraction is done, it looks like the following:</p>
 
-<p>bcrypt produces a compound hash that looks like the following:</p>
+<pre><code class="language-php">namespace app\models;
 
-<p>$<strong style="color: #f00">2y</strong>$<strong style="color: #0a0">13</strong>$<strong style="color: #00f">YUUgrko03UmNU/fe6gNcO.</strong><strong style="color: #00a">Hka4lrdRlkq0iJ5d4bv4fK.sKS.6jXu</strong></p>
+class User
+{
+    const GENDER_FEMALE = 'female';
+    const GENDER_MALE = 'male';
+    
+    public static function listGenders()
+    {
+        return [
+            self::GENDER_FEMALE =&gt; Yii::t('app', 'Female'),
+            self::GENDER_MALE =&gt; Yii::t('app', 'Male'),
+        ];
+    }
+    
+    public static function getGenderAsString($gender)
+    {
+        $all = self::listGenders();
 
-<p>The string is always 60 characters long.</p>
+        if (isset($all[$gender])) {
+            return $all[$gender];
+        }
 
-<ul>
-<li><strong style="color: #f00">2y</strong> indicates algorithm. We are using blowfish so in current PHP versions it should
-always be <code>2y</code>.</li>
-<li><strong style="color: #0a0">13</strong> is computation cost. 2^13 iterations of <a href="https://en.wikipedia.org/wiki/Key_derivation_function">key derivation function</a>.</li>
-<li>Rest of the string is concatenated salt, and hash encoded with base64 with a custom set of characters.
-First 22 symbols are <strong style="color: #00f">16 bytes salt</strong>. The rest are <strong style="color: #00a">the hash itself</strong>.</li>
-</ul>
+        return Yii::t('app', 'Not set');
+    }
+    
+    // ...
+}
+</code></pre>
 
-<p>When verifying a password input bcrypt extract algorithm version, cost, salt and hash from compound hash string of
-a saved password. Then, using the data extracted, it calculates a hash of the input and compares it with the hash
-we store.</p>
+<p>or another example from Stay.com project:</p>
+
+<pre><code class="language-php">namespace app\models;
+
+class Guide
+{
+    const THEME_SHOPPING = 2;
+    const THEME_ART_AND_CULTURE = 3;
+    const THEME_AFTER_DARK = 4;
+    const THEME_FAMILY = 5;
+    const THEME_COFFEE = 8;
+    const THEME_ON_A_BUDGET = 9;
+    const THEME_FOOD = 10;
+    const THEME_SPORTS_AND_OUTDOORS = 11;
+    const THEME_24_HOURS = 12;
+    
+    public static function listThemes()
+    {
+        return [
+            self::THEME_SHOPPING =&gt; Yii::t('app', 'Shopping'),
+            // ...
+        ];
+    }
+    
+    public static function getThemeAsString($theme)
+    {
+        $all = self::listThemes();
+
+        if (isset($all[$theme])) {
+            return $all[$theme];
+        }
+
+        return Yii::t('app', 'Not set');
+    }
+    
+    // ...
+}
+</code></pre>
+
+<p>It is more or less OK but some issues are still there:</p>
+
+<ol>
+<li>It bloats the class.</li>
+<li>Constants could not be reused in different context.</li>
+<li>It creates unnecessary dependency when used with different classes such as form models.</li>
+</ol>
+
+<p>In both examples above it&rsquo;s possible to extract constants into its own class. User case:</p>
+
+<pre><code class="language-php">namespace app\dictionaries;
+
+abstract class Gender
+{
+    const FEMALE = 0;
+    const MALE = 1;
+
+    public static function all()
+    {
+        return [
+            self::MALE =&gt; Yii::t('app', 'Male'),
+            self::FEMALE =&gt; Yii::t('app', 'Female'),
+        ];
+    }
+    
+    public static function get($gender)
+    {
+        $all = self::all();
+
+        if (isset($all[$gender])) {
+            return $all[$gender];
+        }
+
+        return Yii::t('app', 'Not set');
+    }
+}
+</code></pre>
+
+<p>Stay.com case:</p>
+
+<pre><code class="language-php">namespace app\dictionaries;
+
+abstract class GuideTheme
+{
+    const SHOPPING = 2;
+    const ART_AND_CULTURE = 3;
+    const AFTER_DARK = 4;
+    const FAMILY = 5;
+    const COFFEE = 8;
+    const ON_A_BUDGET = 9;
+    const FOOD = 10;
+    const SPORTS_AND_OUTDOORS = 11;
+    const 24_HOURS = 12;
+    
+    public static function all()
+    {
+        return [
+            self::SHOPPING =&gt; Yii::t('app', 'Shopping'),
+            // ...
+        ];
+    }
+    
+    public static function get($theme)
+    {
+        $all = self::all();
+
+        if (isset($all[$theme])) {
+            return $all[$theme];
+        }
+
+        return Yii::t('app', 'Not set');
+    }    
+}
+</code></pre>
+
+<p>In both cases, additionally to solving issues listed above, it looks either equally good or better than originally:</p>
+
+<pre><code class="language-php">$user-&gt;gender = Gender::MALE;
+// instead of
+$user-&gt;gender = User::GENDER_MALE;
+
+
+$guide-&gt;theme = GuideTheme::COFFEE;
+// instead of
+$guide-&gt;theme = Guide::THEME_COFFEE;
+</code></pre>
 
                 <br>
 
                 <ul id="tags">
-                    
-                    <li><a href="https://samdark.github.io/tags/bcrypt">bcrypt</a> </li>
-                    
-                    <li><a href="https://samdark.github.io/tags/password">password</a> </li>
-                    
-                    <li><a href="https://samdark.github.io/tags/php">php</a> </li>
                     
                 </ul>
 
@@ -181,9 +311,9 @@ we store.</p>
                 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'samdark';
-    var disqus_identifier = 'https:\/\/samdark.github.io\/blog\/bcrypt-hash\/';
-    var disqus_title = 'bcrypt hash';
-    var disqus_url = 'https:\/\/samdark.github.io\/blog\/bcrypt-hash\/';
+    var disqus_identifier = 'https:\/\/samdark.github.io\/blog\/moving-constants-into-dictionaries\/';
+    var disqus_title = 'Moving constants into dictionaries';
+    var disqus_url = 'https:\/\/samdark.github.io\/blog\/moving-constants-into-dictionaries\/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

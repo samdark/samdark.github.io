@@ -2,14 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hydrator on Alexander Makarov</title>
-    <link>https://samdark.github.io/tags/hydrator/</link>
+    <link>https://samdark.github.io/tags/hydrator/index.xml</link>
     <description>Recent content in Hydrator on Alexander Makarov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 13 May 2017 00:59:27 +0300</lastBuildDate>
-    
-	<atom:link href="https://samdark.github.io/tags/hydrator/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="https://samdark.github.io/tags/hydrator/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Hydrator</title>
@@ -17,7 +14,113 @@
       <pubDate>Sat, 13 May 2017 00:59:27 +0300</pubDate>
       
       <guid>https://samdark.github.io/blog/hydrator/</guid>
-      <description>November 2016 I&amp;rsquo;ve implemented and released a Hydrator library but never properly announced it. As far as I know, the &amp;ldquo;hydrator&amp;rdquo; term was first used in Hibernate Java ORM. The job of a hydrator is to fill an object with data or extract data from an object without calling constructor or extra getter-setter methods. It allows you to directly work with private properties which should be persisted to database or loaded from database while not exposing these properties thus keeping public interface clean.</description>
+      <description>
+
+&lt;p&gt;November 2016 I&amp;rsquo;ve implemented and released a &lt;a href=&#34;https://github.com/samdark/hydrator&#34;&gt;Hydrator library&lt;/a&gt; but never properly
+announced it. As far as I know, the &amp;ldquo;hydrator&amp;rdquo; term was first used in &lt;a href=&#34;http://hibernate.org/orm/&#34;&gt;Hibernate Java ORM&lt;/a&gt;.
+The job of a hydrator is to fill an object with data or extract data from an object without calling constructor or extra
+getter-setter methods. It allows you to directly work with private properties which should be persisted to database
+or loaded from database while not exposing these properties thus keeping public interface clean.&lt;/p&gt;
+
+&lt;p&gt;Internally it uses &lt;a href=&#34;http://php.net/manual/en/book.reflection.php&#34;&gt;PHP reflection&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://samdark.github.io/img/posts/hydration.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+
+&lt;p&gt;Consider we have a &lt;code&gt;Post&lt;/code&gt; entity which represents a blog post. It has a title and a text. A unique id is generated to
+identify it.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;class Post
+{
+    private $id;
+    protected $title;
+    protected $text;
+
+    public function __construct($title, $text)
+    {
+        $this-&amp;gt;id = uniqid(&#39;post_&#39;, true);
+        $this-&amp;gt;title = $title;
+        $this-&amp;gt;text = $text;
+    }
+   
+    public function getId()
+    {
+        return $this-&amp;gt;id;
+    }
+    
+    public function getTitle()
+    {
+        return $this-&amp;gt;title;
+    }
+    
+    public function setTitle($title)
+    {
+        $this-&amp;gt;title = $title;
+    }
+    
+    public function getText()
+    {
+        return $this-&amp;gt;text;
+    }
+    
+    public function setText()
+    {
+        return $this-&amp;gt;text;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Saving a post to database:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;$post = new Post(&#39;First post&#39;, &#39;Hell, it is a first post.&#39;);
+
+$postHydrator = new \samdark\hydrator\Hydrator([
+    &#39;id&#39; =&amp;gt; &#39;id&#39;,
+    &#39;title&#39; =&amp;gt; &#39;title&#39;,
+    &#39;text&#39; =&amp;gt; &#39;text&#39;,
+]);
+
+$data = $postHydrator-&amp;gt;extract($post);
+save_to_database($data);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Loading post from database:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;&amp;lt;?php
+$data = load_from_database();
+
+$postHydrator = new \samdark\hydrator\Hydrator([
+    &#39;id&#39; =&amp;gt; &#39;id&#39;,
+    &#39;title&#39; =&amp;gt; &#39;title&#39;,
+    &#39;text&#39; =&amp;gt; &#39;text&#39;,
+]);
+
+$post = $postHydrator-&amp;gt;hydrate($data, Post::class);
+echo $post-&amp;gt;getId();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Filling existing post object with data:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-php&#34;&gt;$data = load_from_database();
+
+$postHydrator = new \samdark\hydrator\Hydrator([
+    &#39;title&#39; =&amp;gt; &#39;title&#39;,
+    &#39;text&#39; =&amp;gt; &#39;text&#39;,
+]);
+
+$post = get_post();
+$post = $postHydrator-&amp;gt;hydrateInto($data, $post);
+echo $post-&amp;gt;getTitle();
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;usage-in-yii&#34;&gt;Usage in Yii&lt;/h2&gt;
+
+&lt;p&gt;It&amp;rsquo;s not currently used in Yii in any way. One may use it to implement his own data mapping
+in a repository in case of purchasing
+&lt;a href=&#34;https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html&#34;&gt;clean architecture&lt;/a&gt;
+and &lt;a href=&#34;https://en.wikipedia.org/wiki/Domain-driven_design&#34;&gt;domain driven design&lt;/a&gt; where encapsulation is uber-important.&lt;/p&gt;
+</description>
     </item>
     
   </channel>
