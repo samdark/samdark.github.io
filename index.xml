@@ -175,6 +175,10 @@ $guide-&amp;gt;theme = GuideTheme::COFFEE;
 // instead of
 $guide-&amp;gt;theme = Guide::THEME_COFFEE;
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/PHP/comments/6eqwj4/moving_constants_into_dictionaries/&#34;&gt;Comments at Reddit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -645,10 +649,6 @@ better to stick with objects composition.&lt;/p&gt;
         &lt;/span&gt;        
     &lt;/li&gt;
     &lt;li&gt;
-        &lt;img src=&#34;https://samdark.github.io/img/patrons/timur_ruziev.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
-        &lt;a class=&#34;name&#34; href=&#34;https://github.com/resurtm&#34;&gt;Timur Ruziev&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
         &lt;img src=&#34;https://samdark.github.io/img/patrons/dragan_zivkovic.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
         &lt;a class=&#34;name&#34; href=&#34;https://github.com/dzivkovic&#34;&gt;Dragan Zivkovic&lt;/a&gt;
     &lt;/li&gt;
@@ -675,7 +675,7 @@ better to stick with objects composition.&lt;/p&gt;
         &lt;img src=&#34;https://samdark.github.io/img/patrons/no_photo.png&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
         &lt;a class=&#34;name&#34; href=&#34;https://github.com/Caravus&#34;&gt;Evgeniy Denisenko&lt;/a&gt;
     &lt;/li&gt;
-    &lt;li&gt;
+    git &lt;li&gt;
         &lt;img src=&#34;https://samdark.github.io/img/patrons/no_photo.png&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
         &lt;a class=&#34;name&#34; href=&#34;https://github.com/djeux&#34;&gt;djeux&lt;/a&gt;
     &lt;/li&gt;
@@ -686,10 +686,6 @@ better to stick with objects composition.&lt;/p&gt;
     &lt;li&gt;
         &lt;img src=&#34;https://samdark.github.io/img/patrons/judd_bundy.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
         &lt;a class=&#34;name&#34; href=&#34;https://github.com/dataskills&#34;&gt;Judd Bundy&lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-        &lt;img src=&#34;https://samdark.github.io/img/patrons/alexander_bondarev.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
-        &lt;span class=&#34;name&#34;&gt;Alexander Bondarev&lt;/span&gt;
     &lt;/li&gt;
     &lt;li&gt;
         &lt;img src=&#34;https://samdark.github.io/img/patrons/pavel_tetyaev.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
@@ -722,10 +718,6 @@ better to stick with objects composition.&lt;/p&gt;
     &lt;li&gt;
         &lt;img src=&#34;https://samdark.github.io/img/patrons/no_photo.png&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
         &lt;span class=&#34;name&#34;&gt;alexvil&lt;/span&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-        &lt;img src=&#34;https://samdark.github.io/img/patrons/chris_smith.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
-        &lt;a class=&#34;name&#34; href=&#34;https://github.com/cgsmith&#34;&gt;Chris Smith&lt;/a&gt;
     &lt;/li&gt;
     &lt;li&gt;
         &lt;img src=&#34;https://samdark.github.io/img/patrons/anton_shelyganov.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
@@ -774,6 +766,27 @@ better to stick with objects composition.&lt;/p&gt;
     &lt;li&gt;
         &lt;img src=&#34;https://samdark.github.io/img/patrons/pawel_brzozowsky.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
         &lt;a class=&#34;name&#34; href=&#34;https://github.com/bizley&#34;&gt;Paweł Brzozowski&lt;/a&gt;
+    &lt;/li&gt;    
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/anatoly_rugalev.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;a class=&#34;name&#34; href=&#34;https://github.com/AnatolyRugalev&#34;&gt;Anatoly Rugalev&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/dmitry_sonko.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;a class=&#34;name&#34; href=&#34;https://github.com/SonkoDmitry&#34;&gt;Dmitry Sonko&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;past-backers&#34;&gt;Past backers&lt;/h2&gt;
+
+&lt;ul id=&#34;patrons&#34;&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/chris_smith.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;a class=&#34;name&#34; href=&#34;https://github.com/cgsmith&#34;&gt;Chris Smith&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/alexander_bondarev.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;span class=&#34;name&#34;&gt;Alexander Bondarev&lt;/span&gt;
     &lt;/li&gt;
 &lt;/ul&gt;
 

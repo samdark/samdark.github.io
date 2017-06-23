@@ -174,6 +174,10 @@ $guide-&amp;gt;theme = GuideTheme::COFFEE;
 // instead of
 $guide-&amp;gt;theme = Guide::THEME_COFFEE;
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/PHP/comments/6eqwj4/moving_constants_into_dictionaries/&#34;&gt;Comments at Reddit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
