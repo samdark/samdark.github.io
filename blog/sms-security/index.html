@@ -14,10 +14,10 @@
 <title>
 
 
-     Yii Q&amp;A 1 
+     SMS Security 
 
 </title>
-<link rel="canonical" href="https://samdark.github.io/blog/yii-qa-1/">
+<link rel="canonical" href="https://samdark.github.io/blog/sms-security/">
 
 
 
@@ -121,7 +121,7 @@
                 <div class="title-container">
                     <div class="page-heading">
 
-    Yii Q&amp;A 1
+    SMS Security
 
 </div>
 
@@ -129,82 +129,94 @@
                 </div>
                 <div class="meta">
                     
-                    <div class="date" title='Tue Apr 18 2017 12:58:47 MSK'>Apr 18, 2017</div>
+                    <div class="date" title='Mon Jul 3 2017 00:17:03 MSK'>Jul 3, 2017</div>
                     
                     
-                    <div class="reading-time"><div class="middot"></div>2 minutes read</div>
+                    <div class="reading-time"><div class="middot"></div>3 minutes read</div>
                     
                 </div>
             </div>
             <div class="markdown">
-                <p>Some questions I&rsquo;m answering are asked often so I decided to publish answers here. Feel free to ask more in comments.</p>
+                
 
-<blockquote>
-<p>Can you clarify please who has what role in Yii 2 maintenance and development?</p>
-</blockquote>
+<p>Nowadays SMS is often used as a channel for secure data such as various tokens, payment confirmation,
+or two factor authentication. SMS has certain advantages. There is no need to install any special applications
+or being connected to the Internet. It works even on legendary Nokia 3310.</p>
+
+<p><img src="https://samdark.github.io/img/posts/nokia-3310-sms.jpg" alt="" /></p>
+
+<p>Everything is great, right? Well, no. Depending on the usage it could be a bad idea.</p>
+
+<h2 id="what-is-wrong-with-sms">What is wrong with SMS?</h2>
+
+<p>The problem is that SMS is insecure channel. 2016 clearly proved that. Details are summed well in Fortune&rsquo;s
+&ldquo;<a href="http://fortune.com/2016/07/26/nist-sms-two-factor/">Time Is Running Out For This Popular Online Security Technique</a>&rdquo;
+article.</p>
+
+<p>Moreover, phone numbers are often reused after canceling a contract and, in some cases, it is
+possible to “restore lost SIM-card” without providing papers.</p>
+
+<h2 id="should-sms-still-be-used">Should SMS still be used?</h2>
+
+<p>As already was mentioned, it depends on how SMS is used. Let us review three common cases.</p>
+
+<h3 id="single-factor-authentication">Single factor authentication</h3>
+
+<p>Single factor authentication is when a single channel is used to confirm the user via sending a secret
+such as password or a token.</p>
+
+<p>If a code from SMS is enough to authenticate a user without entering any additional info then it means
+SMS is used as a single factor of authentication. Since we already know that SMS as a channel is insecure,
+it is a pretty bad idea.</p>
+
+<h3 id="two-factor-authentication">Two factor authentication</h3>
+
+<p>The idea of two factor authentication is simple. One may get a password by fiddling with a network
+connection or another channel but that should not give attacker access to the system because login process
+asks for additional confirmation from another channel. This confirmation, a second factor, is a short token that
+is sent via another channel. The chance that multiple channels are compromised is slightly less.</p>
+
+<p><img src="https://samdark.github.io/img/posts/2fa.png" alt="" /></p>
+
+<p>Having SMS as a second factor channel is not particularly bad and definitely is better than not using second
+factor for authentication at all.</p>
+
+<h3 id="password-reset">Password reset</h3>
+
+<p>Resetting a password usually requires a user access to a communication channel linked with that account.
+Two factor authentication is rarely used for it so resetting a password is effectively a single
+factor authentication.</p>
+
+<p>Of course, the difference is that if attacker is resetting a password, user can no longer log in so
+covert surveillance is not possible. Still, the data and/or identity might be bad enough to lose even
+for a short time span.</p>
+
+<p>Traditionally a single channel for resetting a password was an email but in recent years many
+projects started restoring passwords via SMS only. Knowing the nature of SMS it should be
+considered a bad practice.</p>
+
+<h2 id="tl-dr">TL;DR</h2>
 
 <ul>
-<li><a href="https://github.com/qiangxue/">@qiangxue</a>, Qiang Xue — creator of Yii, see below</li>
-<li><a href="https://github.com/samdark/">@samdark</a>, Alexander Makarov — everything</li>
-<li><a href="https://github.com/cebe/">@cebe</a>, Carsten Brandt — everything</li>
-<li><a href="https://github.com/klimov-paul/">@klimov-paul</a>, Klimov Paul — everything. Focuses on code</li>
-<li><a href="https://github.com/silverfire/">@silverfire</a>, Dmitry Naumenko — everything. Temporarily busy with own projects</li>
-<li><a href="https://github.com/arogachev/">@arogachev</a>, Alexey Rogachev — everything. Focuses on JavaScript. Temporarily busy with own projects</li>
-<li><a href="https://github.com/dynasource/">@dynasource</a>, Boudewijn Vahrmeijer — everything. Temporarily busy with own projects</li>
-<li><a href="https://github.com/mdomba/">@mdomba</a>, Maurizio Domba Cerin — forums, community</li>
-<li><a href="https://github.com/schmunk42/">@schmunk42</a>, Tobias Munk — <a href="https://github.com/yiisoft/yii2-docker">Docker images</a></li>
-<li><a href="https://github.com/mikehaertl/">@mikehaertl</a>, Michael Härtl — <a href="https://github.com/yiisoft/yii2-docker">Docker images</a></li>
-<li><a href="https://github.com/beowulfenator/">@beowulfenator</a>, Konstantin Sirotkin — <a href="https://github.com/yiisoft/yii2-elasticsearch">Elastic search extension</a></li>
+<li>Do not use SMS to restore password or authenticate.</li>
+<li>It is OK to use SMS as a second authentication factor.</li>
 </ul>
-
-<p>Additionally, there are <a href="https://github.com/yiisoft/yii2/graphs/contributors">many active contributors</a> who take care
-about many aspects of the framework.</p>
-
-<blockquote>
-<p>Are you now the project lead?</p>
-</blockquote>
-
-<p>Yii doesn&rsquo;t work this way. The structure is more or less flat.</p>
-
-<p>Smaller decisions are made mostly individually. Strategical decisions are discussed within core team. Usually there is a
-compromise. If not, we do either voting or forced decision (extremely rare).</p>
-
-<p>Personally, I do many things about Yii: development, issues, forums and various communities, announcements and media,
-conferences, and, of course, trying out new things for the next versions.</p>
-
-<blockquote>
-<p>What is the role of Qiang — is he not involved in Yii 2 development anymore?</p>
-</blockquote>
-
-<p>Yes. Qiang still gives advice if needed and manages some parts of Yii infrastructure. He isn&rsquo;t active about development
-and isn&rsquo;t going to get back anytime soon.</p>
-
-<blockquote>
-<p>What&rsquo;s the roadmap for Yii 2 development?</p>
-</blockquote>
-
-<p>There&rsquo;s <a href="https://github.com/yiisoft/yii2/wiki/Plan-for-next-major-versions">a wiki page</a> which has ideas and work in
-progress roadmap.</p>
-
-<blockquote>
-<p>Which version of PHP will be required by the next Yii?</p>
-</blockquote>
-
-<p>Most likely, PHP 7.1.</p>
-
-<blockquote>
-<p>Is there going to be another Yii 1.1 relase?</p>
-</blockquote>
-
-<p>Yes. <a href="https://github.com/yiisoft/yii/milestones/1.1.18">We&rsquo;re almost there</a>.</p>
 
                 <br>
 
                 <ul id="tags">
                     
-                    <li><a href="https://samdark.github.io/tags/yii">yii</a> </li>
+                    <li><a href="https://samdark.github.io/tags/security">security</a> </li>
                     
-                    <li><a href="https://samdark.github.io/tags/qa">qa</a> </li>
+                    <li><a href="https://samdark.github.io/tags/sms">sms</a> </li>
+                    
+                    <li><a href="https://samdark.github.io/tags/password-recovery">password recovery</a> </li>
+                    
+                    <li><a href="https://samdark.github.io/tags/login">login</a> </li>
+                    
+                    <li><a href="https://samdark.github.io/tags/2fa">2fa</a> </li>
+                    
+                    <li><a href="https://samdark.github.io/tags/password-reset">password reset</a> </li>
                     
                 </ul>
 
@@ -215,9 +227,9 @@ progress roadmap.</p>
                 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'samdark';
-    var disqus_identifier = 'https:\/\/samdark.github.io\/blog\/yii-qa-1\/';
-    var disqus_title = 'Yii Q\x26A 1';
-    var disqus_url = 'https:\/\/samdark.github.io\/blog\/yii-qa-1\/';
+    var disqus_identifier = 'https:\/\/samdark.github.io\/blog\/sms-security\/';
+    var disqus_title = 'SMS Security';
+    var disqus_url = 'https:\/\/samdark.github.io\/blog\/sms-security\/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

@@ -9,66 +9,75 @@
     <atom:link href="https://samdark.github.io/tags/security/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>SMS Security and Alternatives</title>
-      <link>https://samdark.github.io/blog/sms-security-and-alternatives/</link>
-      <pubDate>Mon, 06 Mar 2017 00:49:31 +0300</pubDate>
+      <title>SMS Security</title>
+      <link>https://samdark.github.io/blog/sms-security/</link>
+      <pubDate>Mon, 03 Jul 2017 00:17:03 +0300</pubDate>
       
-      <guid>https://samdark.github.io/blog/sms-security-and-alternatives/</guid>
+      <guid>https://samdark.github.io/blog/sms-security/</guid>
       <description>
 
-&lt;p&gt;The idea of two factor authentication is simple. One may get your password by fiddling with your wireless network
-connection but that should not give attacker an access to the system because login process asks for additional
-confirmation. This confirmation, a second factor, is a short token that is nowadays typically sent via SMS.&lt;/p&gt;
+&lt;p&gt;Nowadays SMS is often used as a channel for secure data such as various tokens, payment confirmation,
+or two factor authentication. SMS has certain advantages. There is no need to install any special applications
+or being connected to the Internet. It works even on legendary Nokia 3310.&lt;/p&gt;
 
-&lt;p&gt;SMS has certain pros. There is no need to install any special applications or being connected to Internet.
-It works even on Nokia 3310. Everything&amp;rsquo;s great, right? Well, no.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://samdark.github.io/img/posts/nokia-3310-sms.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;what-s-wrong-with-sms&#34;&gt;What&amp;rsquo;s wrong with SMS?&lt;/h2&gt;
+&lt;p&gt;Everything is great, right? Well, no. Depending on the usage it could be a bad idea.&lt;/p&gt;
 
-&lt;p&gt;The problem is that SMS is not a secure channel. 2016 clearly proved that. Details are summed very well in Fortune&amp;rsquo;s
+&lt;h2 id=&#34;what-is-wrong-with-sms&#34;&gt;What is wrong with SMS?&lt;/h2&gt;
+
+&lt;p&gt;The problem is that SMS is insecure channel. 2016 clearly proved that. Details are summed well in Fortune&amp;rsquo;s
 &amp;ldquo;&lt;a href=&#34;http://fortune.com/2016/07/26/nist-sms-two-factor/&#34;&gt;Time Is Running Out For This Popular Online Security Technique&lt;/a&gt;&amp;rdquo;
 article.&lt;/p&gt;
 
-&lt;p&gt;So knowing your password and having access to your SMS (yes, that&amp;rsquo;s still not trivial) attacker can get your account.&lt;/p&gt;
+&lt;p&gt;Moreover, phone numbers are often reused after canceling a contract and, in some cases, it is
+possible to “restore lost SIM-card” without providing papers.&lt;/p&gt;
 
-&lt;p&gt;Are there safer channels? Yes. Definitely.&lt;/p&gt;
+&lt;h2 id=&#34;should-sms-still-be-used&#34;&gt;Should SMS still be used?&lt;/h2&gt;
 
-&lt;h2 id=&#34;one-time-passwords&#34;&gt;One time passwords&lt;/h2&gt;
+&lt;p&gt;As already was mentioned, it depends on how SMS is used. Let us review three common cases.&lt;/p&gt;
 
-&lt;p&gt;One time passwords are tokens that could be used only once and that change
-often. These are not vulnerable to replay attack and are commonly used as
-a second authentication factor.&lt;/p&gt;
+&lt;h3 id=&#34;single-factor-authentication&#34;&gt;Single factor authentication&lt;/h3&gt;
 
-&lt;p&gt;Tokens could be obtained either from hardware device such as
-&lt;a href=&#34;https://www.yubico.com/products/yubikey-hardware/yubikey/&#34;&gt;YubiKey&lt;/a&gt;
-or software such as &lt;a href=&#34;https://code.google.com/p/google-authenticator/&#34;&gt;Google Authenticator&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Single factor authentication is when a single channel is used to confirm the user via sending a secret
+such as password or a token.&lt;/p&gt;
 
-&lt;p&gt;There are two common kinds of one time passwords: HOTP (HMAC-based one time password)
-and TOTP (Time-based one time password). In both cases each
-one time password is an sha1 of a shared secret and a moving factor.
-Subsequent passwords are different each time.&lt;/p&gt;
+&lt;p&gt;If a code from SMS is enough to authenticate a user without entering any additional info then it means
+SMS is used as a single factor of authentication. Since we already know that SMS as a channel is insecure,
+it is a pretty bad idea.&lt;/p&gt;
+
+&lt;h3 id=&#34;two-factor-authentication&#34;&gt;Two factor authentication&lt;/h3&gt;
+
+&lt;p&gt;The idea of two factor authentication is simple. One may get a password by fiddling with a network
+connection or another channel but that should not give attacker access to the system because login process
+asks for additional confirmation from another channel. This confirmation, a second factor, is a short token that
+is sent via another channel. The chance that multiple channels are compromised is slightly less.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://samdark.github.io/img/posts/2fa.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Having SMS as a second factor channel is not particularly bad and definitely is better than not using second
+factor for authentication at all.&lt;/p&gt;
+
+&lt;h3 id=&#34;password-reset&#34;&gt;Password reset&lt;/h3&gt;
+
+&lt;p&gt;Resetting a password usually requires a user access to a communication channel linked with that account.
+Two factor authentication is rarely used for it so resetting a password is effectively a single
+factor authentication.&lt;/p&gt;
+
+&lt;p&gt;Of course, the difference is that if attacker is resetting a password, user can no longer log in so
+covert surveillance is not possible. Still, the data and/or identity might be bad enough to lose even
+for a short time span.&lt;/p&gt;
+
+&lt;p&gt;Traditionally a single channel for resetting a password was an email but in recent years many
+projects started restoring passwords via SMS only. Knowing the nature of SMS it should be
+considered a bad practice.&lt;/p&gt;
+
+&lt;h2 id=&#34;tl-dr&#34;&gt;TL;DR&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;In case of HOTP a moving factor is a counter. Each password generation increases the counter.&lt;/li&gt;
-&lt;li&gt;In case of TOTP a moving factor is unix time.&lt;/li&gt;
+&lt;li&gt;Do not use SMS to restore password or authenticate.&lt;/li&gt;
+&lt;li&gt;It is OK to use SMS as a second authentication factor.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;Since HOTP may be valid for a long time and TOTP is changed often by itself, TOTP is considered
-being safer.&lt;/p&gt;
-
-&lt;h2 id=&#34;https-github-com-hackedd-php-oath&#34;&gt;&lt;a href=&#34;https://github.com/hackedd/php-oath&#34;&gt;https://github.com/hackedd/php-oath&lt;/a&gt;&lt;/h2&gt;
-
-&lt;h2 id=&#34;https-github-com-spomky-labs-otphp&#34;&gt;&lt;a href=&#34;https://github.com/Spomky-Labs/otphp&#34;&gt;https://github.com/Spomky-Labs/otphp&lt;/a&gt;&lt;/h2&gt;
-
-&lt;h2 id=&#34;https-github-com-lelag-otphp&#34;&gt;&lt;a href=&#34;https://github.com/lelag/otphp&#34;&gt;https://github.com/lelag/otphp&lt;/a&gt;&lt;/h2&gt;
-
-&lt;h2 id=&#34;https-github-com-jakobo-hotp-php&#34;&gt;&lt;a href=&#34;https://github.com/Jakobo/hotp-php&#34;&gt;https://github.com/Jakobo/hotp-php&lt;/a&gt;&lt;/h2&gt;
-
-&lt;h2 id=&#34;integrating-with-google-authenticator&#34;&gt;Integrating with Google Authenticator&lt;/h2&gt;
-
-&lt;p&gt;Google Authenticator accepts a shared key in a QR-code form. In order to generate it&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Resetting is not a good idea.&lt;/p&gt;
 </description>
     </item>
     

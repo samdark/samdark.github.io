@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://samdark.github.io/blog/sms-security/</loc>
+    <lastmod>2017-07-03T00:17:03+03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://samdark.github.io/blog/moving-constants-into-dictionaries/</loc>
     <lastmod>2017-06-02T03:03:04+03:00</lastmod>
   </url>
@@ -67,8 +72,14 @@
   </url>
   
   <url>
+    <loc>https://samdark.github.io/tags/2fa/</loc>
+    <lastmod>2017-07-03T00:17:03+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://samdark.github.io/</loc>
-    <lastmod>2017-06-02T03:03:04+03:00</lastmod>
+    <lastmod>2017-07-03T00:17:03+03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -92,7 +103,7 @@
   
   <url>
     <loc>https://samdark.github.io/blog/</loc>
-    <lastmod>2017-06-02T03:03:04+03:00</lastmod>
+    <lastmod>2017-07-03T00:17:03+03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -151,8 +162,26 @@
   </url>
   
   <url>
+    <loc>https://samdark.github.io/tags/login/</loc>
+    <lastmod>2017-07-03T00:17:03+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://samdark.github.io/tags/password/</loc>
     <lastmod>2017-03-23T11:41:26+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://samdark.github.io/tags/password-recovery/</loc>
+    <lastmod>2017-07-03T00:17:03+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://samdark.github.io/tags/password-reset/</loc>
+    <lastmod>2017-07-03T00:17:03+03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -213,6 +242,18 @@
   <url>
     <loc>https://samdark.github.io/tags/reliable/</loc>
     <lastmod>2017-05-17T13:24:11+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://samdark.github.io/tags/security/</loc>
+    <lastmod>2017-07-03T00:17:03+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://samdark.github.io/tags/sms/</loc>
+    <lastmod>2017-07-03T00:17:03+03:00</lastmod>
     <priority>0</priority>
   </url>
   
