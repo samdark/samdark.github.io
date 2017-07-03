@@ -24,6 +24,14 @@ or being connected to the Internet. It works even on legendary Nokia 3310.&lt;/p
 
 &lt;p&gt;Everything is great, right? Well, no. Depending on the usage it could be a bad idea.&lt;/p&gt;
 
+&lt;h2 id=&#34;tl-dr&#34;&gt;TL;DR&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Do not ever use SMS to restore password or authenticate.&lt;/li&gt;
+&lt;li&gt;SMS for two factor authentication isn&amp;rsquo;t too bad but more
+secure solutions should be used where possible.&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h2 id=&#34;what-is-wrong-with-sms&#34;&gt;What is wrong with SMS?&lt;/h2&gt;
 
 &lt;p&gt;The problem is that SMS is insecure channel. 2016 clearly proved that. Details are summed well in Fortune&amp;rsquo;s
@@ -55,8 +63,9 @@ is sent via another channel. The chance that multiple channels are compromised i
 
 &lt;p&gt;&lt;img src=&#34;https://samdark.github.io/img/posts/2fa.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Having SMS as a second factor channel is not particularly bad and definitely is better than not using second
-factor for authentication at all.&lt;/p&gt;
+&lt;p&gt;Having SMS as a second factor channel is not particularly bad and definitely is better than
+not using second factor for authentication at all but since there are better solutions,
+having SMS in place prevents these from being implemented.&lt;/p&gt;
 
 &lt;h3 id=&#34;password-reset&#34;&gt;Password reset&lt;/h3&gt;
 
@@ -72,11 +81,8 @@ for a short time span.&lt;/p&gt;
 projects started restoring passwords via SMS only. Knowing the nature of SMS it should be
 considered a bad practice.&lt;/p&gt;
 
-&lt;h2 id=&#34;tl-dr&#34;&gt;TL;DR&lt;/h2&gt;
-
 &lt;ul&gt;
-&lt;li&gt;Do not use SMS to restore password or authenticate.&lt;/li&gt;
-&lt;li&gt;It is OK to use SMS as a second authentication factor.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/PHP/comments/6kvqkv/sms_security/&#34;&gt;Comments at Reddit&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
