@@ -864,7 +864,14 @@ better to stick with objects composition.&lt;/p&gt;
     &lt;li&gt;
         &lt;img src=&#34;https://samdark.github.io/img/patrons/florian_kubis.jpg&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
         &lt;a class=&#34;name&#34; href=&#34;https://github.com/kubisflo&#34;&gt;Florian Kubis&lt;/a&gt;
-    &lt;/li&gt;    
+        &lt;span class=&#34;info&#34;&gt;
+            &lt;a href=&#34;https://www.refugium22.de/&#34;&gt;refugium22&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;img src=&#34;https://samdark.github.io/img/patrons/no_photo.png&#34; width=&#34;50&#34; height=&#34;50&#34;&gt;
+        &lt;span class=&#34;name&#34;&gt;Radu Herinean&lt;/span&gt;
+    &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&#34;past-backers&#34;&gt;Past backers&lt;/h2&gt;
