@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
     <loc>https://samdark.github.io/blog/sms-security/</loc>
@@ -104,6 +105,11 @@
   <url>
     <loc>https://samdark.github.io/blog/</loc>
     <lastmod>2017-07-03T00:17:03+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://samdark.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
@@ -259,6 +265,7 @@
   
   <url>
     <loc>https://samdark.github.io/tags/</loc>
+    <lastmod>2017-07-03T00:17:03+03:00</lastmod>
     <priority>0</priority>
   </url>
   

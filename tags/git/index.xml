@@ -2,11 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Git on Alexander Makarov</title>
-    <link>https://samdark.github.io/tags/git/index.xml</link>
+    <link>https://samdark.github.io/tags/git/</link>
     <description>Recent content in Git on Alexander Makarov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <atom:link href="https://samdark.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 04 Mar 2017 21:52:28 +0300</lastBuildDate>
+    
+	<atom:link href="https://samdark.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Finding Bug with Binary Search</title>
@@ -14,47 +17,7 @@
       <pubDate>Sat, 04 Mar 2017 21:52:28 +0300</pubDate>
       
       <guid>https://samdark.github.io/blog/finding-bug-with-binary-search/</guid>
-      <description>&lt;p&gt;Once there&amp;rsquo;s a way to reproduce the issue we need to find code which caused it. Sometimes we are totally stuck
-for day feeling more and more depressed and, in the end, unable to think clearly. Luckily, there&amp;rsquo;s a systematic approach
-to find bug even if you have no idea what caused it and even where to set a breakpoint for proper debugging.
-This approach is known as binary search.&lt;/p&gt;
-
-&lt;p&gt;If your code is under version control, firstly you check out a fairly old commit and see if it works. If it does work
-then you check out a commit that is in the middle between the commit that works and the commit which did not and check
-again. When there are no commits remaining in between the working and non-working commits, you arrived at the commit
-that broke it. If you&amp;rsquo;re using git, you&amp;rsquo;re lucky since git has built-in tool &lt;code&gt;git bisect&lt;/code&gt; that will help with this
-process. It is quite simple. Let&amp;rsquo;s say you&amp;rsquo;re on current &lt;code&gt;master&lt;/code&gt; commit and you have a bug.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git bisect # starts the process
-git bisect bad # current commit has a bug
-git bisect good 3.4.5 # I remember that commit tagged 3.4.5 was OK
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;After that, git informs you with something like &lt;code&gt;Bisecting: 10 revisions left to test after this&lt;/code&gt;, which means
-there are about 10 commits between good and bad revisions. Also it is checking out a commit which is in
-the middle of these ten.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://samdark.github.io/img/posts/binary_search.png&#34; width=&#34;50%&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Now, it&amp;rsquo;s your job to confirm if the bug is still present or otherwise. If yes, you issue
-&lt;code&gt;git bisect bad&lt;/code&gt;. If not &amp;mdash; &lt;code&gt;git bisect good&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;git will choose either left or right part of these 10 commits and repeat the process.&lt;/p&gt;
-
-&lt;p&gt;After a few checks, you&amp;rsquo;ll get, for example, &lt;code&gt;1029012930192390 is first bad commit&lt;/code&gt; message.
-If you confirmed the presence of the bug correctly, this indicates the exact commit that introduced the issue.&lt;/p&gt;
-
-&lt;p&gt;When everything is done you execute &lt;code&gt;git bisect reset&lt;/code&gt; to end the process.&lt;/p&gt;
-
-&lt;p&gt;Similarly, the binary search approach could be done with HTML markup of a single page when it&amp;rsquo;s not under version control.
-If you have a weird bug, delete half of the HTML page code and see if issue is still present.
-If it is, then divide that HTML and check parts again. If it&amp;rsquo;s not then take other half for inspection.&lt;/p&gt;
-
-&lt;p&gt;The advantage is that you&amp;rsquo;ll certainly find what caused the bug for certain. However, it is a slow process when
-you&amp;rsquo;re not using a tool like git bisect.&lt;/p&gt;
-
-&lt;p&gt;The same methodology can be applied to anything. For example, this process widely used in electronics.&lt;/p&gt;
-</description>
+      <description>Once there&amp;rsquo;s a way to reproduce the issue we need to find code which caused it. Sometimes we are totally stuck for day feeling more and more depressed and, in the end, unable to think clearly. Luckily, there&amp;rsquo;s a systematic approach to find bug even if you have no idea what caused it and even where to set a breakpoint for proper debugging. This approach is known as binary search.</description>
     </item>
     
   </channel>

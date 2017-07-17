@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Alexander Makarov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 23 Mar 2017 11:41:26 +0300</lastBuildDate>
+    <lastBuildDate>Mon, 03 Jul 2017 00:17:03 +0300</lastBuildDate>
     
 	<atom:link href="https://samdark.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>2fa</title>
+      <link>https://samdark.github.io/tags/2fa/</link>
+      <pubDate>Mon, 03 Jul 2017 00:17:03 +0300</pubDate>
+      
+      <guid>https://samdark.github.io/tags/2fa/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Bcrypt</title>
@@ -53,6 +62,15 @@
       <pubDate>Mon, 08 May 2017 00:40:17 +0300</pubDate>
       
       <guid>https://samdark.github.io/tags/color/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Constants</title>
+      <link>https://samdark.github.io/tags/constants/</link>
+      <pubDate>Fri, 02 Jun 2017 03:03:04 +0300</pubDate>
+      
+      <guid>https://samdark.github.io/tags/constants/</guid>
       <description></description>
     </item>
     
@@ -111,11 +129,38 @@
     </item>
     
     <item>
+      <title>Login</title>
+      <link>https://samdark.github.io/tags/login/</link>
+      <pubDate>Mon, 03 Jul 2017 00:17:03 +0300</pubDate>
+      
+      <guid>https://samdark.github.io/tags/login/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Password</title>
       <link>https://samdark.github.io/tags/password/</link>
       <pubDate>Thu, 23 Mar 2017 11:41:26 +0300</pubDate>
       
       <guid>https://samdark.github.io/tags/password/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Password Recovery</title>
+      <link>https://samdark.github.io/tags/password-recovery/</link>
+      <pubDate>Mon, 03 Jul 2017 00:17:03 +0300</pubDate>
+      
+      <guid>https://samdark.github.io/tags/password-recovery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Password Reset</title>
+      <link>https://samdark.github.io/tags/password-reset/</link>
+      <pubDate>Mon, 03 Jul 2017 00:17:03 +0300</pubDate>
+      
+      <guid>https://samdark.github.io/tags/password-reset/</guid>
       <description></description>
     </item>
     
@@ -140,7 +185,7 @@
     <item>
       <title>Php</title>
       <link>https://samdark.github.io/tags/php/</link>
-      <pubDate>Sat, 13 May 2017 00:59:27 +0300</pubDate>
+      <pubDate>Fri, 02 Jun 2017 03:03:04 +0300</pubDate>
       
       <guid>https://samdark.github.io/tags/php/</guid>
       <description></description>
@@ -192,11 +237,38 @@
     </item>
     
     <item>
+      <title>Refactoring</title>
+      <link>https://samdark.github.io/tags/refactoring/</link>
+      <pubDate>Fri, 02 Jun 2017 03:03:04 +0300</pubDate>
+      
+      <guid>https://samdark.github.io/tags/refactoring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Reliable</title>
       <link>https://samdark.github.io/tags/reliable/</link>
       <pubDate>Wed, 17 May 2017 13:24:11 +0300</pubDate>
       
       <guid>https://samdark.github.io/tags/reliable/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Security</title>
+      <link>https://samdark.github.io/tags/security/</link>
+      <pubDate>Mon, 03 Jul 2017 00:17:03 +0300</pubDate>
+      
+      <guid>https://samdark.github.io/tags/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sms</title>
+      <link>https://samdark.github.io/tags/sms/</link>
+      <pubDate>Mon, 03 Jul 2017 00:17:03 +0300</pubDate>
+      
+      <guid>https://samdark.github.io/tags/sms/</guid>
       <description></description>
     </item>
     

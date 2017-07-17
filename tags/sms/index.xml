@@ -2,11 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sms on Alexander Makarov</title>
-    <link>https://samdark.github.io/tags/sms/index.xml</link>
+    <link>https://samdark.github.io/tags/sms/</link>
     <description>Recent content in Sms on Alexander Makarov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <atom:link href="https://samdark.github.io/tags/sms/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 Jul 2017 00:17:03 +0300</lastBuildDate>
+    
+	<atom:link href="https://samdark.github.io/tags/sms/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>SMS Security</title>
@@ -14,77 +17,9 @@
       <pubDate>Mon, 03 Jul 2017 00:17:03 +0300</pubDate>
       
       <guid>https://samdark.github.io/blog/sms-security/</guid>
-      <description>
-
-&lt;p&gt;Nowadays SMS is often used as a channel for secure data such as various tokens, payment confirmation,
-or two factor authentication. SMS has certain advantages. There is no need to install any special applications
-or being connected to the Internet. It works even on legendary Nokia 3310.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://samdark.github.io/img/posts/nokia-3310-sms.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Everything is great, right? Well, no. Depending on the usage it could be a bad idea.&lt;/p&gt;
-
-&lt;h2 id=&#34;tl-dr&#34;&gt;TL;DR&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Do not ever use SMS to restore password or authenticate.&lt;/li&gt;
-&lt;li&gt;SMS for two factor authentication isn&amp;rsquo;t too bad but more
-secure solutions should be used where possible.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;what-is-wrong-with-sms&#34;&gt;What is wrong with SMS?&lt;/h2&gt;
-
-&lt;p&gt;The problem is that SMS is insecure channel. 2016 clearly proved that. Details are summed well in Fortune&amp;rsquo;s
-&amp;ldquo;&lt;a href=&#34;http://fortune.com/2016/07/26/nist-sms-two-factor/&#34;&gt;Time Is Running Out For This Popular Online Security Technique&lt;/a&gt;&amp;rdquo;
-article.&lt;/p&gt;
-
-&lt;p&gt;Moreover, phone numbers are often reused after canceling a contract and, in some cases, it is
-possible to “restore lost SIM-card” without providing papers.&lt;/p&gt;
-
-&lt;h2 id=&#34;should-sms-still-be-used&#34;&gt;Should SMS still be used?&lt;/h2&gt;
-
-&lt;p&gt;As already was mentioned, it depends on how SMS is used. Let us review three common cases.&lt;/p&gt;
-
-&lt;h3 id=&#34;single-factor-authentication&#34;&gt;Single factor authentication&lt;/h3&gt;
-
-&lt;p&gt;Single factor authentication is when a single channel is used to confirm the user via sending a secret
-such as password or a token.&lt;/p&gt;
-
-&lt;p&gt;If a code from SMS is enough to authenticate a user without entering any additional info then it means
-SMS is used as a single factor of authentication. Since we already know that SMS as a channel is insecure,
-it is a pretty bad idea.&lt;/p&gt;
-
-&lt;h3 id=&#34;two-factor-authentication&#34;&gt;Two factor authentication&lt;/h3&gt;
-
-&lt;p&gt;The idea of two factor authentication is simple. One may get a password by fiddling with a network
-connection or another channel but that should not give attacker access to the system because login process
-asks for additional confirmation from another channel. This confirmation, a second factor, is a short token that
-is sent via another channel. The chance that multiple channels are compromised is slightly less.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://samdark.github.io/img/posts/2fa.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Having SMS as a second factor channel is not particularly bad and definitely is better than
-not using second factor for authentication at all but since there are better solutions,
-having SMS in place prevents these from being implemented.&lt;/p&gt;
-
-&lt;h3 id=&#34;password-reset&#34;&gt;Password reset&lt;/h3&gt;
-
-&lt;p&gt;Resetting a password usually requires a user access to a communication channel linked with that account.
-Two factor authentication is rarely used for it so resetting a password is effectively a single
-factor authentication.&lt;/p&gt;
-
-&lt;p&gt;Of course, the difference is that if attacker is resetting a password, user can no longer log in so
-covert surveillance is not possible. Still, the data and/or identity might be bad enough to lose even
-for a short time span.&lt;/p&gt;
-
-&lt;p&gt;Traditionally a single channel for resetting a password was an email but in recent years many
-projects started restoring passwords via SMS only. Knowing the nature of SMS it should be
-considered a bad practice.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/PHP/comments/6kvqkv/sms_security/&#34;&gt;Comments at Reddit&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>Nowadays SMS is often used as a channel for secure data such as various tokens, payment confirmation, or two factor authentication. SMS has certain advantages. There is no need to install any special applications or being connected to the Internet. It works even on legendary Nokia 3310.
+Everything is great, right? Well, no. Depending on the usage it could be a bad idea.
+TL;DR  Do not ever use SMS to restore password or authenticate.</description>
     </item>
     
   </channel>
