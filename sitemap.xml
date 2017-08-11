@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://samdark.github.io/blog/flavors-of-bad-code/</loc>
+    <lastmod>2017-08-11T16:06:31+03:00</lastmod>
+  </url>
   
   <url>
     <loc>https://samdark.github.io/blog/sms-security/</loc>
@@ -80,7 +84,7 @@
   
   <url>
     <loc>https://samdark.github.io/</loc>
-    <lastmod>2017-07-03T00:17:03+03:00</lastmod>
+    <lastmod>2017-08-11T16:06:31+03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -104,7 +108,7 @@
   
   <url>
     <loc>https://samdark.github.io/blog/</loc>
-    <lastmod>2017-07-03T00:17:03+03:00</lastmod>
+    <lastmod>2017-08-11T16:06:31+03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -115,7 +119,7 @@
   
   <url>
     <loc>https://samdark.github.io/tags/code/</loc>
-    <lastmod>2017-03-05T21:52:28+03:00</lastmod>
+    <lastmod>2017-08-11T16:06:31+03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -158,6 +162,12 @@
   <url>
     <loc>https://samdark.github.io/tags/hydrator/</loc>
     <lastmod>2017-05-13T00:59:27+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://samdark.github.io/tags/lasagna/</loc>
+    <lastmod>2017-08-11T16:06:31+03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -241,7 +251,7 @@
   
   <url>
     <loc>https://samdark.github.io/tags/refactoring/</loc>
-    <lastmod>2017-06-02T03:03:04+03:00</lastmod>
+    <lastmod>2017-08-11T16:06:31+03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -260,6 +270,12 @@
   <url>
     <loc>https://samdark.github.io/tags/sms/</loc>
     <lastmod>2017-07-03T00:17:03+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://samdark.github.io/tags/spaghetti/</loc>
+    <lastmod>2017-08-11T16:06:31+03:00</lastmod>
     <priority>0</priority>
   </url>
   

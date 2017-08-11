@@ -14,10 +14,10 @@
 <title>
 
 
-     Finding Bug with Binary Search 
+     Flavors of bad code 
 
 </title>
-<link rel="canonical" href="https://samdark.github.io/blog/finding-bug-with-binary-search/">
+<link rel="canonical" href="https://samdark.github.io/blog/flavors-of-bad-code/">
 
 
 
@@ -121,7 +121,7 @@
                 <div class="title-container">
                     <div class="page-heading">
 
-    Finding Bug with Binary Search
+    Flavors of bad code
 
 </div>
 
@@ -129,64 +129,80 @@
                 </div>
                 <div class="meta">
                     
-                    <div class="date" title='Sat Mar 4 2017 21:52:28 MSK'>Mar 4, 2017</div>
+                    <div class="date" title='Fri Aug 11 2017 16:06:31 MSK'>Aug 11, 2017</div>
                     
                     
-                    <div class="reading-time"><div class="middot"></div>3 minutes read</div>
+                    <div class="reading-time"><div class="middot"></div>2 minutes read</div>
                     
                 </div>
             </div>
             <div class="markdown">
-                <p>Once there&rsquo;s a way to reproduce the issue we need to find code which caused it. Sometimes we are totally stuck
-for day feeling more and more depressed and, in the end, unable to think clearly. Luckily, there&rsquo;s a systematic approach
-to find bug even if you have no idea what caused it and even where to set a breakpoint for proper debugging.
-This approach is known as binary search.</p>
+                
 
-<p>If your code is under version control, firstly you check out a fairly old commit and see if it works. If it does work
-then you check out a commit that is in the middle between the commit that works and the commit which did not and check
-again. When there are no commits remaining in between the working and non-working commits, you arrived at the commit
-that broke it. If you&rsquo;re using git, you&rsquo;re lucky since git has built-in tool <code>git bisect</code> that will help with this
-process. It is quite simple. Let&rsquo;s say you&rsquo;re on current <code>master</code> commit and you have a bug.</p>
+<p>There are many flavors of bad code but let us focus on two prominent ones named after tasty Italian dishes:
+spaghetti and lasagna.</p>
 
-<pre><code class="language-bash">git bisect # starts the process
-git bisect bad # current commit has a bug
-git bisect good 3.4.5 # I remember that commit tagged 3.4.5 was OK
-</code></pre>
+<h2 id="spaghetti">Spaghetti</h2>
 
-<p>After that, git informs you with something like <code>Bisecting: 10 revisions left to test after this</code>, which means
-there are about 10 commits between good and bad revisions. Also it is checking out a commit which is in
-the middle of these ten.</p>
+<p>Spaghetti flavored code is unstructured code where everything is mixed in a single place.</p>
 
-<p><img src="https://samdark.github.io/img/posts/binary_search.png" width="50%" /></p>
+<p><img src="https://samdark.github.io/img/posts/spaghetti.jpg" alt="" /></p>
 
-<p>Now, it&rsquo;s your job to confirm if the bug is still present or otherwise. If yes, you issue
-<code>git bisect bad</code>. If not &mdash; <code>git bisect good</code>.</p>
+<p>Usually it is produced by novices who are unaware on how to structure their code and tend to skip
+thinking about architecture. Typical reasons for spaghetti:</p>
 
-<p>git will choose either left or right part of these 10 commits and repeat the process.</p>
+<ul>
+<li>Lack of experience.</li>
+<li>Not thinking about structuring code.</li>
+<li>Too tight deadlines.</li>
+</ul>
 
-<p>After a few checks, you&rsquo;ll get, for example, <code>1029012930192390 is first bad commit</code> message.
-If you confirmed the presence of the bug correctly, this indicates the exact commit that introduced the issue.</p>
+<h2 id="abstraction-and-layers">Abstraction and layers</h2>
 
-<p>When everything is done you execute <code>git bisect reset</code> to end the process.</p>
+<p>What is the solution to make such code better? To refactor introducing abstraction. The only goal of abstraction is
+to make things simpler and more manageable than they were.</p>
 
-<p>Similarly, the binary search approach could be done with HTML markup of a single page when it&rsquo;s not under version control.
-If you have a weird bug, delete half of the HTML page code and see if issue is still present.
-If it is, then divide that HTML and check parts again. If it&rsquo;s not then take other half for inspection.</p>
+<p>Our brain has two types of memory, one of it is short term memory. It is similar to a stack data structure and its
+capacity is at max of 5 items. That is why we can not deal with too complicated systems. Abstractions are a way of
+hiding details so an abstraction becomes a whole item you can put into short term memory. If layering is done properly
+there are about 5 components max at each level so you are able to get an overview of the whole system even if it is
+complicated.</p>
 
-<p>The advantage is that you&rsquo;ll certainly find what caused the bug for certain. However, it is a slow process when
-you&rsquo;re not using a tool like git bisect.</p>
+<h2 id="lasagna">Lasagna</h2>
 
-<p>The same methodology can be applied to anything. For example, this process widely used in electronics.</p>
+<p>Lasagna flavored code is layered code with clean interfaces. There is nothing wrong with it if it is done right.
+Unfortunately, doing it right is hard and often we have it structured wrong. A bad lasagna that is too tall.</p>
+
+<p><img src="https://samdark.github.io/img/posts/lasagna.jpg" alt="" /></p>
+
+<p>The goal of lasagna code is to make things simpler by introducing layers and developers are often fanatically following
+this goal. They create layer after layer. Each layer becomes too simple while layer interaction becomes complicated.
+It makes system overall less manageable than it was before. Reasons for bad lasagna:</p>
+
+<ul>
+<li>Lack of experience.</li>
+<li>Thinking about re-use case before thinking about use case.</li>
+<li>Unclear requirements.</li>
+<li>Permanently changing project goals.</li>
+</ul>
+
+<h2 id="what-is-better">What is better?</h2>
+
+<p>I think that it is better to have spaghetti than bad lasagna. Both are, of course, evil, and should be refactored but
+spaghetti is much easier to refactor. In order to refactor bad lasagna you should de-layer it first making it
+almost spaghetti and then re-think and layer it again properly.</p>
 
                 <br>
 
                 <ul id="tags">
                     
-                    <li><a href="https://samdark.github.io/tags/git">git</a> </li>
+                    <li><a href="https://samdark.github.io/tags/refactoring">refactoring</a> </li>
                     
-                    <li><a href="https://samdark.github.io/tags/binary-search">binary search</a> </li>
+                    <li><a href="https://samdark.github.io/tags/code">code</a> </li>
                     
-                    <li><a href="https://samdark.github.io/tags/bisect">bisect</a> </li>
+                    <li><a href="https://samdark.github.io/tags/spaghetti">spaghetti</a> </li>
+                    
+                    <li><a href="https://samdark.github.io/tags/lasagna">lasagna</a> </li>
                     
                 </ul>
 
@@ -197,9 +213,9 @@ you&rsquo;re not using a tool like git bisect.</p>
                 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'samdark';
-    var disqus_identifier = 'https:\/\/samdark.github.io\/blog\/finding-bug-with-binary-search\/';
-    var disqus_title = 'Finding Bug with Binary Search';
-    var disqus_url = 'https:\/\/samdark.github.io\/blog\/finding-bug-with-binary-search\/';
+    var disqus_identifier = 'https:\/\/samdark.github.io\/blog\/flavors-of-bad-code\/';
+    var disqus_title = 'Flavors of bad code';
+    var disqus_url = 'https:\/\/samdark.github.io\/blog\/flavors-of-bad-code\/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

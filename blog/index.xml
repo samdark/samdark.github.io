@@ -6,10 +6,22 @@
     <description>Recent content in Blog on Alexander Makarov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 03 Jul 2017 00:17:03 +0300</lastBuildDate>
+    <lastBuildDate>Fri, 11 Aug 2017 16:06:31 +0300</lastBuildDate>
     
 	<atom:link href="https://samdark.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Flavors of bad code</title>
+      <link>https://samdark.github.io/blog/flavors-of-bad-code/</link>
+      <pubDate>Fri, 11 Aug 2017 16:06:31 +0300</pubDate>
+      
+      <guid>https://samdark.github.io/blog/flavors-of-bad-code/</guid>
+      <description>There are many flavors of bad code but let us focus on two prominent ones named after tasty Italian dishes: spaghetti and lasagna.
+Spaghetti Spaghetti flavored code is unstructured code where everything is mixed in a single place.
+Usually it is produced by novices who are unaware on how to structure their code and tend to skip thinking about architecture. Typical reasons for spaghetti:
+ Lack of experience. Not thinking about structuring code.</description>
+    </item>
     
     <item>
       <title>SMS Security</title>
