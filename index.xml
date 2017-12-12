@@ -6,10 +6,20 @@
     <description>Recent content on Alexander Makarov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Fri, 11 Aug 2017 16:06:31 +0300</lastBuildDate>
+    <lastBuildDate>Tue, 12 Dec 2017 21:53:44 +0300</lastBuildDate>
     
 	<atom:link href="https://samdark.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Repairing Silhouette Cameo Touchscreen</title>
+      <link>https://samdark.github.io/blog/repairing-silhouette-cameo-touchscreen/</link>
+      <pubDate>Tue, 12 Dec 2017 21:53:44 +0300</pubDate>
+      
+      <guid>https://samdark.github.io/blog/repairing-silhouette-cameo-touchscreen/</guid>
+      <description>This year my wife got Silhouette CAMEO® 3 cutter as her birthday present. She and our whole family were happily using it to precisely cut various cool things until last month.
+The problem We store the device in a separate room in order for children not to hurt themselves with sharp parts and carrying it to main room to actually cut things. After one of these transfers and turning CAMEO on LCD touch screen refused to react on touch.</description>
+    </item>
     
     <item>
       <title>Flavors of bad code</title>
