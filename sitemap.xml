@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://samdark.github.io/blog/youtubes-500-error-page/</loc>
+    <lastmod>2018-04-02T23:02:47+03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://samdark.github.io/blog/repairing-silhouette-cameo-touchscreen/</loc>
     <lastmod>2017-12-12T21:53:44+03:00</lastmod>
   </url>
@@ -90,7 +95,7 @@
   
   <url>
     <loc>https://samdark.github.io/</loc>
-    <lastmod>2017-12-12T21:53:44+03:00</lastmod>
+    <lastmod>2018-04-02T23:02:47+03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -114,7 +119,7 @@
   
   <url>
     <loc>https://samdark.github.io/blog/</loc>
-    <lastmod>2017-12-12T21:53:44+03:00</lastmod>
+    <lastmod>2018-04-02T23:02:47+03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -156,6 +161,12 @@
   <url>
     <loc>https://samdark.github.io/tags/dull/</loc>
     <lastmod>2017-05-08T00:40:17+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://samdark.github.io/tags/error/</loc>
+    <lastmod>2018-04-02T23:02:47+03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -323,7 +334,13 @@
   
   <url>
     <loc>https://samdark.github.io/tags/yii/</loc>
-    <lastmod>2017-04-18T12:58:47+03:00</lastmod>
+    <lastmod>2018-04-02T23:02:47+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://samdark.github.io/tags/youtube/</loc>
+    <lastmod>2018-04-02T23:02:47+03:00</lastmod>
     <priority>0</priority>
   </url>
   

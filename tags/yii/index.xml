@@ -6,10 +6,20 @@
     <description>Recent content in Yii on Alexander Makarov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 18 Apr 2017 12:58:47 +0300</lastBuildDate>
+    <lastBuildDate>Mon, 02 Apr 2018 23:02:47 +0300</lastBuildDate>
     
 	<atom:link href="https://samdark.github.io/tags/yii/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>YouTube&#39;s 500 error page</title>
+      <link>https://samdark.github.io/blog/youtubes-500-error-page/</link>
+      <pubDate>Mon, 02 Apr 2018 23:02:47 +0300</pubDate>
+      
+      <guid>https://samdark.github.io/blog/youtubes-500-error-page/</guid>
+      <description>Just caught 500-error at YouTube. No one is safe from that, even the best projects but that&amp;rsquo;s not the point of the post. The thing is that the error page is more useful than majority of other error pages. Here&amp;rsquo;s why&amp;hellip;
+What is different here is a long wall of &amp;ldquo;information&amp;rdquo;. You can not display anything useful in production since it would allow hackers to crack your project easier. But it would have been great because searching for particular user-reported error is, sometimes, a big pain.</description>
+    </item>
     
     <item>
       <title>Yii Q&amp;A 1</title>
