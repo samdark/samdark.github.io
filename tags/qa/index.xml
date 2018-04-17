@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Qa on Alexander Makarov</title>
-    <link>https://samdark.github.io/tags/qa/</link>
+    <link>https://en.rmcreative.ru/tags/qa/</link>
     <description>Recent content in Qa on Alexander Makarov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Tue, 18 Apr 2017 12:58:47 +0300</lastBuildDate>
     
-	<atom:link href="https://samdark.github.io/tags/qa/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://en.rmcreative.ru/tags/qa/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Yii Q&amp;A 1</title>
-      <link>https://samdark.github.io/blog/yii-qa-1/</link>
+      <link>https://en.rmcreative.ru/blog/yii-qa-1/</link>
       <pubDate>Tue, 18 Apr 2017 12:58:47 +0300</pubDate>
       
-      <guid>https://samdark.github.io/blog/yii-qa-1/</guid>
+      <guid>https://en.rmcreative.ru/blog/yii-qa-1/</guid>
       <description>Some questions I&amp;rsquo;m answering are asked often so I decided to publish answers here. Feel free to ask more in comments.
  Can you clarify please who has what role in Yii 2 maintenance and development?
   @qiangxue, Qiang Xue — creator of Yii, see below @samdark, Alexander Makarov — everything @cebe, Carsten Brandt — everything @klimov-paul, Klimov Paul — everything. Focuses on code @silverfire, Dmitry Naumenko — everything. Temporarily busy with own projects @arogachev, Alexey Rogachev — everything.</description>

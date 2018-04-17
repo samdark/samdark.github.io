@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Code on Alexander Makarov</title>
-    <link>https://samdark.github.io/tags/code/</link>
+    <link>https://en.rmcreative.ru/tags/code/</link>
     <description>Recent content in Code on Alexander Makarov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Fri, 11 Aug 2017 16:06:31 +0300</lastBuildDate>
     
-	<atom:link href="https://samdark.github.io/tags/code/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://en.rmcreative.ru/tags/code/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Flavors of bad code</title>
-      <link>https://samdark.github.io/blog/flavors-of-bad-code/</link>
+      <link>https://en.rmcreative.ru/blog/flavors-of-bad-code/</link>
       <pubDate>Fri, 11 Aug 2017 16:06:31 +0300</pubDate>
       
-      <guid>https://samdark.github.io/blog/flavors-of-bad-code/</guid>
+      <guid>https://en.rmcreative.ru/blog/flavors-of-bad-code/</guid>
       <description>There are many flavors of bad code but let us focus on two prominent ones named after tasty Italian dishes: spaghetti and lasagna.
 Spaghetti Spaghetti flavored code is unstructured code where everything is mixed in a single place.
 Usually it is produced by novices who are unaware on how to structure their code and tend to skip thinking about architecture. Typical reasons for spaghetti:
@@ -25,10 +25,10 @@ Usually it is produced by novices who are unaware on how to structure their code
     
     <item>
       <title>No Kipple Please</title>
-      <link>https://samdark.github.io/blog/no-kipple-please/</link>
+      <link>https://en.rmcreative.ru/blog/no-kipple-please/</link>
       <pubDate>Sun, 05 Mar 2017 21:52:28 +0300</pubDate>
       
-      <guid>https://samdark.github.io/blog/no-kipple-please/</guid>
+      <guid>https://en.rmcreative.ru/blog/no-kipple-please/</guid>
       <description>&amp;ldquo;Kipple is useless objects, like junk mail or match folders after you use the last match or gum wrappers or yesterday&amp;rsquo;s homeopape. When nobody&amp;rsquo;s around, kipple reproduces itself. For instance, if you go to bed leaving any kipple around your apartment, when you wake up the next morning there&amp;rsquo;s twice as much of it. It always gets more and more.&amp;rdquo;
 &amp;hellip;
 &amp;ldquo;There&amp;rsquo;s the First Law of Kipple,&amp;rdquo; he said. &amp;ldquo;Kipple drives out nonkipple.</description>

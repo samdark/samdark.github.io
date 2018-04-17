@@ -2,41 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Alexander Makarov</title>
-    <link>https://samdark.github.io/</link>
+    <link>https://en.rmcreative.ru/</link>
     <description>Recent content on Alexander Makarov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Mon, 02 Apr 2018 23:02:47 +0300</lastBuildDate>
     
-	<atom:link href="https://samdark.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://en.rmcreative.ru/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>YouTube&#39;s 500 error page</title>
-      <link>https://samdark.github.io/blog/youtubes-500-error-page/</link>
+      <link>https://en.rmcreative.ru/blog/youtubes-500-error-page/</link>
       <pubDate>Mon, 02 Apr 2018 23:02:47 +0300</pubDate>
       
-      <guid>https://samdark.github.io/blog/youtubes-500-error-page/</guid>
+      <guid>https://en.rmcreative.ru/blog/youtubes-500-error-page/</guid>
       <description>Just caught 500-error at YouTube. No one is safe from that, even the best projects but that&amp;rsquo;s not the point of the post. The thing is that the error page is more useful than majority of other error pages. Here&amp;rsquo;s why&amp;hellip;
 What is different here is a long wall of &amp;ldquo;information&amp;rdquo;. You can not display anything useful in production since it would allow hackers to crack your project easier. But it would have been great because searching for particular user-reported error is, sometimes, a big pain.</description>
     </item>
     
     <item>
       <title>Repairing Silhouette CAMEO Touchscreen</title>
-      <link>https://samdark.github.io/blog/repairing-silhouette-cameo-touchscreen/</link>
+      <link>https://en.rmcreative.ru/blog/repairing-silhouette-cameo-touchscreen/</link>
       <pubDate>Tue, 12 Dec 2017 21:53:44 +0300</pubDate>
       
-      <guid>https://samdark.github.io/blog/repairing-silhouette-cameo-touchscreen/</guid>
+      <guid>https://en.rmcreative.ru/blog/repairing-silhouette-cameo-touchscreen/</guid>
       <description>This year my wife got Silhouette CAMEO® 3 cutter as her birthday present. She and our whole family were happily using it to precisely cut various cool things until last month.
 The problem We store the device in a separate room in order for children not to hurt themselves with sharp parts and carrying it to main room to actually cut things. After one of these transfers and turning CAMEO on LCD touch screen refused to react on touch.</description>
     </item>
     
     <item>
       <title>Flavors of bad code</title>
-      <link>https://samdark.github.io/blog/flavors-of-bad-code/</link>
+      <link>https://en.rmcreative.ru/blog/flavors-of-bad-code/</link>
       <pubDate>Fri, 11 Aug 2017 16:06:31 +0300</pubDate>
       
-      <guid>https://samdark.github.io/blog/flavors-of-bad-code/</guid>
+      <guid>https://en.rmcreative.ru/blog/flavors-of-bad-code/</guid>
       <description>There are many flavors of bad code but let us focus on two prominent ones named after tasty Italian dishes: spaghetti and lasagna.
 Spaghetti Spaghetti flavored code is unstructured code where everything is mixed in a single place.
 Usually it is produced by novices who are unaware on how to structure their code and tend to skip thinking about architecture. Typical reasons for spaghetti:
@@ -45,10 +45,10 @@ Usually it is produced by novices who are unaware on how to structure their code
     
     <item>
       <title>SMS Security</title>
-      <link>https://samdark.github.io/blog/sms-security/</link>
+      <link>https://en.rmcreative.ru/blog/sms-security/</link>
       <pubDate>Mon, 03 Jul 2017 00:17:03 +0300</pubDate>
       
-      <guid>https://samdark.github.io/blog/sms-security/</guid>
+      <guid>https://en.rmcreative.ru/blog/sms-security/</guid>
       <description>Nowadays SMS is often used as a channel for secure data such as various tokens, payment confirmation, or two factor authentication. SMS has certain advantages. There is no need to install any special applications or being connected to the Internet. It works even on legendary Nokia 3310.
 Everything is great, right? Well, no. Depending on the usage it could be a bad idea.
 TL;DR  Do not ever use SMS to restore password or authenticate.</description>
@@ -56,10 +56,10 @@ TL;DR  Do not ever use SMS to restore password or authenticate.</description>
     
     <item>
       <title>Moving constants into dictionaries</title>
-      <link>https://samdark.github.io/blog/moving-constants-into-dictionaries/</link>
+      <link>https://en.rmcreative.ru/blog/moving-constants-into-dictionaries/</link>
       <pubDate>Fri, 02 Jun 2017 03:03:04 +0300</pubDate>
       
-      <guid>https://samdark.github.io/blog/moving-constants-into-dictionaries/</guid>
+      <guid>https://en.rmcreative.ru/blog/moving-constants-into-dictionaries/</guid>
       <description>Extracting constants makes code much cleaner compared to using values directly. It eliminates typos and makes it possible to use IDE autocomplete and refactoring.
 Typically, after extraction is done, it looks like the following:
 namespace app\models; class User { const GENDER_FEMALE = &#39;female&#39;; const GENDER_MALE = &#39;male&#39;; public static function listGenders() { return [ self::GENDER_FEMALE =&amp;gt; Yii::t(&#39;app&#39;, &#39;Female&#39;), self::GENDER_MALE =&amp;gt; Yii::t(&#39;app&#39;, &#39;Male&#39;), ]; } public static function getGenderAsString($gender) { $all = self::listGenders(); if (isset($all[$gender])) { return $all[$gender]; } return Yii::t(&#39;app&#39;, &#39;Not set&#39;); } // .</description>
@@ -67,38 +67,38 @@ namespace app\models; class User { const GENDER_FEMALE = &#39;female&#39;; const
     
     <item>
       <title>How to safely retrieve files from failing HDD, SSD or SD card using free tools</title>
-      <link>https://samdark.github.io/blog/how-to-safely-retrieve-files-from-failing-hdd-ssd-or-sd-card-using-free-tools/</link>
+      <link>https://en.rmcreative.ru/blog/how-to-safely-retrieve-files-from-failing-hdd-ssd-or-sd-card-using-free-tools/</link>
       <pubDate>Wed, 17 May 2017 13:24:11 +0300</pubDate>
       
-      <guid>https://samdark.github.io/blog/how-to-safely-retrieve-files-from-failing-hdd-ssd-or-sd-card-using-free-tools/</guid>
+      <guid>https://en.rmcreative.ru/blog/how-to-safely-retrieve-files-from-failing-hdd-ssd-or-sd-card-using-free-tools/</guid>
       <description>All the drives we are using to store our precious photos and videos are not 100% reliable. Everybody should know that and back everything up but even if you are doing it properly, there are cases when drive fails and you have nowhere to get its contents except from the drive itself.
 It happened to me recently. 23 GB SD card from a trip almost full of precious shots was corrupted when inserted into a cheap PC card reader.</description>
     </item>
     
     <item>
       <title>Hydrator</title>
-      <link>https://samdark.github.io/blog/hydrator/</link>
+      <link>https://en.rmcreative.ru/blog/hydrator/</link>
       <pubDate>Sat, 13 May 2017 00:59:27 +0300</pubDate>
       
-      <guid>https://samdark.github.io/blog/hydrator/</guid>
+      <guid>https://en.rmcreative.ru/blog/hydrator/</guid>
       <description>November 2016 I&amp;rsquo;ve implemented and released a Hydrator library but never properly announced it. As far as I know, the &amp;ldquo;hydrator&amp;rdquo; term was first used in Hibernate Java ORM. The job of a hydrator is to fill an object with data or extract data from an object without calling constructor or extra getter-setter methods. It allows you to directly work with private properties which should be persisted to database or loaded from database while not exposing these properties thus keeping public interface clean.</description>
     </item>
     
     <item>
       <title>Why am I getting dull images after processing RAW files?!</title>
-      <link>https://samdark.github.io/blog/why-am-i-getting-dull-images-after-processing-raw-files/</link>
+      <link>https://en.rmcreative.ru/blog/why-am-i-getting-dull-images-after-processing-raw-files/</link>
       <pubDate>Mon, 08 May 2017 00:40:17 +0300</pubDate>
       
-      <guid>https://samdark.github.io/blog/why-am-i-getting-dull-images-after-processing-raw-files/</guid>
+      <guid>https://en.rmcreative.ru/blog/why-am-i-getting-dull-images-after-processing-raw-files/</guid>
       <description>I&amp;rsquo;m not a pro photographer but love to travel with a camera so I&amp;rsquo;m making some pictures from time to time. Some time ago I&amp;rsquo;ve started shooting in RAW and post-processing it to JPEG-s at home. After some practice I&amp;rsquo;ve managed to get slightly better JPEG-s than camera was making automatically. Everything was well (except tons of unprocessed RAWs, of course) but after re-installing OS something went wrong. I was doing everything as before but resulting JPEGs were simply dull colored and greyish.</description>
     </item>
     
     <item>
       <title>Yii Q&amp;A 1</title>
-      <link>https://samdark.github.io/blog/yii-qa-1/</link>
+      <link>https://en.rmcreative.ru/blog/yii-qa-1/</link>
       <pubDate>Tue, 18 Apr 2017 12:58:47 +0300</pubDate>
       
-      <guid>https://samdark.github.io/blog/yii-qa-1/</guid>
+      <guid>https://en.rmcreative.ru/blog/yii-qa-1/</guid>
       <description>Some questions I&amp;rsquo;m answering are asked often so I decided to publish answers here. Feel free to ask more in comments.
  Can you clarify please who has what role in Yii 2 maintenance and development?
   @qiangxue, Qiang Xue — creator of Yii, see below @samdark, Alexander Makarov — everything @cebe, Carsten Brandt — everything @klimov-paul, Klimov Paul — everything. Focuses on code @silverfire, Dmitry Naumenko — everything. Temporarily busy with own projects @arogachev, Alexey Rogachev — everything.</description>
@@ -106,10 +106,10 @@ It happened to me recently. 23 GB SD card from a trip almost full of precious sh
     
     <item>
       <title>Are traits evil?</title>
-      <link>https://samdark.github.io/blog/are-traits-evil/</link>
+      <link>https://en.rmcreative.ru/blog/are-traits-evil/</link>
       <pubDate>Mon, 17 Apr 2017 13:49:29 +0300</pubDate>
       
-      <guid>https://samdark.github.io/blog/are-traits-evil/</guid>
+      <guid>https://en.rmcreative.ru/blog/are-traits-evil/</guid>
       <description>When I have started a Patreon campaign, I have promised to answer questions. First question came from Daniel Fly and is about PHP traits:
  What do you think about Traits in PHP? Do you think they are evil and should avoid using them? If using them what are some common pitfalls fx where not to use them? Maybe you got some bad or good experience?
  What are traits?</description>
@@ -117,20 +117,20 @@ It happened to me recently. 23 GB SD card from a trip almost full of precious sh
     
     <item>
       <title>Patrons</title>
-      <link>https://samdark.github.io/patrons/</link>
+      <link>https://en.rmcreative.ru/patrons/</link>
       <pubDate>Wed, 29 Mar 2017 16:14:29 +0300</pubDate>
       
-      <guid>https://samdark.github.io/patrons/</guid>
+      <guid>https://en.rmcreative.ru/patrons/</guid>
       <description>My OpenSource time is backed financially by Yii and PHP communities via Patreon.
 Top backers  Brandon Kelly Craft CMS and Pixel &amp; Tonic    Tobias Munk Phundament    Lucas Bartholemy HumHub    Basil Suter LUYA    Dragan Zivkovic   Paul Heisig   Ilya Pistol Nethammer    Serban Cristian   Daniel Fly   Evgeniy Denisenko   djeux   Ulisses Vaquero   Judd Bundy   Pavel Tetyaev   Sergey Senokossov   Maxim Smirnov   Ivan Filatov   James crittenden   John Wales   Vuong Minh   alexvil   Anton Shelyganov   Scott Arciszewski Paragon Initiative Enterprises    Nikola Trifunović   Chris Weyland   Alexander Kozhevnikov dotPlant2 CMS    Justin Cherniak Pinfire labs    Rodolfo Carmona   Paweł Brzozowski   Anatoly Rugalev   Dmitry Sonko   Ivan Braun Icons8    Florian Kubis refugium22    Radu Herinean   Kilderson Sena   Paweł Derehajło   Past backers  Chris Smith   Alexander Bondarev   Petr Myazin Пятиминутка PHP    Big thank you to the ones backed me, listed and unlisted.</description>
     </item>
     
     <item>
       <title>bcrypt hash</title>
-      <link>https://samdark.github.io/blog/bcrypt-hash/</link>
+      <link>https://en.rmcreative.ru/blog/bcrypt-hash/</link>
       <pubDate>Thu, 23 Mar 2017 11:41:26 +0300</pubDate>
       
-      <guid>https://samdark.github.io/blog/bcrypt-hash/</guid>
+      <guid>https://en.rmcreative.ru/blog/bcrypt-hash/</guid>
       <description>bcrypt is a good way to deal with password authentication. In PHP it is available via crypt with blowfish algorithm or a shortcut password_hash function current PHP versions are providing.
 Yii framework project templates are using bcrypt for handling passwords. Framework components are providing polyfills ensuring bcrypt is used correctly.
 bcrypt produces a compound hash that looks like the following:
@@ -141,10 +141,10 @@ The string is always 60 characters long.
     
     <item>
       <title>Yii 2.0 Logging and PSR-3</title>
-      <link>https://samdark.github.io/blog/yii-2.0-logging-and-psr-3/</link>
+      <link>https://en.rmcreative.ru/blog/yii-2.0-logging-and-psr-3/</link>
       <pubDate>Thu, 09 Mar 2017 12:39:18 +0300</pubDate>
       
-      <guid>https://samdark.github.io/blog/yii-2.0-logging-and-psr-3/</guid>
+      <guid>https://en.rmcreative.ru/blog/yii-2.0-logging-and-psr-3/</guid>
       <description>It is 2017 and major parts of PHP community are all talking about PSRs: PHP standard recommendations that aim is to make parts of frameworks reusable. The recommendation PSR-3 is about logging. Many logging libraries are following this recommendation, among which Monolog is the most widely used one.
 There are three questions commonly asked about Yii 2.0 with regards to PSR-3:
  Why isn&amp;rsquo;t Yii 2.0 PSR-3 compatible? How do I use PSR-3 compatible logger in Yii 2.</description>
@@ -152,10 +152,10 @@ There are three questions commonly asked about Yii 2.0 with regards to PSR-3:
     
     <item>
       <title>No Kipple Please</title>
-      <link>https://samdark.github.io/blog/no-kipple-please/</link>
+      <link>https://en.rmcreative.ru/blog/no-kipple-please/</link>
       <pubDate>Sun, 05 Mar 2017 21:52:28 +0300</pubDate>
       
-      <guid>https://samdark.github.io/blog/no-kipple-please/</guid>
+      <guid>https://en.rmcreative.ru/blog/no-kipple-please/</guid>
       <description>&amp;ldquo;Kipple is useless objects, like junk mail or match folders after you use the last match or gum wrappers or yesterday&amp;rsquo;s homeopape. When nobody&amp;rsquo;s around, kipple reproduces itself. For instance, if you go to bed leaving any kipple around your apartment, when you wake up the next morning there&amp;rsquo;s twice as much of it. It always gets more and more.&amp;rdquo;
 &amp;hellip;
 &amp;ldquo;There&amp;rsquo;s the First Law of Kipple,&amp;rdquo; he said. &amp;ldquo;Kipple drives out nonkipple.</description>
@@ -163,10 +163,10 @@ There are three questions commonly asked about Yii 2.0 with regards to PSR-3:
     
     <item>
       <title>About</title>
-      <link>https://samdark.github.io/about/</link>
+      <link>https://en.rmcreative.ru/about/</link>
       <pubDate>Sun, 05 Mar 2017 16:11:58 +0530</pubDate>
       
-      <guid>https://samdark.github.io/about/</guid>
+      <guid>https://en.rmcreative.ru/about/</guid>
       <description>I&amp;rsquo;m Alex, one of the core maintainers of Yii PHP framework for more than 7 years, its representative in PHP-FIG, active conference speaker and participant of various other OpenSource projects.
 I am blogging in Russian since 2005 and recently decided that it is time to write in English as well.
 Seeking for patronage I am seeking for patronage in order to work on Yii framework and other OpenSource software. Would really appreciate if you will support me.</description>
@@ -174,19 +174,19 @@ Seeking for patronage I am seeking for patronage in order to work on Yii framewo
     
     <item>
       <title>Finding Bug with Binary Search</title>
-      <link>https://samdark.github.io/blog/finding-bug-with-binary-search/</link>
+      <link>https://en.rmcreative.ru/blog/finding-bug-with-binary-search/</link>
       <pubDate>Sat, 04 Mar 2017 21:52:28 +0300</pubDate>
       
-      <guid>https://samdark.github.io/blog/finding-bug-with-binary-search/</guid>
+      <guid>https://en.rmcreative.ru/blog/finding-bug-with-binary-search/</guid>
       <description>Once there&amp;rsquo;s a way to reproduce the issue we need to find code which caused it. Sometimes we are totally stuck for day feeling more and more depressed and, in the end, unable to think clearly. Luckily, there&amp;rsquo;s a systematic approach to find bug even if you have no idea what caused it and even where to set a breakpoint for proper debugging. This approach is known as binary search.</description>
     </item>
     
     <item>
       <title>The History of Yii Framework</title>
-      <link>https://samdark.github.io/blog/the-history-of-yii-framework/</link>
+      <link>https://en.rmcreative.ru/blog/the-history-of-yii-framework/</link>
       <pubDate>Sat, 04 Mar 2017 21:52:28 +0300</pubDate>
       
-      <guid>https://samdark.github.io/blog/the-history-of-yii-framework/</guid>
+      <guid>https://en.rmcreative.ru/blog/the-history-of-yii-framework/</guid>
       <description>Yii is one of the long-living PHP frameworks out there that is constantly evolving with time as PHP is enhanced more and more. It&amp;rsquo;s interesting explore the history of Yii.
 Prado In June 2004, Qiang Xue released the first version of PRADO framework. Prado was inspired by Apache Tapestry, Borland Delphi and Microsoft ASP.NET.
 Roughly at the same time, Zend conducted a competition called &amp;ldquo;gophp5&amp;rdquo; to promote the newly released PHP 5.</description>

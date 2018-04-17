@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Password Recovery on Alexander Makarov</title>
-    <link>https://samdark.github.io/tags/password-recovery/</link>
+    <link>https://en.rmcreative.ru/tags/password-recovery/</link>
     <description>Recent content in Password Recovery on Alexander Makarov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Mon, 03 Jul 2017 00:17:03 +0300</lastBuildDate>
     
-	<atom:link href="https://samdark.github.io/tags/password-recovery/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://en.rmcreative.ru/tags/password-recovery/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>SMS Security</title>
-      <link>https://samdark.github.io/blog/sms-security/</link>
+      <link>https://en.rmcreative.ru/blog/sms-security/</link>
       <pubDate>Mon, 03 Jul 2017 00:17:03 +0300</pubDate>
       
-      <guid>https://samdark.github.io/blog/sms-security/</guid>
+      <guid>https://en.rmcreative.ru/blog/sms-security/</guid>
       <description>Nowadays SMS is often used as a channel for secure data such as various tokens, payment confirmation, or two factor authentication. SMS has certain advantages. There is no need to install any special applications or being connected to the Internet. It works even on legendary Nokia 3310.
 Everything is great, right? Well, no. Depending on the usage it could be a bad idea.
 TL;DR  Do not ever use SMS to restore password or authenticate.</description>
