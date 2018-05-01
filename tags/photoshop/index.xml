@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Photoshop on Alexander Makarov</title>
-    <link>https://en.rmcreative.ru/tags/photoshop/</link>
+    <link>http://en.rmcreative.ru/tags/photoshop/</link>
     <description>Recent content in Photoshop on Alexander Makarov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Mon, 08 May 2017 00:40:17 +0300</lastBuildDate>
     
-	<atom:link href="https://en.rmcreative.ru/tags/photoshop/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://en.rmcreative.ru/tags/photoshop/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Why am I getting dull images after processing RAW files?!</title>
-      <link>https://en.rmcreative.ru/blog/why-am-i-getting-dull-images-after-processing-raw-files/</link>
+      <link>http://en.rmcreative.ru/blog/why-am-i-getting-dull-images-after-processing-raw-files/</link>
       <pubDate>Mon, 08 May 2017 00:40:17 +0300</pubDate>
       
-      <guid>https://en.rmcreative.ru/blog/why-am-i-getting-dull-images-after-processing-raw-files/</guid>
+      <guid>http://en.rmcreative.ru/blog/why-am-i-getting-dull-images-after-processing-raw-files/</guid>
       <description>I&amp;rsquo;m not a pro photographer but love to travel with a camera so I&amp;rsquo;m making some pictures from time to time. Some time ago I&amp;rsquo;ve started shooting in RAW and post-processing it to JPEG-s at home. After some practice I&amp;rsquo;ve managed to get slightly better JPEG-s than camera was making automatically. Everything was well (except tons of unprocessed RAWs, of course) but after re-installing OS something went wrong. I was doing everything as before but resulting JPEGs were simply dull colored and greyish.</description>
     </item>
     

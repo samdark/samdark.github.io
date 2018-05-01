@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Refactoring on Alexander Makarov</title>
-    <link>https://en.rmcreative.ru/tags/refactoring/</link>
+    <link>http://en.rmcreative.ru/tags/refactoring/</link>
     <description>Recent content in Refactoring on Alexander Makarov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Fri, 11 Aug 2017 16:06:31 +0300</lastBuildDate>
     
-	<atom:link href="https://en.rmcreative.ru/tags/refactoring/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://en.rmcreative.ru/tags/refactoring/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Flavors of bad code</title>
-      <link>https://en.rmcreative.ru/blog/flavors-of-bad-code/</link>
+      <link>http://en.rmcreative.ru/blog/flavors-of-bad-code/</link>
       <pubDate>Fri, 11 Aug 2017 16:06:31 +0300</pubDate>
       
-      <guid>https://en.rmcreative.ru/blog/flavors-of-bad-code/</guid>
+      <guid>http://en.rmcreative.ru/blog/flavors-of-bad-code/</guid>
       <description>There are many flavors of bad code but let us focus on two prominent ones named after tasty Italian dishes: spaghetti and lasagna.
 Spaghetti Spaghetti flavored code is unstructured code where everything is mixed in a single place.
 Usually it is produced by novices who are unaware on how to structure their code and tend to skip thinking about architecture. Typical reasons for spaghetti:
@@ -25,10 +25,10 @@ Usually it is produced by novices who are unaware on how to structure their code
     
     <item>
       <title>Moving constants into dictionaries</title>
-      <link>https://en.rmcreative.ru/blog/moving-constants-into-dictionaries/</link>
+      <link>http://en.rmcreative.ru/blog/moving-constants-into-dictionaries/</link>
       <pubDate>Fri, 02 Jun 2017 03:03:04 +0300</pubDate>
       
-      <guid>https://en.rmcreative.ru/blog/moving-constants-into-dictionaries/</guid>
+      <guid>http://en.rmcreative.ru/blog/moving-constants-into-dictionaries/</guid>
       <description>Extracting constants makes code much cleaner compared to using values directly. It eliminates typos and makes it possible to use IDE autocomplete and refactoring.
 Typically, after extraction is done, it looks like the following:
 namespace app\models; class User { const GENDER_FEMALE = &#39;female&#39;; const GENDER_MALE = &#39;male&#39;; public static function listGenders() { return [ self::GENDER_FEMALE =&amp;gt; Yii::t(&#39;app&#39;, &#39;Female&#39;), self::GENDER_MALE =&amp;gt; Yii::t(&#39;app&#39;, &#39;Male&#39;), ]; } public static function getGenderAsString($gender) { $all = self::listGenders(); if (isset($all[$gender])) { return $all[$gender]; } return Yii::t(&#39;app&#39;, &#39;Not set&#39;); } // .</description>
