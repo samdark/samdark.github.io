@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Password on Alexander Makarov</title>
-    <link>http://en.rmcreative.ru/tags/password/</link>
+    <link>https://en.rmcreative.ru/tags/password/</link>
     <description>Recent content in Password on Alexander Makarov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Thu, 23 Mar 2017 11:41:26 +0300</lastBuildDate>
     
-	<atom:link href="http://en.rmcreative.ru/tags/password/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://en.rmcreative.ru/tags/password/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>bcrypt hash</title>
-      <link>http://en.rmcreative.ru/blog/bcrypt-hash/</link>
+      <link>https://en.rmcreative.ru/blog/bcrypt-hash/</link>
       <pubDate>Thu, 23 Mar 2017 11:41:26 +0300</pubDate>
       
-      <guid>http://en.rmcreative.ru/blog/bcrypt-hash/</guid>
+      <guid>https://en.rmcreative.ru/blog/bcrypt-hash/</guid>
       <description>bcrypt is a good way to deal with password authentication. In PHP it is available via crypt with blowfish algorithm or a shortcut password_hash function current PHP versions are providing.
 Yii framework project templates are using bcrypt for handling passwords. Framework components are providing polyfills ensuring bcrypt is used correctly.
 bcrypt produces a compound hash that looks like the following:

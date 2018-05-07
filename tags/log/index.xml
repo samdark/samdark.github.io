@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Log on Alexander Makarov</title>
-    <link>http://en.rmcreative.ru/tags/log/</link>
+    <link>https://en.rmcreative.ru/tags/log/</link>
     <description>Recent content in Log on Alexander Makarov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Thu, 09 Mar 2017 12:39:18 +0300</lastBuildDate>
     
-	<atom:link href="http://en.rmcreative.ru/tags/log/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://en.rmcreative.ru/tags/log/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Yii 2.0 Logging and PSR-3</title>
-      <link>http://en.rmcreative.ru/blog/yii-2.0-logging-and-psr-3/</link>
+      <link>https://en.rmcreative.ru/blog/yii-2.0-logging-and-psr-3/</link>
       <pubDate>Thu, 09 Mar 2017 12:39:18 +0300</pubDate>
       
-      <guid>http://en.rmcreative.ru/blog/yii-2.0-logging-and-psr-3/</guid>
+      <guid>https://en.rmcreative.ru/blog/yii-2.0-logging-and-psr-3/</guid>
       <description>It is 2017 and major parts of PHP community are all talking about PSRs: PHP standard recommendations that aim is to make parts of frameworks reusable. The recommendation PSR-3 is about logging. Many logging libraries are following this recommendation, among which Monolog is the most widely used one.
 There are three questions commonly asked about Yii 2.0 with regards to PSR-3:
  Why isn&amp;rsquo;t Yii 2.0 PSR-3 compatible? How do I use PSR-3 compatible logger in Yii 2.</description>

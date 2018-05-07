@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hydrator on Alexander Makarov</title>
-    <link>http://en.rmcreative.ru/tags/hydrator/</link>
+    <link>https://en.rmcreative.ru/tags/hydrator/</link>
     <description>Recent content in Hydrator on Alexander Makarov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Sat, 13 May 2017 00:59:27 +0300</lastBuildDate>
     
-	<atom:link href="http://en.rmcreative.ru/tags/hydrator/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://en.rmcreative.ru/tags/hydrator/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hydrator</title>
-      <link>http://en.rmcreative.ru/blog/hydrator/</link>
+      <link>https://en.rmcreative.ru/blog/hydrator/</link>
       <pubDate>Sat, 13 May 2017 00:59:27 +0300</pubDate>
       
-      <guid>http://en.rmcreative.ru/blog/hydrator/</guid>
+      <guid>https://en.rmcreative.ru/blog/hydrator/</guid>
       <description>November 2016 I&amp;rsquo;ve implemented and released a Hydrator library but never properly announced it. As far as I know, the &amp;ldquo;hydrator&amp;rdquo; term was first used in Hibernate Java ORM. The job of a hydrator is to fill an object with data or extract data from an object without calling constructor or extra getter-setter methods. It allows you to directly work with private properties which should be persisted to database or loaded from database while not exposing these properties thus keeping public interface clean.</description>
     </item>
     

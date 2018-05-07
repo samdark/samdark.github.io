@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Trait on Alexander Makarov</title>
-    <link>http://en.rmcreative.ru/tags/trait/</link>
+    <link>https://en.rmcreative.ru/tags/trait/</link>
     <description>Recent content in Trait on Alexander Makarov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Mon, 17 Apr 2017 13:49:29 +0300</lastBuildDate>
     
-	<atom:link href="http://en.rmcreative.ru/tags/trait/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://en.rmcreative.ru/tags/trait/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Are traits evil?</title>
-      <link>http://en.rmcreative.ru/blog/are-traits-evil/</link>
+      <link>https://en.rmcreative.ru/blog/are-traits-evil/</link>
       <pubDate>Mon, 17 Apr 2017 13:49:29 +0300</pubDate>
       
-      <guid>http://en.rmcreative.ru/blog/are-traits-evil/</guid>
+      <guid>https://en.rmcreative.ru/blog/are-traits-evil/</guid>
       <description>When I have started a Patreon campaign, I have promised to answer questions. First question came from Daniel Fly and is about PHP traits:
  What do you think about Traits in PHP? Do you think they are evil and should avoid using them? If using them what are some common pitfalls fx where not to use them? Maybe you got some bad or good experience?
  What are traits?</description>

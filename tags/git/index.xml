@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Git on Alexander Makarov</title>
-    <link>http://en.rmcreative.ru/tags/git/</link>
+    <link>https://en.rmcreative.ru/tags/git/</link>
     <description>Recent content in Git on Alexander Makarov</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Sat, 04 Mar 2017 21:52:28 +0300</lastBuildDate>
     
-	<atom:link href="http://en.rmcreative.ru/tags/git/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://en.rmcreative.ru/tags/git/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Finding Bug with Binary Search</title>
-      <link>http://en.rmcreative.ru/blog/finding-bug-with-binary-search/</link>
+      <link>https://en.rmcreative.ru/blog/finding-bug-with-binary-search/</link>
       <pubDate>Sat, 04 Mar 2017 21:52:28 +0300</pubDate>
       
-      <guid>http://en.rmcreative.ru/blog/finding-bug-with-binary-search/</guid>
+      <guid>https://en.rmcreative.ru/blog/finding-bug-with-binary-search/</guid>
       <description>Once there&amp;rsquo;s a way to reproduce the issue we need to find code which caused it. Sometimes we are totally stuck for day feeling more and more depressed and, in the end, unable to think clearly. Luckily, there&amp;rsquo;s a systematic approach to find bug even if you have no idea what caused it and even where to set a breakpoint for proper debugging. This approach is known as binary search.</description>
     </item>
     
