@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Engineer having fun">
+
+<base href="https://en.rmcreative.ru/">
+<title>
+
+
+     Naming things 
+
+</title>
+<link rel="canonical" href="https://en.rmcreative.ru/blog/naming-things/">
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="https://en.rmcreative.ru/css/reset.css?t=1544993859">
+    <link rel="stylesheet" href="https://en.rmcreative.ru/css/pygments.css?t=1544993859">
+    <link rel="stylesheet" href="https://en.rmcreative.ru/css/main.css?t=1544993859">
+    
+        <link rel="stylesheet" href="https://en.rmcreative.ru/css/override.css?t=1544993859">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="https://en.rmcreative.ru/img/favicon.ico"
+
+>
+
+
+
+
+
+
+</head>
+
+
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+              <a href="https://en.rmcreative.ru/"><img class="avatar" src="https://en.rmcreative.ru/img/avatar.jpg" /></a>
+            
+            <a href="https://en.rmcreative.ru/"><div class="name">Alexander Makarov / @samdark</div></a>
+            
+              <h3 class="self-intro">Engineer having fun</h3>
+            
+            <nav>
+                <ul>
+                    <li class="nav-blog"><a href="https://en.rmcreative.ru/blog/">Blog</a></li>
+                    <li class="nav-blog"><a href="https://en.rmcreative.ru/patrons/">Patrons</a></li>
+                    <li class="nav-about"><a href="https://en.rmcreative.ru/about/">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+
+        
+            <a href="//github.com/samdark" target="_blank" rel="noopener"><img class="icon" src="https://en.rmcreative.ru/img/github.svg" alt="github" /></a>
+        
+
+        
+            <a href="//twitter.com/sam_dark" target="_blank" rel="noopener"><img class="icon" src="https://en.rmcreative.ru/img/twitter.svg" alt="twitter" /></a>
+        
+
+        
+            <a href="//linkedin.com/in/makarov" target="_blank" rel="noopener"><img class="icon" src="https://en.rmcreative.ru/img/linkedin.svg" alt="linkedin" /></a>
+        
+
+        
+
+        
+
+        
+            <a href="mailto:sam@rmcreative.ru"><img class="icon" src="https://en.rmcreative.ru/img/email.svg" alt="email" /></a>
+        
+
+        
+            <a href="https://en.rmcreative.ru/index.xml"><img class="icon" src="https://en.rmcreative.ru/img/rss.svg" alt="rss" /></a>
+        
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    Naming things
+
+</div>
+
+                    <div class="initials"><a href="https://en.rmcreative.ru/"></a></div>
+                </div>
+                <div class="meta">
+                    
+                    <div class="date" title='Sun Dec 16 2018 18:46:23 MSK'>Dec 16, 2018</div>
+                    
+                    
+                    <div class="reading-time"><div class="middot"></div>6 minutes read</div>
+                    
+                </div>
+            </div>
+            <div class="markdown">
+                
+
+<blockquote>
+<p>There are only two hard things in Computer Science: cache invalidation
+and naming things.</p>
+
+<p>&ndash; <cite>Phil Karlton</cite></p>
+</blockquote>
+
+<p>We, developers, spend more time reading code than writing it.
+It is important for the code to be readable and clear about its intent.</p>
+
+<p>Below are some advice based on my experience naming things.</p>
+
+<ul>
+<li><a href="#meaning">Meaning</a></li>
+<li><a href="#consistency">Consistency</a></li>
+<li><a href="#verbosity">Verbosity</a></li>
+<li><a href="#readability">Readability</a></li>
+</ul>
+
+<h1 id="meaning-a-id-meaning-href-meaning-a">Meaning <a id="meaning" href="#meaning">#</a></h1>
+
+<p>A name, be it a variable, a property, a class, or an interface, should reflect
+the purpose of why it&rsquo;s being introduced and how it&rsquo;s used.</p>
+
+<h2 id="use-accurate-names">Use accurate names</h2>
+
+<p>If one can not get an idea about usage and purpose without extra comments
+the name is not good enough. If immediate usage or purpose
+idea based on naming is wrong then the naming is unacceptable.</p>
+
+<p>The worst possible naming is when a method name lies to the one who reads it.</p>
+
+<h2 id="avoid-meaningless-names">Avoid meaningless names</h2>
+
+<p>These are names like <code>$i</code>, <code>$j</code>, <code>$k</code> etc. While these are OK to use in cycles,
+in other cases they are wasting readability.</p>
+
+<p>A common source of such names is classic science where most formulas use
+one-letter variables so it is faster to write. As a consequence, you can not
+make sense of these formulas without an introductory paragraph explaining
+naming. Often this paragraph is hard to find.</p>
+
+<p>Since computer science education includes significant number of classic science
+disciplines, students are getting used to such naming and bring it to programming.</p>
+
+<h2 id="naming-classes-interfaces-properties-and-methods">Naming classes, interfaces, properties and methods</h2>
+
+<p>Class name should be one or several nouns. There should be no verbs.
+Try avoiding &ldquo;data&rdquo;, &ldquo;manager&rdquo;, &ldquo;info&rdquo;, &ldquo;processor&rdquo;, &ldquo;handler&rdquo;, &ldquo;maker&rdquo;,
+&ldquo;util&rdquo; etc. as these usually an indicator of vague naming.</p>
+
+<p>Interfaces are usually either nouns or adjectives. Some teams, including
+<a href="https://www.php-fig.org/">PHP-FIG</a>, chose to postfix interfaces with <code>Interface</code>.
+Some do it with <code>I</code> prefix and some use no prefix or postfix. I find
+all these acceptable in case you are consistent.</p>
+
+<p>Properties should be named with nouns or adjectives. For booleans use affirmative
+phrases prefixing with &ldquo;Is&rdquo;, &ldquo;Can&rdquo;, or &ldquo;Has&rdquo; where appropriate.</p>
+
+<p>Method names should contain one or more verbs as they are actions. Choose verb
+that describes what the method does, not how it does it.</p>
+
+<p>While it is not strictly necessary, it is a good idea to end derived
+class name with the name of the base class:</p>
+
+<pre><code class="language-php">class Exception {}
+
+class InvalidArgumentException extends Exception {}
+</code></pre>
+
+<h1 id="consistency-a-id-consistency-href-consistency-a">Consistency <a id="consistency" href="#consistency">#</a></h1>
+
+<p>Use a single name for a single concept. Be consistent.</p>
+
+<p>A good example is using <code>begin</code>/<code>end</code> everywhere instead of mixing it with <code>start</code>/<code>finish</code>.</p>
+
+<h2 id="follow-code-style-conventions">Follow code style conventions</h2>
+
+<p>When developing a project, a team must agree on code style and naming conventions
+they use and follow these. If a part of conventions is not accepted by
+some team members then it should be reviewed, changed and new rule should be set.</p>
+
+<p>For PHP the most common convention is currently PSR-2 and most internal project
+conventions are based on it.</p>
+
+<h1 id="verbosity-a-id-verbosity-href-verbosity-a">Verbosity <a id="verbosity" href="#verbosity">#</a></h1>
+
+<h2 id="avoid-reusing-names">Avoid reusing names</h2>
+
+<p>Using same name for many concepts should be avoided if possible as it brings
+two problems:</p>
+
+<ul>
+<li>When reading, you have to keep context in mind. Usually that means getting to
+namespace or package declaration constantly.</li>
+<li>Searching for such names is a pain.</li>
+</ul>
+
+<h2 id="avoid-contractions">Avoid contractions</h2>
+
+<p>Do not use contractions. Common examples are:</p>
+
+<ul>
+<li><code>cnt</code></li>
+<li><code>iter</code></li>
+<li><code>amnt</code></li>
+<li><code>impl</code></li>
+</ul>
+
+<pre><code class="language-php">function cntBigWrds($data, $length)
+{
+    $i = 0;
+    foreach ($data as $iter) {
+        if (mb_strlen($iter) &gt;= $length) {
+            $i++;
+        }
+    }
+    return $i;
+}
+
+$data = ['I', 'am', 'word'];
+echo cntBigWrds($data, 3);
+</code></pre>
+
+<p>The code above when named properly becomes:</p>
+
+<pre><code class="language-php">function countWordsLongerThan(array $words, int $minimumLength)
+{
+    $count = 0;
+    foreach ($words as $word) {
+        if (mb_strlen($word) &gt;= $minimumLength) {
+            $count++;
+        }
+    }
+    return $count;
+}
+
+$words = ['I', 'am', 'word'];
+echo countWordsLongerThan($words, 3);
+</code></pre>
+
+<p>Note still that short explanatory names without contractions are better than
+long explanatory names so do not take verbosity to extreme ending up with names
+like <code>processTextReplacingMoreThanASingleSpaceWithASingleSpace()</code>.</p>
+
+<p>If the name is too long it either means it could be re-worded to make it shorter
+or the thing you are naming is doing too much and should be refactored into
+multiple things.</p>
+
+<h2 id="avoid-acronyms">Avoid acronyms</h2>
+
+<p>Avoid acronyms and abbreviations except commonly known ones such as HTML. <a href="https://en.wikipedia.org/wiki/Elon_Musk">Elon Musk</a> sent an email titled
+&ldquo;Acronyms Seriously Suck&rdquo; to all SpaceX employees in May 2010:</p>
+
+<blockquote>
+<p>There is a creeping tendency to use made up acronyms at SpaceX. Excessive use of made up acronyms is a significant impediment to communication and keeping communication good as we grow is incredibly important. Individually, a few acronyms here and there may not seem so bad, but if a thousand people are making these up, over time the result will be a huge glossary that we have to issue to new employees. No one can actually remember all these acronyms and people don&rsquo;t want to seem dumb in a meeting, so they just sit there in ignorance. This is particularly tough on new employees.</p>
+
+<p>That needs to stop immediately or I will take drastic action - I have given enough warning over the years. Unless an acronym is approved by me, it should not enter the SpaceX glossary. If there is an existing acronym that cannot reasonably be justified, it should be eliminated, as I have requested in the past.</p>
+
+<p>For example, there should be not &ldquo;HTS&rdquo; [horizontal test stand] or &ldquo;VTS&rdquo; [vertical test stand] designations for test stands. Those are particularly dumb, as they contain unnecessary words. A &ldquo;stand&rdquo; at our test site is obviously a test stand. VTS-3 is four syllables compared with &ldquo;Tripod&rdquo;, which is two, so the bloody acronym version actually takes longer to say than the name!</p>
+
+<p>The key test for an acronym is to ask whether it helps or hurts communication. An acronym that most engineers outside of SpaceX already know, such as GUI, is fine to use. It is also ok to make up a few acronyms/contractions every now and again, assuming I have approved them, e.g. MVac and M9 instead of Merlin 1C-Vacuum or Merlin 1C-Sea Level, but those need to be kept to a minimum.</p>
+</blockquote>
+
+<p>I agree with him.</p>
+
+<h1 id="readability-a-id-readability-href-readability-a">Readability <a id="readability" href="#readability">#</a></h1>
+
+<p>Code should be able to be read as easily as prose. Choose words that you would
+choose writing an article or a book. For example, a property named
+<code>TotalAmount</code> is more readable in English than <code>AmountTotal</code>.</p>
+
+<h2 id="hiding-implementation-details">Hiding implementation details</h2>
+
+<p>That is more about object oriented design but it affects readability much if
+implementation details are exposed. Try not to expose methods named like:</p>
+
+<ul>
+<li><code>initialize</code></li>
+<li><code>init</code></li>
+<li><code>create</code></li>
+<li><code>build</code></li>
+</ul>
+
+<h2 id="domain-language">Domain language</h2>
+
+<p>Code should use the same names as used in the business or domain model automated.</p>
+
+<p>For example, if a travel business using &ldquo;venue&rdquo; as a general name for cafes,
+hotels and tourist attractions, it is a bad idea to use &ldquo;place&rdquo; in the code
+because you and your users will speak two different languages making it more complicated than it should.</p>
+
+<p>Such a language is often called &ldquo;The Ubiquitous Language&rdquo;. You can learn more from
+&ldquo;<a href="https://www.infoq.com/minibooks/domain-driven-design-quickly">Domain Driven Design Quickly</a>&ldquo;
+mini-book by InfoQ.</p>
+
+<h2 id="english">English</h2>
+
+<p>Majority of programming languages use English for built-in constructs and it is
+a good practice to name things in English as well. It is extremely important
+for a developer to learn English at least on the basic level and,
+what is more important, to have good vocabulary that one can use for
+finding a good name.</p>
+
+<p>Some useful tools:</p>
+
+<ul>
+<li><a href="http://www.thesaurus.com/">thesaurus.com</a> - for finding synonyms.</li>
+<li><a href="https://wordassociations.net/en">wordassociations.net</a> - for finding associations.</li>
+</ul>
+
+<h1 id="references">References</h1>
+
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/previous-versions/dotnet/netframework-4.0/ms229002(v%3dvs.100)">Microsoft Guidelines for Names</a></li>
+<li><a href="https://martinfowler.com/bliki/TwoHardThings.html">TwoHardThings by Martin Fowler</a></li>
+<li><a href="https://www.infoq.com/minibooks/domain-driven-design-quickly">Domain Driven Design Quickly by InfoQ</a></li>
+</ul>
+
+                <br>
+
+                <ul id="tags">
+                    
+                </ul>
+
+                <p><a href="https://en.rmcreative.ru/blog/">Back to posts</a></p>
+            </div>
+            <br>
+            <div class="disqus">
+                <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "samdark" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-93053867-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+  
+
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+</body>
+</html>
+

@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://en.rmcreative.ru/blog/naming-things/</loc>
+    <lastmod>2018-12-16T18:46:23+03:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://en.rmcreative.ru/blog/youtubes-500-error-page/</loc>
     <lastmod>2018-04-02T23:02:47+03:00</lastmod>
   </url>
@@ -95,7 +100,7 @@
   
   <url>
     <loc>https://en.rmcreative.ru/</loc>
-    <lastmod>2018-04-02T23:02:47+03:00</lastmod>
+    <lastmod>2018-12-16T18:46:23+03:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -119,7 +124,7 @@
   
   <url>
     <loc>https://en.rmcreative.ru/blog/</loc>
-    <lastmod>2018-04-02T23:02:47+03:00</lastmod>
+    <lastmod>2018-12-16T18:46:23+03:00</lastmod>
     <priority>0</priority>
   </url>
   
