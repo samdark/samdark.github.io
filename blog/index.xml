@@ -21,7 +21,7 @@
 &amp;ndash; Phil Karlton
  We, developers, spend more time reading code than writing it. It is important for the code to be readable and clear about its intent.
 Below are some advice based on my experience naming things.
- Meaning Consistency Verbosity Readability  Meaning # A name, be it a variable, a property, a class, or an interface, should reflect the purpose of why it&amp;rsquo;s being introduced and how it&amp;rsquo;s used.</description>
+Meaning A name, be it a variable, a property, a class, or an interface, should reflect the purpose of why it&amp;rsquo;s being introduced and how it&amp;rsquo;s used.</description>
     </item>
     
     <item>
