@@ -184,5 +184,80 @@ Prado In June 2004, Qiang Xue released the first version of PRADO framework. Pra
 Roughly at the same time, Zend conducted a competition called &amp;ldquo;gophp5&amp;rdquo; to promote the newly released PHP 5.</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://en.rmcreative.ru/blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://en.rmcreative.ru/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://en.rmcreative.ru/blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://en.rmcreative.ru/blog/</guid>
+      <description>Immutable objects http://ragazzo.github.io/immutability/oop/2016/05/03/immutability.html
+In this short article we will see what immutable objects are and why we should consider to use them.
+Immutable object is an object that does not change its state after it was created. Immutable objects usually are very simple. You may already seen them as enum types or primitives like DateTimeImmutable.
+Further in this article you will learn that making simple objects immutable may save significant amount of your time by making impossible to make certain types of mistakes.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://en.rmcreative.ru/blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://en.rmcreative.ru/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://en.rmcreative.ru/blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://en.rmcreative.ru/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://en.rmcreative.ru/blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://en.rmcreative.ru/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://en.rmcreative.ru/blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://en.rmcreative.ru/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://en.rmcreative.ru/blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://en.rmcreative.ru/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://en.rmcreative.ru/blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://en.rmcreative.ru/blog/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
